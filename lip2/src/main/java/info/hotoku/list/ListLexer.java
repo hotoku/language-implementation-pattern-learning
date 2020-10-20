@@ -66,4 +66,20 @@ public class ListLexer {
     boolean ws() {
         return c == ' ' || c == '\t' || c == '\n';
     }
+
+    public static String tokenName(int type) {
+        switch (type) {
+            case 1:
+                return "EOF_TYPE";
+            case 2:
+                return "LBRACK";
+            case 3:
+                return "RBRACK";
+            case 4:
+                return "NAME";
+            case 5:
+                return "COMMA";
+        }
+        return "unknown";
+    }
 }

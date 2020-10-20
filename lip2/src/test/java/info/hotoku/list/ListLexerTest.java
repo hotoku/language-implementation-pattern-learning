@@ -48,4 +48,23 @@ public class ListLexerTest extends TestCase {
         token = lexer.nextToken();
         assertEquals(ListLexer.EOF_TYPE, token.type);
     }
+
+    public void test2() {
+        String line = "[a,]";
+        ListLexer lexer = new ListLexer(line);
+        Token token = lexer.nextToken();
+        assertEquals(ListLexer.LBRACK, token.type);
+        assertEquals("[", token.value);
+        token = lexer.nextToken();
+        assertEquals(ListLexer.NAME, token.type);
+        assertEquals("a", token.value);
+        token = lexer.nextToken();
+        assertEquals(ListLexer.COMMA, token.type);
+        assertEquals(",", token.value);
+        token = lexer.nextToken();
+        assertEquals("]", token.value);
+        token = lexer.nextToken();
+        assertEquals(ListLexer.EOF_TYPE, token.type);
+    }
+
 }
