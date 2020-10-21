@@ -36,7 +36,7 @@ public class ParserTest extends TestCase {
         Parser parser;
         try {
             parser = new Parser(lexer, 2);
-            parser.list();
+            parser.parse();
         } catch (UnknownCharacterException e) {
             assertTrue("never comes here", false);
         } catch (UnexpectedToken e) {
@@ -51,7 +51,7 @@ public class ParserTest extends TestCase {
         Parser parser;
         try {
             parser = new Parser(lexer, 2);
-            parser.list();
+            parser.parse();
             assertTrue("never comes here", false);
         } catch (UnknownCharacterException e) {
             assertTrue("never comes here", false);
@@ -67,7 +67,7 @@ public class ParserTest extends TestCase {
         Parser parser;
         try {
             parser = new Parser(lexer, 2);
-            parser.list();
+            parser.parse();
         } catch (UnknownCharacterException e) {
             assertTrue("never comes here", false);
         } catch (UnexpectedToken e) {
@@ -82,11 +82,13 @@ public class ParserTest extends TestCase {
         Parser parser;
         try {
             parser = new Parser(lexer, 2);
-            parser.list();
+            parser.parse();
+            assertTrue("never comes here", false);
         } catch (UnknownCharacterException e) {
             assertTrue("never comes here", false);
         } catch (UnexpectedToken e) {
-            assertTrue("never comes here", false);
+            assertEquals(Lexer.EOF_TYPE, e.expected);
+            assertEquals(Lexer.RBRACK, e.actual.type);
         }
 
     }

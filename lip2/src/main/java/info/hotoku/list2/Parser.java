@@ -21,7 +21,7 @@ public class Parser {
         match(Lexer.EOF_TYPE);
     }
 
-    public void list() throws UnexpectedToken, UnknownCharacterException {
+    private void list() throws UnexpectedToken, UnknownCharacterException {
         match(Lexer.LBRACK);
         elements();
         match(Lexer.RBRACK);
