@@ -3,8 +3,8 @@ package info.hotoku.backtrack;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class MemoParser {
-    private static final int FAILED = -1;
+public class MemoParser2 {
+    public static final int FAILED = -1;
 
     Lexer lexer;
     ArrayList<Token> buf;
@@ -12,7 +12,7 @@ public class MemoParser {
     int p;
     HashMap<Integer, Integer> list_memo;
 
-    public MemoParser(Lexer l) throws ParseFailure {
+    public MemoParser2(Lexer l) throws ParseFailure {
         lexer = l;
         buf = new ArrayList<Token>();
         stack = new ArrayList<Integer>();
@@ -60,7 +60,7 @@ public class MemoParser {
 
     public void parse() throws ParseFailure {
         if (speculate_list()) {
-            list();
+            _list();
             match(Lexer.EOF_TYPE);
         } else if (speculate_assign()) {
             assign();
@@ -70,25 +70,27 @@ public class MemoParser {
         }
     }
 
-    private boolean speculate_assign() {
+    private boolean speculate_assign() throws ParseFailure {
         boolean success = true;
         mark();
         try {
             assign();
             match(Lexer.EOF_TYPE);
-        } catch (ParseFailure e) {
+        } catch (UnexpectedToken e) {
             success = false;
         }
         unmark();
         return success;
     }
 
-    private boolean speculate_list() {
+    private boolean speculate_list() throws ParseFailure {
         boolean success = true;
         mark();
         try {
             list();
             match(Lexer.EOF_TYPE);
+        } catch (UnexpectedToken e) {
+            success = false;
         } catch (ParseFailure e) {
             success = false;
         }
@@ -112,36 +114,40 @@ public class MemoParser {
     }
 
     private void list() throws ParseFailure {
-        if (!isSpeculating()) {
-            _list();
+        if (isSpeculating() && alreadyParsedRule(list_memo))
             return;
-        }
-        Integer p2 = Integer.valueOf(p);
-        if (list_memo.containsKey(p2)) {
-            if (list_memo.get(p2).intValue() == FAILED) {
-                throw new ParseFailure("previous parse failed");
-            } else {
-                p = list_memo.get(p2).intValue();
-                return;
-            }
-        }
+
         boolean failed = false;
-        int startPos = p;
+        int startTokenIndex = p;
         try {
             _list();
-        } catch (ParseFailure e) {
+        } catch (UnexpectedToken e) {
             failed = true;
         } finally {
-            if (failed) {
-                list_memo.put(Integer.valueOf(startPos), Integer.valueOf(FAILED));
-            } else {
-                list_memo.put(Integer.valueOf(startPos), Integer.valueOf(p));
+            if (isSpeculating()) {
+                memoize(list_memo, startTokenIndex, failed);
             }
         }
     }
 
-    private boolean alreadyParsed(HashMap<Integer, Integer> list_memo2) {
-        return false;
+    private void memoize(HashMap<Integer, Integer> memo, int startTokenIndex, boolean failed) {
+        if (failed) {
+            memo.put(Integer.valueOf(startTokenIndex), Integer.valueOf(FAILED));
+        } else {
+            memo.put(Integer.valueOf(startTokenIndex), Integer.valueOf(p));
+        }
+    }
+
+    private boolean alreadyParsedRule(HashMap<Integer, Integer> memo) throws ParseFailure {
+        Integer ret = memo.get(Integer.valueOf(p));
+        if (ret == null) {
+            return false;
+        }
+        if (ret.intValue() == FAILED) {
+            throw new ParseFailure("previous parse failed");
+        }
+        p = ret.intValue();
+        return true;
     }
 
     private void elements() throws ParseFailure {
@@ -169,7 +175,7 @@ public class MemoParser {
             match(Lexer.NAME);
             return;
         }
-        throw new ParseFailure(String.format("cannot parsed as element: %s", LT(0).value));
+        throw new ParseFailure("cannot parsed as element");
     }
 
     private void assign() throws ParseFailure {
