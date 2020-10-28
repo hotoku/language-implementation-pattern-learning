@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g 2009-09-23 17:38:02
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g 2020-10-28 21:00:40
 
 import java.util.*;
 import java.io.*;
@@ -19,35 +11,39 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 public class Wiki extends Lexer {
-    public static final int ITALICS=8;
-    public static final int ELSE=18;
-    public static final int TABLE=12;
-    public static final int SECTION=11;
-    public static final int UL=10;
-    public static final int LI=9;
-    public static final int SEC_TAIL=14;
-    public static final int EOF=-1;
-    public static final int TABLE_CONTENT=17;
     public static final int COL=16;
+    public static final int TABLE_CONTENT=17;
+    public static final int TABLE=12;
+    public static final int BLANK_LINE=13;
+    public static final int ITALICS=8;
+    public static final int TAIL=4;
+    public static final int UL=10;
+    public static final int SEC_TAIL=14;
     public static final int LINK=7;
+    public static final int ELSE=18;
     public static final int TITLE=5;
     public static final int BOLD=6;
-    public static final int TAIL=4;
-    public static final int BLANK_LINE=13;
     public static final int ROW=15;
+    public static final int EOF=-1;
+    public static final int LI=9;
+    public static final int SECTION=11;
 
     PrintStream out;
+    // START: stack
     Stack<String> context = new Stack<String>();
     void closeList() {
         if ( context.size()==0 ) return;
         String list = context.pop();
         out.println("</"+list+">");
     }
+    // END: stack
+    // START: ctx
     boolean upcomingEndOfCol() {
         return input.LA(1)=='|' ||
                (input.LA(1)=='\n'&&
                 (input.LA(2)=='-'&&input.LA(3)=='-')||input.LA(2)==']');
     }
+    // END: ctx
     public Wiki(CharStream input, PrintStream out) {
         this(input);
         this.out = out;
@@ -65,7 +61,7 @@ public class Wiki extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/trans/wiki/Wiki.g"; }
 
     public Token nextToken() {
         while (true) {
@@ -119,8 +115,8 @@ public class Wiki extends Lexer {
             int _channel = DEFAULT_TOKEN_CHANNEL;
             CommonToken TAIL1=null;
 
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:36:5: ({...}? => TAIL )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:36:9: {...}? => TAIL
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:36:5: ({...}? => TAIL )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:36:9: {...}? => TAIL
             {
             if ( !((getLine()==1)) ) {
                 if (state.backtracking>0) {state.failed=true; return ;}
@@ -150,8 +146,8 @@ public class Wiki extends Lexer {
             int _channel = DEFAULT_TOKEN_CHANNEL;
             int c;
 
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:42:5: ({...}? => '*' (c=~ '*' )+ '*' )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:42:9: {...}? => '*' (c=~ '*' )+ '*'
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:42:5: ({...}? => '*' (c=~ '*' )+ '*' )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:42:9: {...}? => '*' (c=~ '*' )+ '*'
             {
             if ( !((getCharPositionInLine()>0)) ) {
                 if (state.backtracking>0) {state.failed=true; return ;}
@@ -161,7 +157,7 @@ public class Wiki extends Lexer {
             if ( state.backtracking==1 ) {
               out.print("<b>");
             }
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:44:9: (c=~ '*' )+
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:44:9: (c=~ '*' )+
             int cnt1=0;
             loop1:
             do {
@@ -175,7 +171,7 @@ public class Wiki extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:44:10: c=~ '*'
+            	    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:44:10: c=~ '*'
             	    {
             	    c= input.LA(1);
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<=')')||(input.LA(1)>='+' && input.LA(1)<='\uFFFF') ) {
@@ -227,14 +223,14 @@ public class Wiki extends Lexer {
             int _channel = DEFAULT_TOKEN_CHANNEL;
             int c;
 
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:49:5: ( '@' (c=~ ( '|' | '@' ) )+ ( '|' (c=~ '@' )+ )? '@' )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:49:9: '@' (c=~ ( '|' | '@' ) )+ ( '|' (c=~ '@' )+ )? '@'
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:49:5: ( '@' (c=~ ( '|' | '@' ) )+ ( '|' (c=~ '@' )+ )? '@' )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:49:9: '@' (c=~ ( '|' | '@' ) )+ ( '|' (c=~ '@' )+ )? '@'
             {
             match('@'); if (state.failed) return ;
             if ( state.backtracking==1 ) {
               out.print("<a href=");
             }
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:50:9: (c=~ ( '|' | '@' ) )+
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:50:9: (c=~ ( '|' | '@' ) )+
             int cnt2=0;
             loop2:
             do {
@@ -248,7 +244,7 @@ public class Wiki extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:50:10: c=~ ( '|' | '@' )
+            	    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:50:10: c=~ ( '|' | '@' )
             	    {
             	    c= input.LA(1);
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='?')||(input.LA(1)>='A' && input.LA(1)<='{')||(input.LA(1)>='}' && input.LA(1)<='\uFFFF') ) {
@@ -278,7 +274,7 @@ public class Wiki extends Lexer {
                 cnt2++;
             } while (true);
 
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:51:9: ( '|' (c=~ '@' )+ )?
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:51:9: ( '|' (c=~ '@' )+ )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -287,13 +283,13 @@ public class Wiki extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:51:13: '|' (c=~ '@' )+
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:51:13: '|' (c=~ '@' )+
                     {
                     match('|'); if (state.failed) return ;
                     if ( state.backtracking==1 ) {
                       out.print(">");
                     }
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:52:13: (c=~ '@' )+
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:52:13: (c=~ '@' )+
                     int cnt3=0;
                     loop3:
                     do {
@@ -307,7 +303,7 @@ public class Wiki extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:52:14: c=~ '@'
+                    	    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:52:14: c=~ '@'
                     	    {
                     	    c= input.LA(1);
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='?')||(input.LA(1)>='A' && input.LA(1)<='\uFFFF') ) {
@@ -365,14 +361,14 @@ public class Wiki extends Lexer {
             int _channel = DEFAULT_TOKEN_CHANNEL;
             int c;
 
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:58:5: ( '_' (c=~ '_' )+ '_' )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:58:9: '_' (c=~ '_' )+ '_'
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:58:5: ( '_' (c=~ '_' )+ '_' )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:58:9: '_' (c=~ '_' )+ '_'
             {
             match('_'); if (state.failed) return ;
             if ( state.backtracking==1 ) {
               out.print("<i>");
             }
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:59:9: (c=~ '_' )+
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:59:9: (c=~ '_' )+
             int cnt5=0;
             loop5:
             do {
@@ -386,7 +382,7 @@ public class Wiki extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:59:10: c=~ '_'
+            	    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:59:10: c=~ '_'
             	    {
             	    c= input.LA(1);
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='^')||(input.LA(1)>='`' && input.LA(1)<='\uFFFF') ) {
@@ -436,8 +432,8 @@ public class Wiki extends Lexer {
         try {
             int _type = LI;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:64:3: ({...}? => '* ' )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:64:5: {...}? => '* '
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:64:3: ({...}? => '* ' )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:64:5: {...}? => '* '
             {
             if ( !((getCharPositionInLine()==0)) ) {
                 if (state.backtracking>0) {state.failed=true; return ;}
@@ -464,15 +460,15 @@ public class Wiki extends Lexer {
         try {
             int _type = BLANK_LINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:69:5: ( '\\n\\n' ( UL | SECTION | TABLE | ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:69:9: '\\n\\n' ( UL | SECTION | TABLE | )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:69:5: ( '\\n\\n' ( UL | SECTION | TABLE | ) )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:69:9: '\\n\\n' ( UL | SECTION | TABLE | )
             {
             match("\n\n"); if (state.failed) return ;
 
             if ( state.backtracking==1 ) {
               out.println("\n"); closeList(); 
             }
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:70:9: ( UL | SECTION | TABLE | )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:70:9: ( UL | SECTION | TABLE | )
             int alt6=4;
             int LA6_0 = input.LA(1);
 
@@ -489,28 +485,28 @@ public class Wiki extends Lexer {
                 alt6=4;}
             switch (alt6) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:70:13: UL
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:70:13: UL
                     {
                     mUL(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:71:13: SECTION
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:71:13: SECTION
                     {
                     mSECTION(); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:72:13: TABLE
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:72:13: TABLE
                     {
                     mTABLE(); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:73:30: 
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:73:30: 
                     {
                     if ( state.backtracking==1 ) {
                       out.println("<p>");
@@ -535,8 +531,8 @@ public class Wiki extends Lexer {
     // $ANTLR start "UL"
     public final void mUL() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:80:3: ( '* ' )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:80:5: '* '
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:80:3: ( '* ' )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:80:5: '* '
             {
             match("* "); if (state.failed) return ;
 
@@ -558,14 +554,14 @@ public class Wiki extends Lexer {
             CommonToken SEC_TAIL2=null;
 
             String h=null;
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:86:5: ({...}? => ( '###' | '##' | '#' ) SEC_TAIL )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:86:9: {...}? => ( '###' | '##' | '#' ) SEC_TAIL
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:86:5: ({...}? => ( '###' | '##' | '#' ) SEC_TAIL )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:86:9: {...}? => ( '###' | '##' | '#' ) SEC_TAIL
             {
             if ( !((getCharPositionInLine()==0)) ) {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 throw new FailedPredicateException(input, "SECTION", "getCharPositionInLine()==0");
             }
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:87:9: ( '###' | '##' | '#' )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:87:9: ( '###' | '##' | '#' )
             int alt7=3;
             int LA7_0 = input.LA(1);
 
@@ -609,7 +605,7 @@ public class Wiki extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:87:13: '###'
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:87:13: '###'
                     {
                     match("###"); if (state.failed) return ;
 
@@ -620,7 +616,7 @@ public class Wiki extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:88:13: '##'
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:88:13: '##'
                     {
                     match("##"); if (state.failed) return ;
 
@@ -631,7 +627,7 @@ public class Wiki extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:89:13: '#'
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:89:13: '#'
                     {
                     match('#'); if (state.failed) return ;
                     if ( state.backtracking==1 ) {
@@ -661,15 +657,15 @@ public class Wiki extends Lexer {
     // $ANTLR start "TABLE"
     public final void mTABLE() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:98:5: ( '[' ROW ( '\\n--\\n' ROW )* '\\n' ']' )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:98:9: '[' ROW ( '\\n--\\n' ROW )* '\\n' ']'
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:98:5: ( '[' ROW ( '\\n--\\n' ROW )* '\\n' ']' )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:98:9: '[' ROW ( '\\n--\\n' ROW )* '\\n' ']'
             {
             match('['); if (state.failed) return ;
             if ( state.backtracking==1 ) {
               out.print("<table border=1>\n");
             }
             mROW(); if (state.failed) return ;
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:99:13: ( '\\n--\\n' ROW )*
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:99:13: ( '\\n--\\n' ROW )*
             loop8:
             do {
                 int alt8=2;
@@ -688,7 +684,7 @@ public class Wiki extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:99:14: '\\n--\\n' ROW
+            	    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:99:14: '\\n--\\n' ROW
             	    {
             	    match("\n--\n"); if (state.failed) return ;
 
@@ -719,14 +715,14 @@ public class Wiki extends Lexer {
     // $ANTLR start "ROW"
     public final void mROW() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:105:5: ( COL ( '|' COL )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:105:9: COL ( '|' COL )*
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:105:5: ( COL ( '|' COL )* )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:105:9: COL ( '|' COL )*
             {
             if ( state.backtracking==1 ) {
               out.print("<tr>\n");
             }
             mCOL(); if (state.failed) return ;
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:106:13: ( '|' COL )*
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:106:13: ( '|' COL )*
             loop9:
             do {
                 int alt9=2;
@@ -739,7 +735,7 @@ public class Wiki extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:106:14: '|' COL
+            	    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:106:14: '|' COL
             	    {
             	    match('|'); if (state.failed) return ;
             	    mCOL(); if (state.failed) return ;
@@ -767,13 +763,13 @@ public class Wiki extends Lexer {
     // $ANTLR start "COL"
     public final void mCOL() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:111:5: ( ( TABLE_CONTENT )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:111:9: ( TABLE_CONTENT )+
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:111:5: ( ( TABLE_CONTENT )+ )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:111:9: ( TABLE_CONTENT )+
             {
             if ( state.backtracking==1 ) {
               out.print("<td>");
             }
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:112:9: ( TABLE_CONTENT )+
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:112:9: ( TABLE_CONTENT )+
             int cnt10=0;
             loop10:
             do {
@@ -796,7 +792,7 @@ public class Wiki extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:112:9: TABLE_CONTENT
+            	    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:112:9: TABLE_CONTENT
             	    {
             	    mTABLE_CONTENT(); if (state.failed) return ;
 
@@ -830,7 +826,7 @@ public class Wiki extends Lexer {
         try {
             int c;
 
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:119:5: ( TABLE | BOLD | ITALICS | {...}? =>c= . )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:119:5: ( TABLE | BOLD | ITALICS | {...}? =>c= . )
             int alt11=4;
             int LA11_0 = input.LA(1);
 
@@ -873,28 +869,28 @@ public class Wiki extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:119:9: TABLE
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:119:9: TABLE
                     {
                     mTABLE(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:120:9: BOLD
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:120:9: BOLD
                     {
                     mBOLD(); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:121:9: ITALICS
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:121:9: ITALICS
                     {
                     mITALICS(); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:122:9: {...}? =>c= .
+                    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:122:9: {...}? =>c= .
                     {
                     if ( !((!upcomingEndOfCol())) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
@@ -919,10 +915,10 @@ public class Wiki extends Lexer {
     // $ANTLR start "TAIL"
     public final void mTAIL() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:128:6: ( (~ '\\n' )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:128:8: (~ '\\n' )+
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:128:6: ( (~ '\\n' )+ )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:128:8: (~ '\\n' )+
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:128:8: (~ '\\n' )+
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:128:8: (~ '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -936,7 +932,7 @@ public class Wiki extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:128:8: ~ '\\n'
+            	    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:128:8: ~ '\\n'
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -974,10 +970,10 @@ public class Wiki extends Lexer {
     // $ANTLR start "SEC_TAIL"
     public final void mSEC_TAIL() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:132:10: ( (~ ( '\\n' | '#' ) )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:132:12: (~ ( '\\n' | '#' ) )+
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:132:10: ( (~ ( '\\n' | '#' ) )+ )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:132:12: (~ ( '\\n' | '#' ) )+
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:132:12: (~ ( '\\n' | '#' ) )+
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:132:12: (~ ( '\\n' | '#' ) )+
             int cnt13=0;
             loop13:
             do {
@@ -991,7 +987,7 @@ public class Wiki extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:132:12: ~ ( '\\n' | '#' )
+            	    // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:132:12: ~ ( '\\n' | '#' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\"')||(input.LA(1)>='$' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1033,8 +1029,8 @@ public class Wiki extends Lexer {
             int _channel = DEFAULT_TOKEN_CHANNEL;
             int c;
 
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:135:5: (c= . )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:135:9: c= .
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:135:5: (c= . )
+            // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:135:9: c= .
             {
             c = input.LA(1);
             matchAny(); if (state.failed) return ;
@@ -1053,54 +1049,54 @@ public class Wiki extends Lexer {
     // $ANTLR end "ELSE"
 
     public void mTokens() throws RecognitionException {
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:39: ( TITLE | BOLD | LINK | ITALICS | LI | BLANK_LINE | ELSE )
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:39: ( TITLE | BOLD | LINK | ITALICS | LI | BLANK_LINE | ELSE )
         int alt14=7;
         alt14 = dfa14.predict(input);
         switch (alt14) {
             case 1 :
-                // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:41: TITLE
+                // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:41: TITLE
                 {
                 mTITLE(); if (state.failed) return ;
 
                 }
                 break;
             case 2 :
-                // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:47: BOLD
+                // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:47: BOLD
                 {
                 mBOLD(); if (state.failed) return ;
 
                 }
                 break;
             case 3 :
-                // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:52: LINK
+                // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:52: LINK
                 {
                 mLINK(); if (state.failed) return ;
 
                 }
                 break;
             case 4 :
-                // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:57: ITALICS
+                // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:57: ITALICS
                 {
                 mITALICS(); if (state.failed) return ;
 
                 }
                 break;
             case 5 :
-                // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:65: LI
+                // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:65: LI
                 {
                 mLI(); if (state.failed) return ;
 
                 }
                 break;
             case 6 :
-                // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:68: BLANK_LINE
+                // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:68: BLANK_LINE
                 {
                 mBLANK_LINE(); if (state.failed) return ;
 
                 }
                 break;
             case 7 :
-                // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:79: ELSE
+                // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:79: ELSE
                 {
                 mELSE(); if (state.failed) return ;
 
@@ -1113,8 +1109,8 @@ public class Wiki extends Lexer {
 
     // $ANTLR start synpred1_Wiki
     public final void synpred1_Wiki_fragment() throws RecognitionException {   
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:41: ( TITLE )
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:41: TITLE
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:41: ( TITLE )
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:41: TITLE
         {
         mTITLE(); if (state.failed) return ;
 
@@ -1124,8 +1120,8 @@ public class Wiki extends Lexer {
 
     // $ANTLR start synpred2_Wiki
     public final void synpred2_Wiki_fragment() throws RecognitionException {   
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:47: ( BOLD )
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:47: BOLD
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:47: ( BOLD )
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:47: BOLD
         {
         mBOLD(); if (state.failed) return ;
 
@@ -1135,8 +1131,8 @@ public class Wiki extends Lexer {
 
     // $ANTLR start synpred3_Wiki
     public final void synpred3_Wiki_fragment() throws RecognitionException {   
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:52: ( LINK )
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:52: LINK
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:52: ( LINK )
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:52: LINK
         {
         mLINK(); if (state.failed) return ;
 
@@ -1146,8 +1142,8 @@ public class Wiki extends Lexer {
 
     // $ANTLR start synpred4_Wiki
     public final void synpred4_Wiki_fragment() throws RecognitionException {   
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:57: ( ITALICS )
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:57: ITALICS
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:57: ( ITALICS )
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:57: ITALICS
         {
         mITALICS(); if (state.failed) return ;
 
@@ -1157,8 +1153,8 @@ public class Wiki extends Lexer {
 
     // $ANTLR start synpred5_Wiki
     public final void synpred5_Wiki_fragment() throws RecognitionException {   
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:65: ( LI )
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:65: LI
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:65: ( LI )
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:65: LI
         {
         mLI(); if (state.failed) return ;
 
@@ -1168,8 +1164,8 @@ public class Wiki extends Lexer {
 
     // $ANTLR start synpred6_Wiki
     public final void synpred6_Wiki_fragment() throws RecognitionException {   
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:68: ( BLANK_LINE )
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/wiki/Wiki.g:1:68: BLANK_LINE
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:68: ( BLANK_LINE )
+        // /Users/hotoku/projects/lip/code/trans/wiki/Wiki.g:1:68: BLANK_LINE
         {
         mBLANK_LINE(); if (state.failed) return ;
 
@@ -1205,11 +1201,11 @@ public class Wiki extends Lexer {
         state.failed=false;
         return success;
     }
-    public final boolean synpred1_Wiki() {
+    public final boolean synpred2_Wiki() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred1_Wiki_fragment(); // can never throw exception
+            synpred2_Wiki_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -1233,11 +1229,11 @@ public class Wiki extends Lexer {
         state.failed=false;
         return success;
     }
-    public final boolean synpred5_Wiki() {
+    public final boolean synpred1_Wiki() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred5_Wiki_fragment(); // can never throw exception
+            synpred1_Wiki_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -1247,11 +1243,11 @@ public class Wiki extends Lexer {
         state.failed=false;
         return success;
     }
-    public final boolean synpred2_Wiki() {
+    public final boolean synpred5_Wiki() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred2_Wiki_fragment(); // can never throw exception
+            synpred5_Wiki_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }

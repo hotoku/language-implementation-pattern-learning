@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g 2009-09-23 17:37:50
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g 2020-10-28 21:00:23
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -21,58 +13,58 @@ public class CymbolParser extends Parser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "METHOD_DECL", "ARG_DECL", "BLOCK", "VAR_DECL", "FIELD_DECL", "CALL", "ELIST", "EXPR", "UNARY_MINUS", "UNARY_NOT", "ASSIGN", "INDEX", "ID", "INT", "FLOAT", "CHAR", "LETTER", "WS", "SL_COMMENT", "'struct'", "'{'", "'}'", "';'", "'[]'", "'('", "')'", "','", "'float'", "'int'", "'char'", "'boolean'", "'void'", "'if'", "'else'", "'return'", "'!='", "'=='", "'<'", "'>'", "'<='", "'>='", "'+'", "'-'", "'*'", "'/'", "'!'", "'['", "']'", "'.'", "'true'", "'false'"
     };
-    public static final int INDEX=15;
-    public static final int T__42=42;
-    public static final int T__28=28;
-    public static final int T__23=23;
-    public static final int T__51=51;
-    public static final int EXPR=11;
-    public static final int T__47=47;
-    public static final int FLOAT=18;
-    public static final int T__50=50;
-    public static final int FIELD_DECL=8;
-    public static final int BLOCK=6;
-    public static final int T__39=39;
-    public static final int T__30=30;
-    public static final int T__46=46;
-    public static final int T__52=52;
-    public static final int UNARY_MINUS=12;
-    public static final int INT=17;
-    public static final int UNARY_NOT=13;
-    public static final int T__27=27;
-    public static final int ASSIGN=14;
-    public static final int T__24=24;
-    public static final int T__49=49;
-    public static final int METHOD_DECL=4;
-    public static final int T__48=48;
-    public static final int T__54=54;
-    public static final int T__34=34;
-    public static final int SL_COMMENT=22;
-    public static final int ELIST=10;
-    public static final int ID=16;
+    public static final int VAR_DECL=7;
     public static final int LETTER=20;
+    public static final int T__50=50;
+    public static final int METHOD_DECL=4;
+    public static final int ELIST=10;
+    public static final int INDEX=15;
+    public static final int ID=16;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__54=54;
+    public static final int BLOCK=6;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int CALL=9;
+    public static final int FLOAT=18;
+    public static final int CHAR=19;
+    public static final int UNARY_NOT=13;
+    public static final int ASSIGN=14;
+    public static final int INT=17;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int EXPR=11;
+    public static final int T__39=39;
+    public static final int T__33=33;
+    public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int ARG_DECL=5;
     public static final int WS=21;
-    public static final int CHAR=19;
-    public static final int T__44=44;
-    public static final int T__33=33;
-    public static final int T__29=29;
-    public static final int T__45=45;
-    public static final int T__43=43;
-    public static final int T__31=31;
-    public static final int T__40=40;
     public static final int EOF=-1;
-    public static final int T__53=53;
+    public static final int T__30=30;
+    public static final int T__31=31;
     public static final int T__32=32;
-    public static final int T__38=38;
-    public static final int CALL=9;
-    public static final int T__37=37;
-    public static final int T__26=26;
-    public static final int T__25=25;
-    public static final int VAR_DECL=7;
+    public static final int FIELD_DECL=8;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int UNARY_MINUS=12;
+    public static final int T__44=44;
+    public static final int SL_COMMENT=22;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__40=40;
     public static final int T__41=41;
+    public static final int ARG_DECL=5;
+    public static final int T__42=42;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -96,7 +88,7 @@ public class CymbolParser extends Parser {
     }
 
     public String[] getTokenNames() { return CymbolParser.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g"; }
 
 
     public static class compilationUnit_return extends ParserRuleReturnScope {
@@ -105,7 +97,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "compilationUnit"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:22:1: compilationUnit : ( options {backtrack=true; } : structDeclaration | methodDeclaration | varDeclaration )+ ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:22:1: compilationUnit : ( options {backtrack=true; } : structDeclaration | methodDeclaration | varDeclaration )+ ;
     public final CymbolParser.compilationUnit_return compilationUnit() throws RecognitionException {
         CymbolParser.compilationUnit_return retval = new CymbolParser.compilationUnit_return();
         retval.start = input.LT(1);
@@ -121,12 +113,12 @@ public class CymbolParser extends Parser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:24:5: ( ( options {backtrack=true; } : structDeclaration | methodDeclaration | varDeclaration )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:24:9: ( options {backtrack=true; } : structDeclaration | methodDeclaration | varDeclaration )+
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:24:5: ( ( options {backtrack=true; } : structDeclaration | methodDeclaration | varDeclaration )+ )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:24:9: ( options {backtrack=true; } : structDeclaration | methodDeclaration | varDeclaration )+
             {
             root_0 = (CymbolAST)adaptor.nil();
 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:24:9: ( options {backtrack=true; } : structDeclaration | methodDeclaration | varDeclaration )+
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:24:9: ( options {backtrack=true; } : structDeclaration | methodDeclaration | varDeclaration )+
             int cnt1=0;
             loop1:
             do {
@@ -182,7 +174,7 @@ public class CymbolParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:26:5: structDeclaration
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:26:5: structDeclaration
             	    {
             	    pushFollow(FOLLOW_structDeclaration_in_compilationUnit164);
             	    structDeclaration1=structDeclaration();
@@ -194,7 +186,7 @@ public class CymbolParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:26:25: methodDeclaration
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:26:25: methodDeclaration
             	    {
             	    pushFollow(FOLLOW_methodDeclaration_in_compilationUnit168);
             	    methodDeclaration2=methodDeclaration();
@@ -206,7 +198,7 @@ public class CymbolParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:26:45: varDeclaration
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:26:45: varDeclaration
             	    {
             	    pushFollow(FOLLOW_varDeclaration_in_compilationUnit172);
             	    varDeclaration3=varDeclaration();
@@ -260,7 +252,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "structDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:30:1: structDeclaration : 'struct' ID '{' ( structMember )+ '}' ';' -> ^( 'struct' ID ( structMember )+ ) ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:30:1: structDeclaration : 'struct' ID '{' ( structMember )+ '}' ';' -> ^( 'struct' ID ( structMember )+ ) ;
     public final CymbolParser.structDeclaration_return structDeclaration() throws RecognitionException {
         CymbolParser.structDeclaration_return retval = new CymbolParser.structDeclaration_return();
         retval.start = input.LT(1);
@@ -280,15 +272,15 @@ public class CymbolParser extends Parser {
         CymbolAST char_literal6_tree=null;
         CymbolAST char_literal8_tree=null;
         CymbolAST char_literal9_tree=null;
-        RewriteRuleTokenStream stream_24=new RewriteRuleTokenStream(adaptor,"token 24");
-        RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
         RewriteRuleTokenStream stream_23=new RewriteRuleTokenStream(adaptor,"token 23");
+        RewriteRuleTokenStream stream_24=new RewriteRuleTokenStream(adaptor,"token 24");
         RewriteRuleTokenStream stream_25=new RewriteRuleTokenStream(adaptor,"token 25");
+        RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleSubtreeStream stream_structMember=new RewriteRuleSubtreeStream(adaptor,"rule structMember");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:31:2: ( 'struct' ID '{' ( structMember )+ '}' ';' -> ^( 'struct' ID ( structMember )+ ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:31:4: 'struct' ID '{' ( structMember )+ '}' ';'
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:31:2: ( 'struct' ID '{' ( structMember )+ '}' ';' -> ^( 'struct' ID ( structMember )+ ) )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:31:4: 'struct' ID '{' ( structMember )+ '}' ';'
             {
             string_literal4=(Token)match(input,23,FOLLOW_23_in_structDeclaration191); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_23.add(string_literal4);
@@ -299,7 +291,7 @@ public class CymbolParser extends Parser {
             char_literal6=(Token)match(input,24,FOLLOW_24_in_structDeclaration195); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_24.add(char_literal6);
 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:31:20: ( structMember )+
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:31:20: ( structMember )+
             int cnt2=0;
             loop2:
             do {
@@ -313,7 +305,7 @@ public class CymbolParser extends Parser {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:31:20: structMember
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:31:20: structMember
             	    {
             	    pushFollow(FOLLOW_structMember_in_structDeclaration197);
             	    structMember7=structMember();
@@ -344,7 +336,7 @@ public class CymbolParser extends Parser {
 
 
             // AST REWRITE
-            // elements: ID, structMember, 23
+            // elements: 23, ID, structMember
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -357,7 +349,7 @@ public class CymbolParser extends Parser {
             root_0 = (CymbolAST)adaptor.nil();
             // 31:42: -> ^( 'struct' ID ( structMember )+ )
             {
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:31:45: ^( 'struct' ID ( structMember )+ )
+                // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:31:45: ^( 'struct' ID ( structMember )+ )
                 {
                 CymbolAST root_1 = (CymbolAST)adaptor.nil();
                 root_1 = (CymbolAST)adaptor.becomeRoot(stream_23.nextNode(), root_1);
@@ -406,7 +398,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "structMember"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:34:1: structMember : ( type ID ';' -> ^( FIELD_DECL type ID ) | type ID '[]' ';' -> ^( FIELD_DECL ^( '[]' type ) ID ) | structDeclaration );
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:34:1: structMember : ( type ID ';' -> ^( FIELD_DECL type ID ) | type ID '[]' ';' -> ^( FIELD_DECL ^( '[]' type ) ID ) | structDeclaration );
     public final CymbolParser.structMember_return structMember() throws RecognitionException {
         CymbolParser.structMember_return retval = new CymbolParser.structMember_return();
         retval.start = input.LT(1);
@@ -435,7 +427,7 @@ public class CymbolParser extends Parser {
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:35:2: ( type ID ';' -> ^( FIELD_DECL type ID ) | type ID '[]' ';' -> ^( FIELD_DECL ^( '[]' type ) ID ) | structDeclaration )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:35:2: ( type ID ';' -> ^( FIELD_DECL type ID ) | type ID '[]' ';' -> ^( FIELD_DECL ^( '[]' type ) ID ) | structDeclaration )
             int alt3=3;
             int LA3_0 = input.LA(1);
 
@@ -445,11 +437,11 @@ public class CymbolParser extends Parser {
                 if ( (LA3_1==ID) ) {
                     int LA3_3 = input.LA(3);
 
-                    if ( (LA3_3==27) ) {
-                        alt3=2;
-                    }
-                    else if ( (LA3_3==26) ) {
+                    if ( (LA3_3==26) ) {
                         alt3=1;
+                    }
+                    else if ( (LA3_3==27) ) {
+                        alt3=2;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return retval;}
@@ -479,11 +471,11 @@ public class CymbolParser extends Parser {
                     else if ( (LA3_4==ID) ) {
                         int LA3_3 = input.LA(4);
 
-                        if ( (LA3_3==27) ) {
-                            alt3=2;
-                        }
-                        else if ( (LA3_3==26) ) {
+                        if ( (LA3_3==26) ) {
                             alt3=1;
+                        }
+                        else if ( (LA3_3==27) ) {
+                            alt3=2;
                         }
                         else {
                             if (state.backtracking>0) {state.failed=true; return retval;}
@@ -518,7 +510,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt3) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:35:4: type ID ';'
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:35:4: type ID ';'
                     {
                     pushFollow(FOLLOW_type_in_structMember226);
                     type10=type();
@@ -548,7 +540,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 35:18: -> ^( FIELD_DECL type ID )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:35:21: ^( FIELD_DECL type ID )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:35:21: ^( FIELD_DECL type ID )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(FIELD_DECL, "FIELD_DECL"), root_1);
@@ -565,7 +557,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:36:4: type ID '[]' ';'
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:36:4: type ID '[]' ';'
                     {
                     pushFollow(FOLLOW_type_in_structMember247);
                     type13=type();
@@ -585,7 +577,7 @@ public class CymbolParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: type, ID, 27
+                    // elements: type, 27, ID
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -598,12 +590,12 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 36:21: -> ^( FIELD_DECL ^( '[]' type ) ID )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:36:24: ^( FIELD_DECL ^( '[]' type ) ID )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:36:24: ^( FIELD_DECL ^( '[]' type ) ID )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(FIELD_DECL, "FIELD_DECL"), root_1);
 
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:36:37: ^( '[]' type )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:36:37: ^( '[]' type )
                         {
                         CymbolAST root_2 = (CymbolAST)adaptor.nil();
                         root_2 = (CymbolAST)adaptor.becomeRoot(stream_27.nextNode(), root_2);
@@ -623,7 +615,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:37:4: structDeclaration
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:37:4: structDeclaration
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -664,7 +656,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "methodDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:41:1: methodDeclaration : type ID '(' ( formalParameters )? ')' block -> ^( METHOD_DECL type ID ( formalParameters )? block ) ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:41:1: methodDeclaration : type ID '(' ( formalParameters )? ')' block -> ^( METHOD_DECL type ID ( formalParameters )? block ) ;
     public final CymbolParser.methodDeclaration_return methodDeclaration() throws RecognitionException {
         CymbolParser.methodDeclaration_return retval = new CymbolParser.methodDeclaration_return();
         retval.start = input.LT(1);
@@ -688,11 +680,11 @@ public class CymbolParser extends Parser {
         RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleSubtreeStream stream_formalParameters=new RewriteRuleSubtreeStream(adaptor,"rule formalParameters");
-        RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
+        RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:42:5: ( type ID '(' ( formalParameters )? ')' block -> ^( METHOD_DECL type ID ( formalParameters )? block ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:42:9: type ID '(' ( formalParameters )? ')' block
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:42:5: ( type ID '(' ( formalParameters )? ')' block -> ^( METHOD_DECL type ID ( formalParameters )? block ) )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:42:9: type ID '(' ( formalParameters )? ')' block
             {
             pushFollow(FOLLOW_type_in_methodDeclaration289);
             type18=type();
@@ -706,7 +698,7 @@ public class CymbolParser extends Parser {
             char_literal20=(Token)match(input,28,FOLLOW_28_in_methodDeclaration293); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_28.add(char_literal20);
 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:42:21: ( formalParameters )?
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:42:21: ( formalParameters )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -715,7 +707,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt4) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:42:21: formalParameters
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:42:21: formalParameters
                     {
                     pushFollow(FOLLOW_formalParameters_in_methodDeclaration295);
                     formalParameters21=formalParameters();
@@ -741,7 +733,7 @@ public class CymbolParser extends Parser {
 
 
             // AST REWRITE
-            // elements: type, block, ID, formalParameters
+            // elements: ID, type, block, formalParameters
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -754,14 +746,14 @@ public class CymbolParser extends Parser {
             root_0 = (CymbolAST)adaptor.nil();
             // 43:9: -> ^( METHOD_DECL type ID ( formalParameters )? block )
             {
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:43:12: ^( METHOD_DECL type ID ( formalParameters )? block )
+                // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:43:12: ^( METHOD_DECL type ID ( formalParameters )? block )
                 {
                 CymbolAST root_1 = (CymbolAST)adaptor.nil();
                 root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(METHOD_DECL, "METHOD_DECL"), root_1);
 
                 adaptor.addChild(root_1, stream_type.nextTree());
                 adaptor.addChild(root_1, stream_ID.nextNode());
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:43:34: ( formalParameters )?
+                // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:43:34: ( formalParameters )?
                 if ( stream_formalParameters.hasNext() ) {
                     adaptor.addChild(root_1, stream_formalParameters.nextTree());
 
@@ -803,7 +795,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "formalParameters"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:47:1: formalParameters : parameter ( ',' parameter )* -> ( parameter )+ ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:47:1: formalParameters : parameter ( ',' parameter )* -> ( parameter )+ ;
     public final CymbolParser.formalParameters_return formalParameters() throws RecognitionException {
         CymbolParser.formalParameters_return retval = new CymbolParser.formalParameters_return();
         retval.start = input.LT(1);
@@ -820,8 +812,8 @@ public class CymbolParser extends Parser {
         RewriteRuleTokenStream stream_30=new RewriteRuleTokenStream(adaptor,"token 30");
         RewriteRuleSubtreeStream stream_parameter=new RewriteRuleSubtreeStream(adaptor,"rule parameter");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:48:5: ( parameter ( ',' parameter )* -> ( parameter )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:48:9: parameter ( ',' parameter )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:48:5: ( parameter ( ',' parameter )* -> ( parameter )+ )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:48:9: parameter ( ',' parameter )*
             {
             pushFollow(FOLLOW_parameter_in_formalParameters343);
             parameter24=parameter();
@@ -829,7 +821,7 @@ public class CymbolParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_parameter.add(parameter24.getTree());
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:48:19: ( ',' parameter )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:48:19: ( ',' parameter )*
             loop5:
             do {
                 int alt5=2;
@@ -842,7 +834,7 @@ public class CymbolParser extends Parser {
 
                 switch (alt5) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:48:20: ',' parameter
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:48:20: ',' parameter
             	    {
             	    char_literal25=(Token)match(input,30,FOLLOW_30_in_formalParameters346); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_30.add(char_literal25);
@@ -918,7 +910,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "parameter"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:51:1: parameter : ( type ID -> ^( ARG_DECL type ID ) | type ID '[]' -> ^( ARG_DECL ^( '[]' type ) ID ) );
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:51:1: parameter : ( type ID -> ^( ARG_DECL type ID ) | type ID '[]' -> ^( ARG_DECL ^( '[]' type ) ID ) );
     public final CymbolParser.parameter_return parameter() throws RecognitionException {
         CymbolParser.parameter_return retval = new CymbolParser.parameter_return();
         retval.start = input.LT(1);
@@ -940,7 +932,7 @@ public class CymbolParser extends Parser {
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:52:2: ( type ID -> ^( ARG_DECL type ID ) | type ID '[]' -> ^( ARG_DECL ^( '[]' type ) ID ) )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:52:2: ( type ID -> ^( ARG_DECL type ID ) | type ID '[]' -> ^( ARG_DECL ^( '[]' type ) ID ) )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1020,7 +1012,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt6) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:52:4: type ID
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:52:4: type ID
                     {
                     pushFollow(FOLLOW_type_in_parameter373);
                     type27=type();
@@ -1047,7 +1039,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 52:14: -> ^( ARG_DECL type ID )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:52:17: ^( ARG_DECL type ID )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:52:17: ^( ARG_DECL type ID )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(ARG_DECL, "ARG_DECL"), root_1);
@@ -1064,7 +1056,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:53:4: type ID '[]'
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:53:4: type ID '[]'
                     {
                     pushFollow(FOLLOW_type_in_parameter392);
                     type29=type();
@@ -1081,7 +1073,7 @@ public class CymbolParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: ID, 27, type
+                    // elements: 27, ID, type
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1094,12 +1086,12 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 53:17: -> ^( ARG_DECL ^( '[]' type ) ID )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:53:20: ^( ARG_DECL ^( '[]' type ) ID )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:53:20: ^( ARG_DECL ^( '[]' type ) ID )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(ARG_DECL, "ARG_DECL"), root_1);
 
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:53:31: ^( '[]' type )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:53:31: ^( '[]' type )
                         {
                         CymbolAST root_2 = (CymbolAST)adaptor.nil();
                         root_2 = (CymbolAST)adaptor.becomeRoot(stream_27.nextNode(), root_2);
@@ -1146,7 +1138,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "type"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:56:1: type : ( primitiveType | 'struct' ID -> ID );
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:56:1: type : ( primitiveType | 'struct' ID -> ID );
     public final CymbolParser.type_return type() throws RecognitionException {
         CymbolParser.type_return retval = new CymbolParser.type_return();
         retval.start = input.LT(1);
@@ -1164,7 +1156,7 @@ public class CymbolParser extends Parser {
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:56:5: ( primitiveType | 'struct' ID -> ID )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:56:5: ( primitiveType | 'struct' ID -> ID )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1183,7 +1175,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt7) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:56:7: primitiveType
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:56:7: primitiveType
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -1197,7 +1189,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:57:7: 'struct' ID
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:57:7: 'struct' ID
                     {
                     string_literal33=(Token)match(input,23,FOLLOW_23_in_type427); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_23.add(string_literal33);
@@ -1256,7 +1248,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "primitiveType"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:60:1: primitiveType : ( 'float' | 'int' | 'char' | 'boolean' | 'void' );
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:60:1: primitiveType : ( 'float' | 'int' | 'char' | 'boolean' | 'void' );
     public final CymbolParser.primitiveType_return primitiveType() throws RecognitionException {
         CymbolParser.primitiveType_return retval = new CymbolParser.primitiveType_return();
         retval.start = input.LT(1);
@@ -1268,8 +1260,8 @@ public class CymbolParser extends Parser {
         CymbolAST set35_tree=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:61:2: ( 'float' | 'int' | 'char' | 'boolean' | 'void' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:61:2: ( 'float' | 'int' | 'char' | 'boolean' | 'void' )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -1314,7 +1306,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "block"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:69:1: block : '{' ( statement )* '}' -> ^( BLOCK ( statement )* ) ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:69:1: block : '{' ( statement )* '}' -> ^( BLOCK ( statement )* ) ;
     public final CymbolParser.block_return block() throws RecognitionException {
         CymbolParser.block_return retval = new CymbolParser.block_return();
         retval.start = input.LT(1);
@@ -1332,13 +1324,13 @@ public class CymbolParser extends Parser {
         RewriteRuleTokenStream stream_25=new RewriteRuleTokenStream(adaptor,"token 25");
         RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:70:5: ( '{' ( statement )* '}' -> ^( BLOCK ( statement )* ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:70:9: '{' ( statement )* '}'
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:70:5: ( '{' ( statement )* '}' -> ^( BLOCK ( statement )* ) )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:70:9: '{' ( statement )* '}'
             {
             char_literal36=(Token)match(input,24,FOLLOW_24_in_block500); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_24.add(char_literal36);
 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:70:13: ( statement )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:70:13: ( statement )*
             loop8:
             do {
                 int alt8=2;
@@ -1351,7 +1343,7 @@ public class CymbolParser extends Parser {
 
                 switch (alt8) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:70:13: statement
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:70:13: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_block502);
             	    statement37=statement();
@@ -1387,12 +1379,12 @@ public class CymbolParser extends Parser {
             root_0 = (CymbolAST)adaptor.nil();
             // 70:28: -> ^( BLOCK ( statement )* )
             {
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:70:31: ^( BLOCK ( statement )* )
+                // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:70:31: ^( BLOCK ( statement )* )
                 {
                 CymbolAST root_1 = (CymbolAST)adaptor.nil();
                 root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(BLOCK, "BLOCK"), root_1);
 
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:70:39: ( statement )*
+                // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:70:39: ( statement )*
                 while ( stream_statement.hasNext() ) {
                     adaptor.addChild(root_1, stream_statement.nextTree());
 
@@ -1433,7 +1425,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "varDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:75:1: varDeclaration : ( type ID ( '=' expression )? ';' -> ^( VAR_DECL type ID ( expression )? ) | type ID '[]' ( '=' expression )? ';' -> ^( VAR_DECL ^( '[]' type ) ID ( expression )? ) );
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:75:1: varDeclaration : ( type ID ( '=' expression )? ';' -> ^( VAR_DECL type ID ( expression )? ) | type ID '[]' ( '=' expression )? ';' -> ^( VAR_DECL ^( '[]' type ) ID ( expression )? ) );
     public final CymbolParser.varDeclaration_return varDeclaration() throws RecognitionException {
         CymbolParser.varDeclaration_return retval = new CymbolParser.varDeclaration_return();
         retval.start = input.LT(1);
@@ -1465,12 +1457,12 @@ public class CymbolParser extends Parser {
         CymbolAST char_literal49_tree=null;
         RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
         RewriteRuleTokenStream stream_27=new RewriteRuleTokenStream(adaptor,"token 27");
-        RewriteRuleTokenStream stream_ASSIGN=new RewriteRuleTokenStream(adaptor,"token ASSIGN");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
-        RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
+        RewriteRuleTokenStream stream_ASSIGN=new RewriteRuleTokenStream(adaptor,"token ASSIGN");
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
+        RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:76:5: ( type ID ( '=' expression )? ';' -> ^( VAR_DECL type ID ( expression )? ) | type ID '[]' ( '=' expression )? ';' -> ^( VAR_DECL ^( '[]' type ) ID ( expression )? ) )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:76:5: ( type ID ( '=' expression )? ';' -> ^( VAR_DECL type ID ( expression )? ) | type ID '[]' ( '=' expression )? ';' -> ^( VAR_DECL ^( '[]' type ) ID ( expression )? ) )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1550,7 +1542,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt11) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:76:9: type ID ( '=' expression )? ';'
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:76:9: type ID ( '=' expression )? ';'
                     {
                     pushFollow(FOLLOW_type_in_varDeclaration535);
                     type39=type();
@@ -1561,7 +1553,7 @@ public class CymbolParser extends Parser {
                     ID40=(Token)match(input,ID,FOLLOW_ID_in_varDeclaration537); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ID.add(ID40);
 
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:76:17: ( '=' expression )?
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:76:17: ( '=' expression )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1570,7 +1562,7 @@ public class CymbolParser extends Parser {
                     }
                     switch (alt9) {
                         case 1 :
-                            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:76:18: '=' expression
+                            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:76:18: '=' expression
                             {
                             char_literal41=(Token)match(input,ASSIGN,FOLLOW_ASSIGN_in_varDeclaration540); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_ASSIGN.add(char_literal41);
@@ -1606,14 +1598,14 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 76:43: -> ^( VAR_DECL type ID ( expression )? )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:76:46: ^( VAR_DECL type ID ( expression )? )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:76:46: ^( VAR_DECL type ID ( expression )? )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(VAR_DECL, "VAR_DECL"), root_1);
 
                         adaptor.addChild(root_1, stream_type.nextTree());
                         adaptor.addChild(root_1, stream_ID.nextNode());
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:76:65: ( expression )?
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:76:65: ( expression )?
                         if ( stream_expression.hasNext() ) {
                             adaptor.addChild(root_1, stream_expression.nextTree());
 
@@ -1629,7 +1621,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:77:7: type ID '[]' ( '=' expression )? ';'
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:77:7: type ID '[]' ( '=' expression )? ';'
                     {
                     pushFollow(FOLLOW_type_in_varDeclaration571);
                     type44=type();
@@ -1643,7 +1635,7 @@ public class CymbolParser extends Parser {
                     string_literal46=(Token)match(input,27,FOLLOW_27_in_varDeclaration575); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_27.add(string_literal46);
 
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:77:20: ( '=' expression )?
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:77:20: ( '=' expression )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1652,7 +1644,7 @@ public class CymbolParser extends Parser {
                     }
                     switch (alt10) {
                         case 1 :
-                            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:77:21: '=' expression
+                            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:77:21: '=' expression
                             {
                             char_literal47=(Token)match(input,ASSIGN,FOLLOW_ASSIGN_in_varDeclaration578); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_ASSIGN.add(char_literal47);
@@ -1675,7 +1667,7 @@ public class CymbolParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: 27, ID, expression, type
+                    // elements: expression, type, 27, ID
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1688,12 +1680,12 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 77:42: -> ^( VAR_DECL ^( '[]' type ) ID ( expression )? )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:77:45: ^( VAR_DECL ^( '[]' type ) ID ( expression )? )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:77:45: ^( VAR_DECL ^( '[]' type ) ID ( expression )? )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(VAR_DECL, "VAR_DECL"), root_1);
 
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:77:56: ^( '[]' type )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:77:56: ^( '[]' type )
                         {
                         CymbolAST root_2 = (CymbolAST)adaptor.nil();
                         root_2 = (CymbolAST)adaptor.becomeRoot(stream_27.nextNode(), root_2);
@@ -1703,7 +1695,7 @@ public class CymbolParser extends Parser {
                         adaptor.addChild(root_1, root_2);
                         }
                         adaptor.addChild(root_1, stream_ID.nextNode());
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:77:72: ( expression )?
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:77:72: ( expression )?
                         if ( stream_expression.hasNext() ) {
                             adaptor.addChild(root_1, stream_expression.nextTree());
 
@@ -1746,7 +1738,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "statement"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:81:1: statement options {backtrack=true; } : ( block | structDeclaration | varDeclaration | 'if' '(' expression ')' s= statement ( 'else' e= statement )? -> ^( 'if' expression $s ( $e)? ) | 'return' ( expression )? ';' -> ^( 'return' ( expression )? ) | lhs '=' expression ';' -> ^( '=' lhs expression ) | a= postfixExpression ';' -> ^( EXPR postfixExpression ) );
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:81:1: statement options {backtrack=true; } : ( block | structDeclaration | varDeclaration | 'if' '(' expression ')' s= statement ( 'else' e= statement )? -> ^( 'if' expression $s ( $e)? ) | 'return' ( expression )? ';' -> ^( 'return' ( expression )? ) | lhs '=' expression ';' -> ^( '=' lhs expression ) | a= postfixExpression ';' -> ^( EXPR postfixExpression ) );
     public final CymbolParser.statement_return statement() throws RecognitionException {
         CymbolParser.statement_return retval = new CymbolParser.statement_return();
         retval.start = input.LT(1);
@@ -1792,24 +1784,24 @@ public class CymbolParser extends Parser {
         CymbolAST char_literal62_tree=null;
         CymbolAST char_literal64_tree=null;
         CymbolAST char_literal65_tree=null;
+        RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
+        RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
+        RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
+        RewriteRuleTokenStream stream_38=new RewriteRuleTokenStream(adaptor,"token 38");
         RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
         RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
-        RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
-        RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
-        RewriteRuleTokenStream stream_38=new RewriteRuleTokenStream(adaptor,"token 38");
         RewriteRuleTokenStream stream_ASSIGN=new RewriteRuleTokenStream(adaptor,"token ASSIGN");
-        RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
+        RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         RewriteRuleSubtreeStream stream_lhs=new RewriteRuleSubtreeStream(adaptor,"rule lhs");
         RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
-        RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         RewriteRuleSubtreeStream stream_postfixExpression=new RewriteRuleSubtreeStream(adaptor,"rule postfixExpression");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:83:5: ( block | structDeclaration | varDeclaration | 'if' '(' expression ')' s= statement ( 'else' e= statement )? -> ^( 'if' expression $s ( $e)? ) | 'return' ( expression )? ';' -> ^( 'return' ( expression )? ) | lhs '=' expression ';' -> ^( '=' lhs expression ) | a= postfixExpression ';' -> ^( EXPR postfixExpression ) )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:83:5: ( block | structDeclaration | varDeclaration | 'if' '(' expression ')' s= statement ( 'else' e= statement )? -> ^( 'if' expression $s ( $e)? ) | 'return' ( expression )? ';' -> ^( 'return' ( expression )? ) | lhs '=' expression ';' -> ^( '=' lhs expression ) | a= postfixExpression ';' -> ^( EXPR postfixExpression ) )
             int alt14=7;
             alt14 = dfa14.predict(input);
             switch (alt14) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:83:9: block
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:83:9: block
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -1823,7 +1815,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:84:7: structDeclaration
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:84:7: structDeclaration
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -1837,7 +1829,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:85:7: varDeclaration
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:85:7: varDeclaration
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -1851,7 +1843,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:86:7: 'if' '(' expression ')' s= statement ( 'else' e= statement )?
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:86:7: 'if' '(' expression ')' s= statement ( 'else' e= statement )?
                     {
                     string_literal53=(Token)match(input,36,FOLLOW_36_in_statement650); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_36.add(string_literal53);
@@ -1874,7 +1866,7 @@ public class CymbolParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_statement.add(s.getTree());
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:86:43: ( 'else' e= statement )?
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:86:43: ( 'else' e= statement )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -1883,7 +1875,7 @@ public class CymbolParser extends Parser {
                     }
                     switch (alt12) {
                         case 1 :
-                            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:86:44: 'else' e= statement
+                            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:86:44: 'else' e= statement
                             {
                             string_literal57=(Token)match(input,37,FOLLOW_37_in_statement663); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_37.add(string_literal57);
@@ -1903,29 +1895,29 @@ public class CymbolParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: e, 36, s, expression
+                    // elements: 36, e, expression, s
                     // token labels: 
-                    // rule labels: retval, s, e
+                    // rule labels: s, e, retval
                     // token list labels: 
                     // rule list labels: 
                     // wildcard labels: 
                     if ( state.backtracking==0 ) {
                     retval.tree = root_0;
-                    RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
                     RewriteRuleSubtreeStream stream_s=new RewriteRuleSubtreeStream(adaptor,"rule s",s!=null?s.tree:null);
                     RewriteRuleSubtreeStream stream_e=new RewriteRuleSubtreeStream(adaptor,"rule e",e!=null?e.tree:null);
+                    RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CymbolAST)adaptor.nil();
                     // 87:6: -> ^( 'if' expression $s ( $e)? )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:87:9: ^( 'if' expression $s ( $e)? )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:87:9: ^( 'if' expression $s ( $e)? )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot(stream_36.nextNode(), root_1);
 
                         adaptor.addChild(root_1, stream_expression.nextTree());
                         adaptor.addChild(root_1, stream_s.nextTree());
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:87:30: ( $e)?
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:87:30: ( $e)?
                         if ( stream_e.hasNext() ) {
                             adaptor.addChild(root_1, stream_e.nextTree());
 
@@ -1941,12 +1933,12 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:88:9: 'return' ( expression )? ';'
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:88:9: 'return' ( expression )? ';'
                     {
                     string_literal58=(Token)match(input,38,FOLLOW_38_in_statement699); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_38.add(string_literal58);
 
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:88:18: ( expression )?
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:88:18: ( expression )?
                     int alt13=2;
                     int LA13_0 = input.LA(1);
 
@@ -1955,7 +1947,7 @@ public class CymbolParser extends Parser {
                     }
                     switch (alt13) {
                         case 1 :
-                            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:88:18: expression
+                            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:88:18: expression
                             {
                             pushFollow(FOLLOW_expression_in_statement701);
                             expression59=expression();
@@ -1988,12 +1980,12 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 88:34: -> ^( 'return' ( expression )? )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:88:37: ^( 'return' ( expression )? )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:88:37: ^( 'return' ( expression )? )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot(stream_38.nextNode(), root_1);
 
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:88:48: ( expression )?
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:88:48: ( expression )?
                         if ( stream_expression.hasNext() ) {
                             adaptor.addChild(root_1, stream_expression.nextTree());
 
@@ -2009,7 +2001,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:89:7: lhs '=' expression ';'
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:89:7: lhs '=' expression ';'
                     {
                     pushFollow(FOLLOW_lhs_in_statement721);
                     lhs61=lhs();
@@ -2032,7 +2024,7 @@ public class CymbolParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: lhs, ASSIGN, expression
+                    // elements: expression, lhs, ASSIGN
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2045,7 +2037,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 89:30: -> ^( '=' lhs expression )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:89:33: ^( '=' lhs expression )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:89:33: ^( '=' lhs expression )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot(stream_ASSIGN.nextNode(), root_1);
@@ -2062,7 +2054,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:90:9: a= postfixExpression ';'
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:90:9: a= postfixExpression ';'
                     {
                     pushFollow(FOLLOW_postfixExpression_in_statement749);
                     a=postfixExpression();
@@ -2089,7 +2081,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 91:7: -> ^( EXPR postfixExpression )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:91:10: ^( EXPR postfixExpression )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:91:10: ^( EXPR postfixExpression )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(EXPR, "EXPR"), root_1);
@@ -2132,7 +2124,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "lhs"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:94:1: lhs : postfixExpression -> ^( EXPR postfixExpression ) ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:94:1: lhs : postfixExpression -> ^( EXPR postfixExpression ) ;
     public final CymbolParser.lhs_return lhs() throws RecognitionException {
         CymbolParser.lhs_return retval = new CymbolParser.lhs_return();
         retval.start = input.LT(1);
@@ -2144,8 +2136,8 @@ public class CymbolParser extends Parser {
 
         RewriteRuleSubtreeStream stream_postfixExpression=new RewriteRuleSubtreeStream(adaptor,"rule postfixExpression");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:94:5: ( postfixExpression -> ^( EXPR postfixExpression ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:94:7: postfixExpression
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:94:5: ( postfixExpression -> ^( EXPR postfixExpression ) )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:94:7: postfixExpression
             {
             pushFollow(FOLLOW_postfixExpression_in_lhs779);
             postfixExpression66=postfixExpression();
@@ -2169,7 +2161,7 @@ public class CymbolParser extends Parser {
             root_0 = (CymbolAST)adaptor.nil();
             // 94:25: -> ^( EXPR postfixExpression )
             {
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:94:28: ^( EXPR postfixExpression )
+                // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:94:28: ^( EXPR postfixExpression )
                 {
                 CymbolAST root_1 = (CymbolAST)adaptor.nil();
                 root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(EXPR, "EXPR"), root_1);
@@ -2210,7 +2202,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "expressionList"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:97:1: expressionList : ( expr ( ',' expr )* -> ^( ELIST ( expr )+ ) | -> ELIST );
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:97:1: expressionList : ( expr ( ',' expr )* -> ^( ELIST ( expr )+ ) | -> ELIST );
     public final CymbolParser.expressionList_return expressionList() throws RecognitionException {
         CymbolParser.expressionList_return retval = new CymbolParser.expressionList_return();
         retval.start = input.LT(1);
@@ -2227,7 +2219,7 @@ public class CymbolParser extends Parser {
         RewriteRuleTokenStream stream_30=new RewriteRuleTokenStream(adaptor,"token 30");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:98:5: ( expr ( ',' expr )* -> ^( ELIST ( expr )+ ) | -> ELIST )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:98:5: ( expr ( ',' expr )* -> ^( ELIST ( expr )+ ) | -> ELIST )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -2246,7 +2238,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt16) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:98:9: expr ( ',' expr )*
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:98:9: expr ( ',' expr )*
                     {
                     pushFollow(FOLLOW_expr_in_expressionList804);
                     expr67=expr();
@@ -2254,7 +2246,7 @@ public class CymbolParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_expr.add(expr67.getTree());
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:98:14: ( ',' expr )*
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:98:14: ( ',' expr )*
                     loop15:
                     do {
                         int alt15=2;
@@ -2267,7 +2259,7 @@ public class CymbolParser extends Parser {
 
                         switch (alt15) {
                     	case 1 :
-                    	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:98:15: ',' expr
+                    	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:98:15: ',' expr
                     	    {
                     	    char_literal68=(Token)match(input,30,FOLLOW_30_in_expressionList807); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_30.add(char_literal68);
@@ -2303,7 +2295,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 98:26: -> ^( ELIST ( expr )+ )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:98:29: ^( ELIST ( expr )+ )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:98:29: ^( ELIST ( expr )+ )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(ELIST, "ELIST"), root_1);
@@ -2326,7 +2318,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:99:9: 
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:99:9: 
                     {
 
                     // AST REWRITE
@@ -2378,7 +2370,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "expression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:102:1: expression : expr -> ^( EXPR expr ) ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:102:1: expression : expr -> ^( EXPR expr ) ;
     public final CymbolParser.expression_return expression() throws RecognitionException {
         CymbolParser.expression_return retval = new CymbolParser.expression_return();
         retval.start = input.LT(1);
@@ -2390,8 +2382,8 @@ public class CymbolParser extends Parser {
 
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:103:5: ( expr -> ^( EXPR expr ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:103:9: expr
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:103:5: ( expr -> ^( EXPR expr ) )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:103:9: expr
             {
             pushFollow(FOLLOW_expr_in_expression851);
             expr70=expr();
@@ -2415,7 +2407,7 @@ public class CymbolParser extends Parser {
             root_0 = (CymbolAST)adaptor.nil();
             // 103:14: -> ^( EXPR expr )
             {
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:103:17: ^( EXPR expr )
+                // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:103:17: ^( EXPR expr )
                 {
                 CymbolAST root_1 = (CymbolAST)adaptor.nil();
                 root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(EXPR, "EXPR"), root_1);
@@ -2456,7 +2448,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "expr"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:106:1: expr : equalityExpression ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:106:1: expr : equalityExpression ;
     public final CymbolParser.expr_return expr() throws RecognitionException {
         CymbolParser.expr_return retval = new CymbolParser.expr_return();
         retval.start = input.LT(1);
@@ -2468,8 +2460,8 @@ public class CymbolParser extends Parser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:106:5: ( equalityExpression )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:106:7: equalityExpression
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:106:5: ( equalityExpression )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:106:7: equalityExpression
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -2508,7 +2500,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "equalityExpression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:109:1: equalityExpression : relationalExpression ( ( '!=' | '==' ) relationalExpression )* ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:109:1: equalityExpression : relationalExpression ( ( '!=' | '==' ) relationalExpression )* ;
     public final CymbolParser.equalityExpression_return equalityExpression() throws RecognitionException {
         CymbolParser.equalityExpression_return retval = new CymbolParser.equalityExpression_return();
         retval.start = input.LT(1);
@@ -2526,8 +2518,8 @@ public class CymbolParser extends Parser {
         CymbolAST string_literal74_tree=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:110:2: ( relationalExpression ( ( '!=' | '==' ) relationalExpression )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:110:4: relationalExpression ( ( '!=' | '==' ) relationalExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:110:2: ( relationalExpression ( ( '!=' | '==' ) relationalExpression )* )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:110:4: relationalExpression ( ( '!=' | '==' ) relationalExpression )*
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -2537,7 +2529,7 @@ public class CymbolParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, relationalExpression72.getTree());
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:110:25: ( ( '!=' | '==' ) relationalExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:110:25: ( ( '!=' | '==' ) relationalExpression )*
             loop18:
             do {
                 int alt18=2;
@@ -2550,9 +2542,9 @@ public class CymbolParser extends Parser {
 
                 switch (alt18) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:110:26: ( '!=' | '==' ) relationalExpression
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:110:26: ( '!=' | '==' ) relationalExpression
             	    {
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:110:26: ( '!=' | '==' )
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:110:26: ( '!=' | '==' )
             	    int alt17=2;
             	    int LA17_0 = input.LA(1);
 
@@ -2571,7 +2563,7 @@ public class CymbolParser extends Parser {
             	    }
             	    switch (alt17) {
             	        case 1 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:110:27: '!='
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:110:27: '!='
             	            {
             	            string_literal73=(Token)match(input,39,FOLLOW_39_in_equalityExpression887); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2582,7 +2574,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:110:35: '=='
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:110:35: '=='
             	            {
             	            string_literal74=(Token)match(input,40,FOLLOW_40_in_equalityExpression892); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2639,7 +2631,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "relationalExpression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:113:1: relationalExpression : additiveExpression ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* ) ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:113:1: relationalExpression : additiveExpression ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* ) ;
     public final CymbolParser.relationalExpression_return relationalExpression() throws RecognitionException {
         CymbolParser.relationalExpression_return retval = new CymbolParser.relationalExpression_return();
         retval.start = input.LT(1);
@@ -2661,8 +2653,8 @@ public class CymbolParser extends Parser {
         CymbolAST string_literal80_tree=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:114:2: ( additiveExpression ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:114:4: additiveExpression ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:114:2: ( additiveExpression ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* ) )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:114:4: additiveExpression ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* )
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -2672,10 +2664,10 @@ public class CymbolParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, additiveExpression76.getTree());
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:115:3: ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:115:5: ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:115:3: ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:115:5: ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )*
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:115:5: ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:115:5: ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )*
             loop20:
             do {
                 int alt20=2;
@@ -2688,9 +2680,9 @@ public class CymbolParser extends Parser {
 
                 switch (alt20) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:115:7: ( '<' | '>' | '<=' | '>=' ) additiveExpression
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:115:7: ( '<' | '>' | '<=' | '>=' ) additiveExpression
             	    {
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:115:7: ( '<' | '>' | '<=' | '>=' )
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:115:7: ( '<' | '>' | '<=' | '>=' )
             	    int alt19=4;
             	    switch ( input.LA(1) ) {
             	    case 41:
@@ -2723,7 +2715,7 @@ public class CymbolParser extends Parser {
 
             	    switch (alt19) {
             	        case 1 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:115:9: '<'
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:115:9: '<'
             	            {
             	            char_literal77=(Token)match(input,41,FOLLOW_41_in_relationalExpression919); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2734,7 +2726,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:116:7: '>'
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:116:7: '>'
             	            {
             	            char_literal78=(Token)match(input,42,FOLLOW_42_in_relationalExpression928); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2745,7 +2737,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 3 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:117:7: '<='
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:117:7: '<='
             	            {
             	            string_literal79=(Token)match(input,43,FOLLOW_43_in_relationalExpression937); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2756,7 +2748,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 4 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:118:7: '>='
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:118:7: '>='
             	            {
             	            string_literal80=(Token)match(input,44,FOLLOW_44_in_relationalExpression946); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2816,7 +2808,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "additiveExpression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:125:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:125:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
     public final CymbolParser.additiveExpression_return additiveExpression() throws RecognitionException {
         CymbolParser.additiveExpression_return retval = new CymbolParser.additiveExpression_return();
         retval.start = input.LT(1);
@@ -2834,8 +2826,8 @@ public class CymbolParser extends Parser {
         CymbolAST char_literal84_tree=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:126:2: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:126:4: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:126:2: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:126:4: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -2845,7 +2837,7 @@ public class CymbolParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, multiplicativeExpression82.getTree());
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:126:29: ( ( '+' | '-' ) multiplicativeExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:126:29: ( ( '+' | '-' ) multiplicativeExpression )*
             loop22:
             do {
                 int alt22=2;
@@ -2858,9 +2850,9 @@ public class CymbolParser extends Parser {
 
                 switch (alt22) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:126:30: ( '+' | '-' ) multiplicativeExpression
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:126:30: ( '+' | '-' ) multiplicativeExpression
             	    {
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:126:30: ( '+' | '-' )
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:126:30: ( '+' | '-' )
             	    int alt21=2;
             	    int LA21_0 = input.LA(1);
 
@@ -2879,7 +2871,7 @@ public class CymbolParser extends Parser {
             	    }
             	    switch (alt21) {
             	        case 1 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:126:31: '+'
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:126:31: '+'
             	            {
             	            char_literal83=(Token)match(input,45,FOLLOW_45_in_additiveExpression984); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2890,7 +2882,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:126:38: '-'
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:126:38: '-'
             	            {
             	            char_literal84=(Token)match(input,46,FOLLOW_46_in_additiveExpression989); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2947,7 +2939,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "multiplicativeExpression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:129:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' ) unaryExpression )* ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:129:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' ) unaryExpression )* ;
     public final CymbolParser.multiplicativeExpression_return multiplicativeExpression() throws RecognitionException {
         CymbolParser.multiplicativeExpression_return retval = new CymbolParser.multiplicativeExpression_return();
         retval.start = input.LT(1);
@@ -2965,8 +2957,8 @@ public class CymbolParser extends Parser {
         CymbolAST char_literal88_tree=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:130:2: ( unaryExpression ( ( '*' | '/' ) unaryExpression )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:130:4: unaryExpression ( ( '*' | '/' ) unaryExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:130:2: ( unaryExpression ( ( '*' | '/' ) unaryExpression )* )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:130:4: unaryExpression ( ( '*' | '/' ) unaryExpression )*
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -2976,7 +2968,7 @@ public class CymbolParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, unaryExpression86.getTree());
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:130:20: ( ( '*' | '/' ) unaryExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:130:20: ( ( '*' | '/' ) unaryExpression )*
             loop24:
             do {
                 int alt24=2;
@@ -2989,9 +2981,9 @@ public class CymbolParser extends Parser {
 
                 switch (alt24) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:130:21: ( '*' | '/' ) unaryExpression
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:130:21: ( '*' | '/' ) unaryExpression
             	    {
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:130:21: ( '*' | '/' )
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:130:21: ( '*' | '/' )
             	    int alt23=2;
             	    int LA23_0 = input.LA(1);
 
@@ -3010,7 +3002,7 @@ public class CymbolParser extends Parser {
             	    }
             	    switch (alt23) {
             	        case 1 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:130:22: '*'
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:130:22: '*'
             	            {
             	            char_literal87=(Token)match(input,47,FOLLOW_47_in_multiplicativeExpression1010); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -3021,7 +3013,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:130:29: '/'
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:130:29: '/'
             	            {
             	            char_literal88=(Token)match(input,48,FOLLOW_48_in_multiplicativeExpression1015); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -3078,7 +3070,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "unaryExpression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:133:1: unaryExpression : (op= '-' unaryExpression -> ^( UNARY_MINUS[$op] unaryExpression ) | op= '!' unaryExpression -> ^( UNARY_NOT[$op] unaryExpression ) | postfixExpression );
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:133:1: unaryExpression : (op= '-' unaryExpression -> ^( UNARY_MINUS[$op] unaryExpression ) | op= '!' unaryExpression -> ^( UNARY_NOT[$op] unaryExpression ) | postfixExpression );
     public final CymbolParser.unaryExpression_return unaryExpression() throws RecognitionException {
         CymbolParser.unaryExpression_return retval = new CymbolParser.unaryExpression_return();
         retval.start = input.LT(1);
@@ -3098,7 +3090,7 @@ public class CymbolParser extends Parser {
         RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
         RewriteRuleSubtreeStream stream_unaryExpression=new RewriteRuleSubtreeStream(adaptor,"rule unaryExpression");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:134:2: (op= '-' unaryExpression -> ^( UNARY_MINUS[$op] unaryExpression ) | op= '!' unaryExpression -> ^( UNARY_NOT[$op] unaryExpression ) | postfixExpression )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:134:2: (op= '-' unaryExpression -> ^( UNARY_MINUS[$op] unaryExpression ) | op= '!' unaryExpression -> ^( UNARY_NOT[$op] unaryExpression ) | postfixExpression )
             int alt25=3;
             switch ( input.LA(1) ) {
             case 46:
@@ -3132,7 +3124,7 @@ public class CymbolParser extends Parser {
 
             switch (alt25) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:134:4: op= '-' unaryExpression
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:134:4: op= '-' unaryExpression
                     {
                     op=(Token)match(input,46,FOLLOW_46_in_unaryExpression1034); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_46.add(op);
@@ -3159,7 +3151,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 134:27: -> ^( UNARY_MINUS[$op] unaryExpression )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:134:30: ^( UNARY_MINUS[$op] unaryExpression )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:134:30: ^( UNARY_MINUS[$op] unaryExpression )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(UNARY_MINUS, op), root_1);
@@ -3175,7 +3167,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:135:4: op= '!' unaryExpression
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:135:4: op= '!' unaryExpression
                     {
                     op=(Token)match(input,49,FOLLOW_49_in_unaryExpression1052); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_49.add(op);
@@ -3202,7 +3194,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 135:27: -> ^( UNARY_NOT[$op] unaryExpression )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:135:30: ^( UNARY_NOT[$op] unaryExpression )
+                        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:135:30: ^( UNARY_NOT[$op] unaryExpression )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(UNARY_NOT, op), root_1);
@@ -3218,7 +3210,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:136:4: postfixExpression
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:136:4: postfixExpression
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3259,7 +3251,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "postfixExpression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:140:1: postfixExpression : primary ( (r= '(' expressionList ')' | r= '[' expr ']' | r= '.' ID ) )* ;
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:140:1: postfixExpression : primary ( (r= '(' expressionList ')' | r= '[' expr ']' | r= '.' ID ) )* ;
     public final CymbolParser.postfixExpression_return postfixExpression() throws RecognitionException {
         CymbolParser.postfixExpression_return retval = new CymbolParser.postfixExpression_return();
         retval.start = input.LT(1);
@@ -3283,8 +3275,8 @@ public class CymbolParser extends Parser {
         CymbolAST ID98_tree=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:141:5: ( primary ( (r= '(' expressionList ')' | r= '[' expr ']' | r= '.' ID ) )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:141:9: primary ( (r= '(' expressionList ')' | r= '[' expr ']' | r= '.' ID ) )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:141:5: ( primary ( (r= '(' expressionList ')' | r= '[' expr ']' | r= '.' ID ) )* )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:141:9: primary ( (r= '(' expressionList ')' | r= '[' expr ']' | r= '.' ID ) )*
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -3294,7 +3286,7 @@ public class CymbolParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, primary93.getTree());
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:142:6: ( (r= '(' expressionList ')' | r= '[' expr ']' | r= '.' ID ) )*
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:142:6: ( (r= '(' expressionList ')' | r= '[' expr ']' | r= '.' ID ) )*
             loop27:
             do {
                 int alt27=2;
@@ -3307,9 +3299,9 @@ public class CymbolParser extends Parser {
 
                 switch (alt27) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:143:7: (r= '(' expressionList ')' | r= '[' expr ']' | r= '.' ID )
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:143:7: (r= '(' expressionList ')' | r= '[' expr ']' | r= '.' ID )
             	    {
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:143:7: (r= '(' expressionList ')' | r= '[' expr ']' | r= '.' ID )
+            	    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:143:7: (r= '(' expressionList ')' | r= '[' expr ']' | r= '.' ID )
             	    int alt26=3;
             	    switch ( input.LA(1) ) {
             	    case 28:
@@ -3337,7 +3329,7 @@ public class CymbolParser extends Parser {
 
             	    switch (alt26) {
             	        case 1 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:143:9: r= '(' expressionList ')'
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:143:9: r= '(' expressionList ')'
             	            {
             	            r=(Token)match(input,28,FOLLOW_28_in_postfixExpression1104); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -3358,7 +3350,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:144:9: r= '[' expr ']'
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:144:9: r= '[' expr ']'
             	            {
             	            r=(Token)match(input,50,FOLLOW_50_in_postfixExpression1124); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -3379,7 +3371,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 3 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:145:9: r= '.' ID
+            	            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:145:9: r= '.' ID
             	            {
             	            r=(Token)match(input,52,FOLLOW_52_in_postfixExpression1146); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -3435,7 +3427,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "primary"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:151:1: primary : ( ID | INT | FLOAT | CHAR | 'true' | 'false' | '(' expression ')' -> expression );
+    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:151:1: primary : ( ID | INT | FLOAT | CHAR | 'true' | 'false' | '(' expression ')' -> expression );
     public final CymbolParser.primary_return primary() throws RecognitionException {
         CymbolParser.primary_return retval = new CymbolParser.primary_return();
         retval.start = input.LT(1);
@@ -3465,7 +3457,7 @@ public class CymbolParser extends Parser {
         RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:152:5: ( ID | INT | FLOAT | CHAR | 'true' | 'false' | '(' expression ')' -> expression )
+            // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:152:5: ( ID | INT | FLOAT | CHAR | 'true' | 'false' | '(' expression ')' -> expression )
             int alt28=7;
             switch ( input.LA(1) ) {
             case ID:
@@ -3513,7 +3505,7 @@ public class CymbolParser extends Parser {
 
             switch (alt28) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:152:9: ID
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:152:9: ID
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3526,7 +3518,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:153:9: INT
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:153:9: INT
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3539,7 +3531,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:154:7: FLOAT
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:154:7: FLOAT
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3552,7 +3544,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:155:7: CHAR
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:155:7: CHAR
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3565,7 +3557,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:156:7: 'true'
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:156:7: 'true'
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3578,7 +3570,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:157:7: 'false'
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:157:7: 'false'
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3591,7 +3583,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:158:9: '(' expression ')'
+                    // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:158:9: '(' expression ')'
                     {
                     char_literal105=(Token)match(input,28,FOLLOW_28_in_primary1237); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_28.add(char_literal105);
@@ -3652,8 +3644,8 @@ public class CymbolParser extends Parser {
 
     // $ANTLR start synpred5_Cymbol
     public final void synpred5_Cymbol_fragment() throws RecognitionException {   
-        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:84:7: ( structDeclaration )
-        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:84:7: structDeclaration
+        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:84:7: ( structDeclaration )
+        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:84:7: structDeclaration
         {
         pushFollow(FOLLOW_structDeclaration_in_synpred5_Cymbol634);
         structDeclaration();
@@ -3667,8 +3659,8 @@ public class CymbolParser extends Parser {
 
     // $ANTLR start synpred6_Cymbol
     public final void synpred6_Cymbol_fragment() throws RecognitionException {   
-        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:85:7: ( varDeclaration )
-        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:85:7: varDeclaration
+        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:85:7: ( varDeclaration )
+        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:85:7: varDeclaration
         {
         pushFollow(FOLLOW_varDeclaration_in_synpred6_Cymbol642);
         varDeclaration();
@@ -3682,8 +3674,8 @@ public class CymbolParser extends Parser {
 
     // $ANTLR start synpred9_Cymbol
     public final void synpred9_Cymbol_fragment() throws RecognitionException {   
-        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:89:7: ( lhs '=' expression ';' )
-        // /Users/parrt/research/book/TPDSL/Book/code/semantics/safety/Cymbol.g:89:7: lhs '=' expression ';'
+        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:89:7: ( lhs '=' expression ';' )
+        // /Users/hotoku/projects/lip/code/semantics/safety/Cymbol.g:89:7: lhs '=' expression ';'
         {
         pushFollow(FOLLOW_lhs_in_synpred9_Cymbol721);
         lhs();
@@ -3704,11 +3696,11 @@ public class CymbolParser extends Parser {
 
     // Delegated rules
 
-    public final boolean synpred9_Cymbol() {
+    public final boolean synpred6_Cymbol() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred9_Cymbol_fragment(); // can never throw exception
+            synpred6_Cymbol_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3718,11 +3710,11 @@ public class CymbolParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred6_Cymbol() {
+    public final boolean synpred9_Cymbol() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred6_Cymbol_fragment(); // can never throw exception
+            synpred9_Cymbol_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }

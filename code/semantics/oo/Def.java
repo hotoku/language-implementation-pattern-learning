@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g 2009-09-23 17:37:47
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/semantics/oo/Def.g 2020-10-28 21:00:18
 
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;import java.util.Stack;
@@ -18,62 +10,62 @@ public class Def extends TreeFilter {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "METHOD_DECL", "ARG_DECL", "BLOCK", "VAR_DECL", "FIELD_DECL", "CALL", "ELIST", "EXPR", "UNARY_MINUS", "UNARY_NOT", "ASSIGN", "ADDR", "DEREF", "ADD", "MEMBER", "ID", "INT", "FLOAT", "CHAR", "LETTER", "WS", "SL_COMMENT", "'class'", "'{'", "'}'", "';'", "':'", "'('", "')'", "','", "'[]'", "'*'", "'float'", "'int'", "'char'", "'boolean'", "'void'", "'if'", "'else'", "'return'", "'!='", "'=='", "'<'", "'>'", "'<='", "'>='", "'-'", "'/'", "'!'", "'&'", "'['", "']'", "'->'", "'true'", "'false'"
     };
-    public static final int T__42=42;
-    public static final int T__28=28;
-    public static final int T__57=57;
-    public static final int T__51=51;
-    public static final int EXPR=11;
-    public static final int T__47=47;
-    public static final int FLOAT=21;
-    public static final int T__50=50;
-    public static final int FIELD_DECL=8;
-    public static final int BLOCK=6;
-    public static final int T__39=39;
-    public static final int T__30=30;
-    public static final int T__52=52;
-    public static final int T__46=46;
-    public static final int UNARY_MINUS=12;
-    public static final int INT=20;
-    public static final int UNARY_NOT=13;
-    public static final int T__27=27;
-    public static final int ASSIGN=14;
-    public static final int T__49=49;
-    public static final int METHOD_DECL=4;
-    public static final int T__48=48;
-    public static final int T__54=54;
-    public static final int MEMBER=18;
-    public static final int T__34=34;
-    public static final int SL_COMMENT=25;
-    public static final int ELIST=10;
-    public static final int T__56=56;
-    public static final int ID=19;
+    public static final int VAR_DECL=7;
+    public static final int ADD=17;
     public static final int LETTER=23;
+    public static final int T__50=50;
+    public static final int METHOD_DECL=4;
+    public static final int ELIST=10;
+    public static final int DEREF=16;
+    public static final int T__55=55;
+    public static final int T__56=56;
+    public static final int T__57=57;
+    public static final int T__58=58;
+    public static final int ID=19;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__54=54;
+    public static final int BLOCK=6;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int CALL=9;
+    public static final int FLOAT=21;
+    public static final int CHAR=22;
+    public static final int UNARY_NOT=13;
+    public static final int ASSIGN=14;
+    public static final int INT=20;
+    public static final int MEMBER=18;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int EXPR=11;
+    public static final int T__39=39;
+    public static final int T__33=33;
+    public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int ARG_DECL=5;
     public static final int WS=24;
-    public static final int CHAR=22;
-    public static final int T__58=58;
-    public static final int T__44=44;
-    public static final int T__33=33;
-    public static final int T__55=55;
-    public static final int T__29=29;
-    public static final int T__45=45;
-    public static final int ADDR=15;
-    public static final int T__43=43;
-    public static final int T__31=31;
-    public static final int T__40=40;
     public static final int EOF=-1;
-    public static final int T__53=53;
+    public static final int T__30=30;
+    public static final int T__31=31;
     public static final int T__32=32;
-    public static final int CALL=9;
-    public static final int T__38=38;
-    public static final int T__37=37;
-    public static final int T__26=26;
-    public static final int VAR_DECL=7;
-    public static final int DEREF=16;
+    public static final int FIELD_DECL=8;
+    public static final int ADDR=15;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int UNARY_MINUS=12;
+    public static final int T__44=44;
+    public static final int SL_COMMENT=25;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__40=40;
     public static final int T__41=41;
-    public static final int ADD=17;
+    public static final int ARG_DECL=5;
+    public static final int T__42=42;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -89,7 +81,7 @@ public class Def extends TreeFilter {
         
 
     public String[] getTokenNames() { return Def.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/semantics/oo/Def.g"; }
 
 
         SymbolTable symtab;
@@ -104,10 +96,10 @@ public class Def extends TreeFilter {
 
 
     // $ANTLR start "topdown"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:20:1: topdown : ( enterBlock | enterMethod | enterClass | atoms | varDeclaration | ret );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:20:1: topdown : ( enterBlock | enterMethod | enterClass | atoms | varDeclaration | ret );
     public final void topdown() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:21:5: ( enterBlock | enterMethod | enterClass | atoms | varDeclaration | ret )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:21:5: ( enterBlock | enterMethod | enterClass | atoms | varDeclaration | ret )
             int alt1=6;
             switch ( input.LA(1) ) {
             case BLOCK:
@@ -152,7 +144,7 @@ public class Def extends TreeFilter {
 
             switch (alt1) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:21:9: enterBlock
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:21:9: enterBlock
                     {
                     pushFollow(FOLLOW_enterBlock_in_topdown56);
                     enterBlock();
@@ -163,7 +155,7 @@ public class Def extends TreeFilter {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:22:9: enterMethod
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:22:9: enterMethod
                     {
                     pushFollow(FOLLOW_enterMethod_in_topdown66);
                     enterMethod();
@@ -174,7 +166,7 @@ public class Def extends TreeFilter {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:23:9: enterClass
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:23:9: enterClass
                     {
                     pushFollow(FOLLOW_enterClass_in_topdown76);
                     enterClass();
@@ -185,7 +177,7 @@ public class Def extends TreeFilter {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:24:9: atoms
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:24:9: atoms
                     {
                     pushFollow(FOLLOW_atoms_in_topdown86);
                     atoms();
@@ -196,7 +188,7 @@ public class Def extends TreeFilter {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:25:9: varDeclaration
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:25:9: varDeclaration
                     {
                     pushFollow(FOLLOW_varDeclaration_in_topdown96);
                     varDeclaration();
@@ -207,7 +199,7 @@ public class Def extends TreeFilter {
                     }
                     break;
                 case 6 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:26:9: ret
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:26:9: ret
                     {
                     pushFollow(FOLLOW_ret_in_topdown106);
                     ret();
@@ -232,10 +224,10 @@ public class Def extends TreeFilter {
 
 
     // $ANTLR start "bottomup"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:29:1: bottomup : ( exitBlock | exitMethod | exitClass );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:29:1: bottomup : ( exitBlock | exitMethod | exitClass );
     public final void bottomup() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:30:5: ( exitBlock | exitMethod | exitClass )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:30:5: ( exitBlock | exitMethod | exitClass )
             int alt2=3;
             switch ( input.LA(1) ) {
             case BLOCK:
@@ -263,7 +255,7 @@ public class Def extends TreeFilter {
 
             switch (alt2) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:30:9: exitBlock
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:30:9: exitBlock
                     {
                     pushFollow(FOLLOW_exitBlock_in_bottomup125);
                     exitBlock();
@@ -274,7 +266,7 @@ public class Def extends TreeFilter {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:31:9: exitMethod
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:31:9: exitMethod
                     {
                     pushFollow(FOLLOW_exitMethod_in_bottomup135);
                     exitMethod();
@@ -285,7 +277,7 @@ public class Def extends TreeFilter {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:32:9: exitClass
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:32:9: exitClass
                     {
                     pushFollow(FOLLOW_exitClass_in_bottomup145);
                     exitClass();
@@ -310,11 +302,11 @@ public class Def extends TreeFilter {
 
 
     // $ANTLR start "enterBlock"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:37:1: enterBlock : BLOCK ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:37:1: enterBlock : BLOCK ;
     public final void enterBlock() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:38:5: ( BLOCK )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:38:9: BLOCK
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:38:5: ( BLOCK )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:38:9: BLOCK
             {
             match(input,BLOCK,FOLLOW_BLOCK_in_enterBlock166); if (state.failed) return ;
             if ( state.backtracking==1 ) {
@@ -336,11 +328,11 @@ public class Def extends TreeFilter {
 
 
     // $ANTLR start "exitBlock"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:40:1: exitBlock : BLOCK ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:40:1: exitBlock : BLOCK ;
     public final void exitBlock() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:41:5: ( BLOCK )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:41:9: BLOCK
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:41:5: ( BLOCK )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:41:9: BLOCK
             {
             match(input,BLOCK,FOLLOW_BLOCK_in_exitBlock187); if (state.failed) return ;
             if ( state.backtracking==1 ) {
@@ -365,20 +357,20 @@ public class Def extends TreeFilter {
 
 
     // $ANTLR start "enterClass"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:49:1: enterClass : ^( 'class' name= ID ( ^( ':' sup= ID ) )? . ) ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:49:1: enterClass : ^( 'class' name= ID ( ^( ':' sup= ID ) )? . ) ;
     public final void enterClass() throws RecognitionException {
         CymbolAST name=null;
         CymbolAST sup=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:50:5: ( ^( 'class' name= ID ( ^( ':' sup= ID ) )? . ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:50:9: ^( 'class' name= ID ( ^( ':' sup= ID ) )? . )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:50:5: ( ^( 'class' name= ID ( ^( ':' sup= ID ) )? . ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:50:9: ^( 'class' name= ID ( ^( ':' sup= ID ) )? . )
             {
             match(input,26,FOLLOW_26_in_enterClass218); if (state.failed) return ;
 
             match(input, Token.DOWN, null); if (state.failed) return ;
             name=(CymbolAST)match(input,ID,FOLLOW_ID_in_enterClass222); if (state.failed) return ;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:50:27: ( ^( ':' sup= ID ) )?
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:50:27: ( ^( ':' sup= ID ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -403,7 +395,7 @@ public class Def extends TreeFilter {
             }
             switch (alt3) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:50:28: ^( ':' sup= ID )
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:50:28: ^( ':' sup= ID )
                     {
                     match(input,30,FOLLOW_30_in_enterClass226); if (state.failed) return ;
 
@@ -450,11 +442,11 @@ public class Def extends TreeFilter {
 
 
     // $ANTLR start "exitClass"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:66:1: exitClass : 'class' ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:66:1: exitClass : 'class' ;
     public final void exitClass() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:67:5: ( 'class' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:67:9: 'class'
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:67:5: ( 'class' )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:67:9: 'class'
             {
             match(input,26,FOLLOW_26_in_exitClass266); if (state.failed) return ;
             if ( state.backtracking==1 ) {
@@ -476,15 +468,15 @@ public class Def extends TreeFilter {
 
 
     // $ANTLR start "enterMethod"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:70:1: enterMethod : ^( METHOD_DECL type ID ( . )* ) ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:70:1: enterMethod : ^( METHOD_DECL type ID ( . )* ) ;
     public final void enterMethod() throws RecognitionException {
         CymbolAST ID1=null;
         Type type2 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:71:5: ( ^( METHOD_DECL type ID ( . )* ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:71:9: ^( METHOD_DECL type ID ( . )* )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:71:5: ( ^( METHOD_DECL type ID ( . )* ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:71:9: ^( METHOD_DECL type ID ( . )* )
             {
             match(input,METHOD_DECL,FOLLOW_METHOD_DECL_in_enterMethod291); if (state.failed) return ;
 
@@ -495,7 +487,7 @@ public class Def extends TreeFilter {
             state._fsp--;
             if (state.failed) return ;
             ID1=(CymbolAST)match(input,ID,FOLLOW_ID_in_enterMethod295); if (state.failed) return ;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:71:31: ( . )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:71:31: ( . )*
             loop4:
             do {
                 int alt4=2;
@@ -511,7 +503,7 @@ public class Def extends TreeFilter {
 
                 switch (alt4) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:71:31: .
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:71:31: .
             	    {
             	    matchAny(input); if (state.failed) return ;
 
@@ -554,14 +546,14 @@ public class Def extends TreeFilter {
     };
 
     // $ANTLR start "ret"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:83:1: ret : ^( 'return' . ) ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:83:1: ret : ^( 'return' . ) ;
     public final Def.ret_return ret() throws RecognitionException {
         Def.ret_return retval = new Def.ret_return();
         retval.start = input.LT(1);
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:84:5: ( ^( 'return' . ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:84:9: ^( 'return' . )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:84:5: ( ^( 'return' . ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:84:9: ^( 'return' . )
             {
             match(input,43,FOLLOW_43_in_ret328); if (state.failed) return retval;
 
@@ -588,11 +580,11 @@ public class Def extends TreeFilter {
 
 
     // $ANTLR start "exitMethod"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:87:1: exitMethod : METHOD_DECL ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:87:1: exitMethod : METHOD_DECL ;
     public final void exitMethod() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:88:5: ( METHOD_DECL )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:88:9: METHOD_DECL
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:88:5: ( METHOD_DECL )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:88:9: METHOD_DECL
             {
             match(input,METHOD_DECL,FOLLOW_METHOD_DECL_in_exitMethod356); if (state.failed) return ;
             if ( state.backtracking==1 ) {
@@ -616,12 +608,12 @@ public class Def extends TreeFilter {
 
 
     // $ANTLR start "atoms"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:97:1: atoms : {...}? ID ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:97:1: atoms : {...}? ID ;
     public final void atoms() throws RecognitionException {
         CymbolAST t = (CymbolAST)input.LT(1);
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:100:5: ({...}? ID )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:100:8: {...}? ID
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:100:5: ({...}? ID )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:100:8: {...}? ID
             {
             if ( !((t.hasAncestor(EXPR)||t.hasAncestor(ASSIGN))) ) {
                 if (state.backtracking>0) {state.failed=true; return ;}
@@ -647,15 +639,15 @@ public class Def extends TreeFilter {
 
 
     // $ANTLR start "varDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:106:1: varDeclaration : ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? ) ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:106:1: varDeclaration : ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? ) ;
     public final void varDeclaration() throws RecognitionException {
         CymbolAST ID3=null;
         Type type4 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:107:5: ( ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:107:9: ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:107:5: ( ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:107:9: ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? )
             {
             if ( input.LA(1)==ARG_DECL||(input.LA(1)>=VAR_DECL && input.LA(1)<=FIELD_DECL) ) {
                 input.consume();
@@ -675,7 +667,7 @@ public class Def extends TreeFilter {
             state._fsp--;
             if (state.failed) return ;
             ID3=(CymbolAST)match(input,ID,FOLLOW_ID_in_varDeclaration438); if (state.failed) return ;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:107:50: ( . )?
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:107:50: ( . )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -684,7 +676,7 @@ public class Def extends TreeFilter {
             }
             switch (alt5) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:107:50: .
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:107:50: .
                     {
                     matchAny(input); if (state.failed) return ;
 
@@ -720,7 +712,7 @@ public class Def extends TreeFilter {
 
 
     // $ANTLR start "type"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:118:1: type returns [Type type] : ( ^( '*' typeElement ) | typeElement );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:118:1: type returns [Type type] : ( ^( '*' typeElement ) | typeElement );
     public final Type type() throws RecognitionException {
         Type type = null;
 
@@ -730,7 +722,7 @@ public class Def extends TreeFilter {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:121:5: ( ^( '*' typeElement ) | typeElement )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:121:5: ( ^( '*' typeElement ) | typeElement )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -749,7 +741,7 @@ public class Def extends TreeFilter {
             }
             switch (alt6) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:121:9: ^( '*' typeElement )
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:121:9: ^( '*' typeElement )
                     {
                     match(input,35,FOLLOW_35_in_type480); if (state.failed) return type;
 
@@ -768,7 +760,7 @@ public class Def extends TreeFilter {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:122:9: typeElement
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:122:9: typeElement
                     {
                     pushFollow(FOLLOW_typeElement_in_type496);
                     typeElement6=typeElement();
@@ -796,14 +788,14 @@ public class Def extends TreeFilter {
 
 
     // $ANTLR start "typeElement"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:126:1: typeElement returns [Type type] : ( 'float' | 'int' | 'char' | 'boolean' | 'void' | ID );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:126:1: typeElement returns [Type type] : ( 'float' | 'int' | 'char' | 'boolean' | 'void' | ID );
     public final Type typeElement() throws RecognitionException {
         Type type = null;
 
         CymbolAST t = (CymbolAST)input.LT(1);
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:134:5: ( 'float' | 'int' | 'char' | 'boolean' | 'void' | ID )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Def.g:
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:134:5: ( 'float' | 'int' | 'char' | 'boolean' | 'void' | ID )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Def.g:
             {
             if ( input.LA(1)==ID||(input.LA(1)>=36 && input.LA(1)<=40) ) {
                 input.consume();

@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g 2009-09-23 17:37:49
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/semantics/promote/Types.g 2020-10-28 21:00:21
 
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;import java.util.Stack;
@@ -18,58 +10,58 @@ public class Types extends TreeFilter {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "METHOD_DECL", "ARG_DECL", "BLOCK", "VAR_DECL", "FIELD_DECL", "CALL", "ELIST", "EXPR", "UNARY_MINUS", "UNARY_NOT", "ASSIGN", "INDEX", "ID", "INT", "FLOAT", "CHAR", "LETTER", "WS", "SL_COMMENT", "'struct'", "'{'", "'}'", "';'", "'[]'", "'('", "')'", "','", "'float'", "'int'", "'char'", "'boolean'", "'void'", "'if'", "'else'", "'return'", "'!='", "'=='", "'<'", "'>'", "'<='", "'>='", "'+'", "'-'", "'*'", "'/'", "'!'", "'['", "']'", "'.'", "'true'", "'false'"
     };
-    public static final int INDEX=15;
-    public static final int T__42=42;
-    public static final int T__28=28;
-    public static final int T__23=23;
-    public static final int EXPR=11;
-    public static final int T__51=51;
-    public static final int T__47=47;
-    public static final int FLOAT=18;
-    public static final int T__50=50;
-    public static final int FIELD_DECL=8;
-    public static final int BLOCK=6;
-    public static final int T__39=39;
-    public static final int T__30=30;
-    public static final int T__52=52;
-    public static final int T__46=46;
-    public static final int UNARY_MINUS=12;
-    public static final int INT=17;
-    public static final int UNARY_NOT=13;
-    public static final int T__27=27;
-    public static final int ASSIGN=14;
-    public static final int T__24=24;
-    public static final int T__49=49;
-    public static final int METHOD_DECL=4;
-    public static final int T__48=48;
-    public static final int T__54=54;
-    public static final int T__34=34;
-    public static final int SL_COMMENT=22;
-    public static final int ELIST=10;
-    public static final int ID=16;
+    public static final int VAR_DECL=7;
     public static final int LETTER=20;
+    public static final int T__50=50;
+    public static final int METHOD_DECL=4;
+    public static final int ELIST=10;
+    public static final int INDEX=15;
+    public static final int ID=16;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__54=54;
+    public static final int BLOCK=6;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int CALL=9;
+    public static final int FLOAT=18;
+    public static final int CHAR=19;
+    public static final int UNARY_NOT=13;
+    public static final int ASSIGN=14;
+    public static final int INT=17;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int EXPR=11;
+    public static final int T__39=39;
+    public static final int T__33=33;
+    public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int ARG_DECL=5;
     public static final int WS=21;
-    public static final int CHAR=19;
-    public static final int T__44=44;
-    public static final int T__33=33;
-    public static final int T__29=29;
-    public static final int T__45=45;
-    public static final int T__43=43;
-    public static final int T__31=31;
-    public static final int T__40=40;
     public static final int EOF=-1;
-    public static final int T__53=53;
+    public static final int T__30=30;
+    public static final int T__31=31;
     public static final int T__32=32;
-    public static final int CALL=9;
-    public static final int T__38=38;
-    public static final int T__37=37;
-    public static final int T__26=26;
-    public static final int T__25=25;
-    public static final int VAR_DECL=7;
+    public static final int FIELD_DECL=8;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int UNARY_MINUS=12;
+    public static final int T__44=44;
+    public static final int SL_COMMENT=22;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__40=40;
     public static final int T__41=41;
+    public static final int ARG_DECL=5;
+    public static final int T__42=42;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -85,7 +77,7 @@ public class Types extends TreeFilter {
         
 
     public String[] getTokenNames() { return Types.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/semantics/promote/Types.g"; }
 
 
         SymbolTable symtab;
@@ -97,10 +89,10 @@ public class Types extends TreeFilter {
 
 
     // $ANTLR start "bottomup"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:17:1: bottomup : ( exprRoot | decl | ret | assignment );
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:17:1: bottomup : ( exprRoot | decl | ret | assignment );
     public final void bottomup() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:18:5: ( exprRoot | decl | ret | assignment )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:18:5: ( exprRoot | decl | ret | assignment )
             int alt1=4;
             switch ( input.LA(1) ) {
             case EXPR:
@@ -133,7 +125,7 @@ public class Types extends TreeFilter {
 
             switch (alt1) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:18:9: exprRoot
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:18:9: exprRoot
                     {
                     pushFollow(FOLLOW_exprRoot_in_bottomup57);
                     exprRoot();
@@ -144,7 +136,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:19:9: decl
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:19:9: decl
                     {
                     pushFollow(FOLLOW_decl_in_bottomup67);
                     decl();
@@ -155,7 +147,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:20:9: ret
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:20:9: ret
                     {
                     pushFollow(FOLLOW_ret_in_bottomup77);
                     ret();
@@ -166,7 +158,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:21:9: assignment
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:21:9: assignment
                     {
                     pushFollow(FOLLOW_assignment_in_bottomup87);
                     assignment();
@@ -191,21 +183,21 @@ public class Types extends TreeFilter {
 
 
     // $ANTLR start "decl"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:25:1: decl : ^( VAR_DECL . ID (init= . )? ) ;
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:25:1: decl : ^( VAR_DECL . ID (init= . )? ) ;
     public final void decl() throws RecognitionException {
         CymbolAST ID1=null;
         CymbolAST init=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:25:5: ( ^( VAR_DECL . ID (init= . )? ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:25:9: ^( VAR_DECL . ID (init= . )? )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:25:5: ( ^( VAR_DECL . ID (init= . )? ) )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:25:9: ^( VAR_DECL . ID (init= . )? )
             {
             match(input,VAR_DECL,FOLLOW_VAR_DECL_in_decl103); if (state.failed) return ;
 
             match(input, Token.DOWN, null); if (state.failed) return ;
             matchAny(input); if (state.failed) return ;
             ID1=(CymbolAST)match(input,ID,FOLLOW_ID_in_decl107); if (state.failed) return ;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:25:25: (init= . )?
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:25:25: (init= . )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -214,7 +206,7 @@ public class Types extends TreeFilter {
             }
             switch (alt2) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:25:26: init= .
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:25:26: init= .
                     {
                     init=(CymbolAST)input.LT(1);
                     matchAny(input); if (state.failed) return ;
@@ -248,7 +240,7 @@ public class Types extends TreeFilter {
     };
 
     // $ANTLR start "ret"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:29:1: ret : ^( 'return' v= . ) ;
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:29:1: ret : ^( 'return' v= . ) ;
     public final Types.ret_return ret() throws RecognitionException {
         Types.ret_return retval = new Types.ret_return();
         retval.start = input.LT(1);
@@ -256,8 +248,8 @@ public class Types extends TreeFilter {
         CymbolAST v=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:29:5: ( ^( 'return' v= . ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:29:9: ^( 'return' v= . )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:29:5: ( ^( 'return' v= . ) )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:29:9: ^( 'return' v= . )
             {
             match(input,38,FOLLOW_38_in_ret145); if (state.failed) return retval;
 
@@ -285,14 +277,14 @@ public class Types extends TreeFilter {
 
 
     // $ANTLR start "assignment"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:30:1: assignment : ^( '=' lhs= . rhs= . ) ;
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:30:1: assignment : ^( '=' lhs= . rhs= . ) ;
     public final void assignment() throws RecognitionException {
         CymbolAST lhs=null;
         CymbolAST rhs=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:31:5: ( ^( '=' lhs= . rhs= . ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:31:9: ^( '=' lhs= . rhs= . )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:31:5: ( ^( '=' lhs= . rhs= . ) )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:31:9: ^( '=' lhs= . rhs= . )
             {
             match(input,ASSIGN,FOLLOW_ASSIGN_in_assignment168); if (state.failed) return ;
 
@@ -322,15 +314,15 @@ public class Types extends TreeFilter {
 
 
     // $ANTLR start "exprRoot"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:35:1: exprRoot : ^( EXPR expr ) ;
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:35:1: exprRoot : ^( EXPR expr ) ;
     public final void exprRoot() throws RecognitionException {
         CymbolAST EXPR2=null;
         Types.expr_return expr3 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:36:5: ( ^( EXPR expr ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:36:9: ^( EXPR expr )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:36:5: ( ^( EXPR expr ) )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:36:9: ^( EXPR expr )
             {
             EXPR2=(CymbolAST)match(input,EXPR,FOLLOW_EXPR_in_exprRoot201); if (state.failed) return ;
 
@@ -364,7 +356,7 @@ public class Types extends TreeFilter {
     };
 
     // $ANTLR start "expr"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:39:1: expr returns [Type type] : ( 'true' | 'false' | CHAR | INT | FLOAT | ID | ^( UNARY_MINUS a= expr ) | ^( UNARY_NOT a= expr ) | member | arrayRef | call | binaryOps );
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:39:1: expr returns [Type type] : ( 'true' | 'false' | CHAR | INT | FLOAT | ID | ^( UNARY_MINUS a= expr ) | ^( UNARY_NOT a= expr ) | member | arrayRef | call | binaryOps );
     public final Types.expr_return expr() throws RecognitionException {
         Types.expr_return retval = new Types.expr_return();
         retval.start = input.LT(1);
@@ -382,7 +374,7 @@ public class Types extends TreeFilter {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:41:5: ( 'true' | 'false' | CHAR | INT | FLOAT | ID | ^( UNARY_MINUS a= expr ) | ^( UNARY_NOT a= expr ) | member | arrayRef | call | binaryOps )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:41:5: ( 'true' | 'false' | CHAR | INT | FLOAT | ID | ^( UNARY_MINUS a= expr ) | ^( UNARY_NOT a= expr ) | member | arrayRef | call | binaryOps )
             int alt3=12;
             switch ( input.LA(1) ) {
             case 53:
@@ -464,7 +456,7 @@ public class Types extends TreeFilter {
 
             switch (alt3) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:41:9: 'true'
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:41:9: 'true'
                     {
                     match(input,53,FOLLOW_53_in_expr235); if (state.failed) return retval;
                     if ( state.backtracking==1 ) {
@@ -474,7 +466,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:42:9: 'false'
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:42:9: 'false'
                     {
                     match(input,54,FOLLOW_54_in_expr252); if (state.failed) return retval;
                     if ( state.backtracking==1 ) {
@@ -484,7 +476,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:43:9: CHAR
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:43:9: CHAR
                     {
                     match(input,CHAR,FOLLOW_CHAR_in_expr268); if (state.failed) return retval;
                     if ( state.backtracking==1 ) {
@@ -494,7 +486,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:44:9: INT
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:44:9: INT
                     {
                     match(input,INT,FOLLOW_INT_in_expr287); if (state.failed) return retval;
                     if ( state.backtracking==1 ) {
@@ -504,7 +496,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:45:9: FLOAT
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:45:9: FLOAT
                     {
                     match(input,FLOAT,FOLLOW_FLOAT_in_expr307); if (state.failed) return retval;
                     if ( state.backtracking==1 ) {
@@ -514,7 +506,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 6 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:46:9: ID
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:46:9: ID
                     {
                     ID4=(CymbolAST)match(input,ID,FOLLOW_ID_in_expr325); if (state.failed) return retval;
                     if ( state.backtracking==1 ) {
@@ -525,7 +517,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 7 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:48:9: ^( UNARY_MINUS a= expr )
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:48:9: ^( UNARY_MINUS a= expr )
                     {
                     match(input,UNARY_MINUS,FOLLOW_UNARY_MINUS_in_expr338); if (state.failed) return retval;
 
@@ -544,7 +536,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 8 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:49:9: ^( UNARY_NOT a= expr )
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:49:9: ^( UNARY_NOT a= expr )
                     {
                     match(input,UNARY_NOT,FOLLOW_UNARY_NOT_in_expr358); if (state.failed) return retval;
 
@@ -563,7 +555,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 9 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:50:9: member
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:50:9: member
                     {
                     pushFollow(FOLLOW_member_in_expr379);
                     member5=member();
@@ -577,7 +569,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 10 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:51:9: arrayRef
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:51:9: arrayRef
                     {
                     pushFollow(FOLLOW_arrayRef_in_expr396);
                     arrayRef6=arrayRef();
@@ -591,7 +583,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 11 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:52:9: call
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:52:9: call
                     {
                     pushFollow(FOLLOW_call_in_expr411);
                     call7=call();
@@ -605,7 +597,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 12 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:53:9: binaryOps
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:53:9: binaryOps
                     {
                     pushFollow(FOLLOW_binaryOps_in_expr430);
                     binaryOps8=binaryOps();
@@ -639,7 +631,7 @@ public class Types extends TreeFilter {
     };
 
     // $ANTLR start "binaryOps"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:56:1: binaryOps returns [Type type] : ( ^( bop a= expr b= expr ) | ^( relop a= expr b= expr ) | ^( eqop a= expr b= expr ) ) ;
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:56:1: binaryOps returns [Type type] : ( ^( bop a= expr b= expr ) | ^( relop a= expr b= expr ) | ^( eqop a= expr b= expr ) ) ;
     public final Types.binaryOps_return binaryOps() throws RecognitionException {
         Types.binaryOps_return retval = new Types.binaryOps_return();
         retval.start = input.LT(1);
@@ -650,10 +642,10 @@ public class Types extends TreeFilter {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:58:5: ( ( ^( bop a= expr b= expr ) | ^( relop a= expr b= expr ) | ^( eqop a= expr b= expr ) ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:58:9: ( ^( bop a= expr b= expr ) | ^( relop a= expr b= expr ) | ^( eqop a= expr b= expr ) )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:58:5: ( ( ^( bop a= expr b= expr ) | ^( relop a= expr b= expr ) | ^( eqop a= expr b= expr ) ) )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:58:9: ( ^( bop a= expr b= expr ) | ^( relop a= expr b= expr ) | ^( eqop a= expr b= expr ) )
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:58:9: ( ^( bop a= expr b= expr ) | ^( relop a= expr b= expr ) | ^( eqop a= expr b= expr ) )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:58:9: ( ^( bop a= expr b= expr ) | ^( relop a= expr b= expr ) | ^( eqop a= expr b= expr ) )
             int alt4=3;
             switch ( input.LA(1) ) {
             case 45:
@@ -688,7 +680,7 @@ public class Types extends TreeFilter {
 
             switch (alt4) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:58:13: ^( bop a= expr b= expr )
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:58:13: ^( bop a= expr b= expr )
                     {
                     pushFollow(FOLLOW_bop_in_binaryOps467);
                     bop();
@@ -716,7 +708,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:59:13: ^( relop a= expr b= expr )
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:59:13: ^( relop a= expr b= expr )
                     {
                     pushFollow(FOLLOW_relop_in_binaryOps495);
                     relop();
@@ -744,7 +736,7 @@ public class Types extends TreeFilter {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:60:13: ^( eqop a= expr b= expr )
+                    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:60:13: ^( eqop a= expr b= expr )
                     {
                     pushFollow(FOLLOW_eqop_in_binaryOps521);
                     eqop();
@@ -796,7 +788,7 @@ public class Types extends TreeFilter {
     };
 
     // $ANTLR start "arrayRef"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:64:1: arrayRef returns [Type type] : ^( INDEX ID expr ) ;
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:64:1: arrayRef returns [Type type] : ^( INDEX ID expr ) ;
     public final Types.arrayRef_return arrayRef() throws RecognitionException {
         Types.arrayRef_return retval = new Types.arrayRef_return();
         retval.start = input.LT(1);
@@ -806,8 +798,8 @@ public class Types extends TreeFilter {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:65:5: ( ^( INDEX ID expr ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:65:9: ^( INDEX ID expr )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:65:5: ( ^( INDEX ID expr ) )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:65:9: ^( INDEX ID expr )
             {
             match(input,INDEX,FOLLOW_INDEX_in_arrayRef567); if (state.failed) return retval;
 
@@ -845,7 +837,7 @@ public class Types extends TreeFilter {
     };
 
     // $ANTLR start "call"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:72:1: call returns [Type type] : ^( CALL ID ^( ELIST ( expr )* ) ) ;
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:72:1: call returns [Type type] : ^( CALL ID ^( ELIST ( expr )* ) ) ;
     public final Types.call_return call() throws RecognitionException {
         Types.call_return retval = new Types.call_return();
         retval.start = input.LT(1);
@@ -856,8 +848,8 @@ public class Types extends TreeFilter {
 
         List args = new ArrayList();
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:74:5: ( ^( CALL ID ^( ELIST ( expr )* ) ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:74:9: ^( CALL ID ^( ELIST ( expr )* ) )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:74:5: ( ^( CALL ID ^( ELIST ( expr )* ) ) )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:74:9: ^( CALL ID ^( ELIST ( expr )* ) )
             {
             match(input,CALL,FOLLOW_CALL_in_call611); if (state.failed) return retval;
 
@@ -867,7 +859,7 @@ public class Types extends TreeFilter {
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); if (state.failed) return retval;
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:74:27: ( expr )*
+                // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:74:27: ( expr )*
                 loop5:
                 do {
                     int alt5=2;
@@ -880,7 +872,7 @@ public class Types extends TreeFilter {
 
                     switch (alt5) {
                 	case 1 :
-                	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:74:28: expr
+                	    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:74:28: expr
                 	    {
                 	    pushFollow(FOLLOW_expr_in_call619);
                 	    expr11=expr();
@@ -929,7 +921,7 @@ public class Types extends TreeFilter {
     };
 
     // $ANTLR start "member"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:81:1: member returns [Type type] : ^( '.' expr ID ) ;
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:81:1: member returns [Type type] : ^( '.' expr ID ) ;
     public final Types.member_return member() throws RecognitionException {
         Types.member_return retval = new Types.member_return();
         retval.start = input.LT(1);
@@ -939,8 +931,8 @@ public class Types extends TreeFilter {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:82:5: ( ^( '.' expr ID ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:82:9: ^( '.' expr ID )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:82:5: ( ^( '.' expr ID ) )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:82:9: ^( '.' expr ID )
             {
             match(input,52,FOLLOW_52_in_member659); if (state.failed) return retval;
 
@@ -975,11 +967,11 @@ public class Types extends TreeFilter {
 
 
     // $ANTLR start "bop"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:89:1: bop : ( '+' | '-' | '*' | '/' );
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:89:1: bop : ( '+' | '-' | '*' | '/' );
     public final void bop() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:89:5: ( '+' | '-' | '*' | '/' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:89:5: ( '+' | '-' | '*' | '/' )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:
             {
             if ( (input.LA(1)>=45 && input.LA(1)<=48) ) {
                 input.consume();
@@ -1007,11 +999,11 @@ public class Types extends TreeFilter {
 
 
     // $ANTLR start "relop"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:91:1: relop : ( '<' | '>' | '<=' | '>=' );
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:91:1: relop : ( '<' | '>' | '<=' | '>=' );
     public final void relop() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:91:6: ( '<' | '>' | '<=' | '>=' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:91:6: ( '<' | '>' | '<=' | '>=' )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:
             {
             if ( (input.LA(1)>=41 && input.LA(1)<=44) ) {
                 input.consume();
@@ -1039,11 +1031,11 @@ public class Types extends TreeFilter {
 
 
     // $ANTLR start "eqop"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:93:1: eqop : ( '!=' | '==' );
+    // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:93:1: eqop : ( '!=' | '==' );
     public final void eqop() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:93:5: ( '!=' | '==' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/promote/Types.g:
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:93:5: ( '!=' | '==' )
+            // /Users/hotoku/projects/lip/code/semantics/promote/Types.g:
             {
             if ( (input.LA(1)>=39 && input.LA(1)<=40) ) {
                 input.consume();

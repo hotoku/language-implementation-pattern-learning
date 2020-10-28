@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g 2009-09-23 17:37:55
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g 2020-10-28 21:00:28
 
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;import java.util.Stack;
@@ -18,34 +10,34 @@ public class DefRef extends TreeFilter {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "METHOD_DECL", "ARG_DECL", "BLOCK", "VAR_DECL", "FIELD_DECL", "CALL", "ELIST", "EXPR", "ID", "INT", "LETTER", "WS", "SL_COMMENT", "'struct'", "'{'", "'}'", "';'", "'('", "')'", "','", "'float'", "'int'", "'void'", "'='", "'return'", "'+'", "'.'"
     };
-    public static final int LETTER=14;
-    public static final int T__28=28;
-    public static final int T__23=23;
-    public static final int T__20=20;
-    public static final int EXPR=11;
-    public static final int ARG_DECL=5;
-    public static final int WS=15;
-    public static final int T__21=21;
-    public static final int T__19=19;
-    public static final int FIELD_DECL=8;
-    public static final int T__22=22;
-    public static final int T__29=29;
-    public static final int BLOCK=6;
-    public static final int T__30=30;
-    public static final int T__17=17;
-    public static final int INT=13;
-    public static final int EOF=-1;
-    public static final int T__27=27;
-    public static final int T__24=24;
-    public static final int CALL=9;
-    public static final int METHOD_DECL=4;
-    public static final int T__26=26;
-    public static final int T__25=25;
     public static final int VAR_DECL=7;
-    public static final int SL_COMMENT=16;
-    public static final int T__18=18;
+    public static final int CALL=9;
+    public static final int LETTER=14;
+    public static final int METHOD_DECL=4;
     public static final int ELIST=10;
+    public static final int INT=13;
+    public static final int T__19=19;
+    public static final int EXPR=11;
+    public static final int T__17=17;
+    public static final int T__18=18;
     public static final int ID=12;
+    public static final int WS=15;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int BLOCK=6;
+    public static final int FIELD_DECL=8;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__22=22;
+    public static final int SL_COMMENT=16;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int ARG_DECL=5;
+    public static final int T__20=20;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -61,7 +53,7 @@ public class DefRef extends TreeFilter {
         
 
     public String[] getTokenNames() { return DefRef.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g"; }
 
 
         SymbolTable symtab;
@@ -75,10 +67,10 @@ public class DefRef extends TreeFilter {
 
 
     // $ANTLR start "topdown"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:19:1: topdown : ( enterBlock | enterMethod | enterStruct | varDeclaration | resolveExpr | assignment );
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:19:1: topdown : ( enterBlock | enterMethod | enterStruct | varDeclaration | resolveExpr | assignment );
     public final void topdown() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:20:5: ( enterBlock | enterMethod | enterStruct | varDeclaration | resolveExpr | assignment )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:20:5: ( enterBlock | enterMethod | enterStruct | varDeclaration | resolveExpr | assignment )
             int alt1=6;
             switch ( input.LA(1) ) {
             case BLOCK:
@@ -123,7 +115,7 @@ public class DefRef extends TreeFilter {
 
             switch (alt1) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:20:9: enterBlock
+                    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:20:9: enterBlock
                     {
                     pushFollow(FOLLOW_enterBlock_in_topdown56);
                     enterBlock();
@@ -134,7 +126,7 @@ public class DefRef extends TreeFilter {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:21:9: enterMethod
+                    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:21:9: enterMethod
                     {
                     pushFollow(FOLLOW_enterMethod_in_topdown66);
                     enterMethod();
@@ -145,7 +137,7 @@ public class DefRef extends TreeFilter {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:22:9: enterStruct
+                    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:22:9: enterStruct
                     {
                     pushFollow(FOLLOW_enterStruct_in_topdown76);
                     enterStruct();
@@ -156,7 +148,7 @@ public class DefRef extends TreeFilter {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:23:9: varDeclaration
+                    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:23:9: varDeclaration
                     {
                     pushFollow(FOLLOW_varDeclaration_in_topdown86);
                     varDeclaration();
@@ -167,7 +159,7 @@ public class DefRef extends TreeFilter {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:24:9: resolveExpr
+                    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:24:9: resolveExpr
                     {
                     pushFollow(FOLLOW_resolveExpr_in_topdown96);
                     resolveExpr();
@@ -178,7 +170,7 @@ public class DefRef extends TreeFilter {
                     }
                     break;
                 case 6 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:25:9: assignment
+                    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:25:9: assignment
                     {
                     pushFollow(FOLLOW_assignment_in_topdown106);
                     assignment();
@@ -203,10 +195,10 @@ public class DefRef extends TreeFilter {
 
 
     // $ANTLR start "bottomup"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:28:1: bottomup : ( exitBlock | exitMethod | exitStruct );
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:28:1: bottomup : ( exitBlock | exitMethod | exitStruct );
     public final void bottomup() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:29:5: ( exitBlock | exitMethod | exitStruct )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:29:5: ( exitBlock | exitMethod | exitStruct )
             int alt2=3;
             switch ( input.LA(1) ) {
             case BLOCK:
@@ -234,7 +226,7 @@ public class DefRef extends TreeFilter {
 
             switch (alt2) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:29:9: exitBlock
+                    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:29:9: exitBlock
                     {
                     pushFollow(FOLLOW_exitBlock_in_bottomup125);
                     exitBlock();
@@ -245,7 +237,7 @@ public class DefRef extends TreeFilter {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:30:9: exitMethod
+                    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:30:9: exitMethod
                     {
                     pushFollow(FOLLOW_exitMethod_in_bottomup135);
                     exitMethod();
@@ -256,7 +248,7 @@ public class DefRef extends TreeFilter {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:31:9: exitStruct
+                    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:31:9: exitStruct
                     {
                     pushFollow(FOLLOW_exitStruct_in_bottomup145);
                     exitStruct();
@@ -281,11 +273,11 @@ public class DefRef extends TreeFilter {
 
 
     // $ANTLR start "enterBlock"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:36:1: enterBlock : BLOCK ;
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:36:1: enterBlock : BLOCK ;
     public final void enterBlock() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:37:5: ( BLOCK )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:37:9: BLOCK
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:37:5: ( BLOCK )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:37:9: BLOCK
             {
             match(input,BLOCK,FOLLOW_BLOCK_in_enterBlock166); if (state.failed) return ;
             if ( state.backtracking==1 ) {
@@ -307,11 +299,11 @@ public class DefRef extends TreeFilter {
 
 
     // $ANTLR start "exitBlock"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:39:1: exitBlock : BLOCK ;
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:39:1: exitBlock : BLOCK ;
     public final void exitBlock() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:40:5: ( BLOCK )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:40:9: BLOCK
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:40:5: ( BLOCK )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:40:9: BLOCK
             {
             match(input,BLOCK,FOLLOW_BLOCK_in_exitBlock187); if (state.failed) return ;
             if ( state.backtracking==1 ) {
@@ -336,19 +328,19 @@ public class DefRef extends TreeFilter {
 
 
     // $ANTLR start "enterStruct"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:48:1: enterStruct : ^( 'struct' ID ( . )+ ) ;
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:48:1: enterStruct : ^( 'struct' ID ( . )+ ) ;
     public final void enterStruct() throws RecognitionException {
         CommonTree ID1=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:49:5: ( ^( 'struct' ID ( . )+ ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:49:7: ^( 'struct' ID ( . )+ )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:49:5: ( ^( 'struct' ID ( . )+ ) )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:49:7: ^( 'struct' ID ( . )+ )
             {
             match(input,17,FOLLOW_17_in_enterStruct217); if (state.failed) return ;
 
             match(input, Token.DOWN, null); if (state.failed) return ;
             ID1=(CommonTree)match(input,ID,FOLLOW_ID_in_enterStruct219); if (state.failed) return ;
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:49:21: ( . )+
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:49:21: ( . )+
             int cnt3=0;
             loop3:
             do {
@@ -365,7 +357,7 @@ public class DefRef extends TreeFilter {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:49:21: .
+            	    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:49:21: .
             	    {
             	    matchAny(input); if (state.failed) return ;
 
@@ -408,11 +400,11 @@ public class DefRef extends TreeFilter {
 
 
     // $ANTLR start "exitStruct"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:57:1: exitStruct : 'struct' ;
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:57:1: exitStruct : 'struct' ;
     public final void exitStruct() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:58:5: ( 'struct' )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:58:9: 'struct'
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:58:5: ( 'struct' )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:58:9: 'struct'
             {
             match(input,17,FOLLOW_17_in_exitStruct250); if (state.failed) return ;
             if ( state.backtracking==1 ) {
@@ -437,15 +429,15 @@ public class DefRef extends TreeFilter {
 
 
     // $ANTLR start "enterMethod"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:66:1: enterMethod : ^( METHOD_DECL type ID ( . )* ) ;
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:66:1: enterMethod : ^( METHOD_DECL type ID ( . )* ) ;
     public final void enterMethod() throws RecognitionException {
         CommonTree ID2=null;
         DefRef.type_return type3 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:67:5: ( ^( METHOD_DECL type ID ( . )* ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:67:9: ^( METHOD_DECL type ID ( . )* )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:67:5: ( ^( METHOD_DECL type ID ( . )* ) )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:67:9: ^( METHOD_DECL type ID ( . )* )
             {
             match(input,METHOD_DECL,FOLLOW_METHOD_DECL_in_enterMethod282); if (state.failed) return ;
 
@@ -456,7 +448,7 @@ public class DefRef extends TreeFilter {
             state._fsp--;
             if (state.failed) return ;
             ID2=(CommonTree)match(input,ID,FOLLOW_ID_in_enterMethod286); if (state.failed) return ;
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:67:31: ( . )*
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:67:31: ( . )*
             loop4:
             do {
                 int alt4=2;
@@ -472,7 +464,7 @@ public class DefRef extends TreeFilter {
 
                 switch (alt4) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:67:31: .
+            	    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:67:31: .
             	    {
             	    matchAny(input); if (state.failed) return ;
 
@@ -510,11 +502,11 @@ public class DefRef extends TreeFilter {
 
 
     // $ANTLR start "exitMethod"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:75:1: exitMethod : METHOD_DECL ;
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:75:1: exitMethod : METHOD_DECL ;
     public final void exitMethod() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:76:5: ( METHOD_DECL )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:76:9: METHOD_DECL
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:76:5: ( METHOD_DECL )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:76:9: METHOD_DECL
             {
             match(input,METHOD_DECL,FOLLOW_METHOD_DECL_in_exitMethod319); if (state.failed) return ;
             if ( state.backtracking==1 ) {
@@ -539,15 +531,15 @@ public class DefRef extends TreeFilter {
 
 
     // $ANTLR start "varDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:86:1: varDeclaration : ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? ) ;
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:86:1: varDeclaration : ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? ) ;
     public final void varDeclaration() throws RecognitionException {
         CommonTree ID4=null;
         DefRef.type_return type5 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:87:5: ( ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:87:9: ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:87:5: ( ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? ) )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:87:9: ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? )
             {
             if ( input.LA(1)==ARG_DECL||(input.LA(1)>=VAR_DECL && input.LA(1)<=FIELD_DECL) ) {
                 input.consume();
@@ -567,7 +559,7 @@ public class DefRef extends TreeFilter {
             state._fsp--;
             if (state.failed) return ;
             ID4=(CommonTree)match(input,ID,FOLLOW_ID_in_varDeclaration363); if (state.failed) return ;
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:87:50: ( . )?
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:87:50: ( . )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -576,7 +568,7 @@ public class DefRef extends TreeFilter {
             }
             switch (alt5) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:87:50: .
+                    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:87:50: .
                     {
                     matchAny(input); if (state.failed) return ;
 
@@ -613,14 +605,14 @@ public class DefRef extends TreeFilter {
     };
 
     // $ANTLR start "type"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:96:1: type returns [Type tsym] : ( 'float' | 'int' | 'void' | ID );
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:96:1: type returns [Type tsym] : ( 'float' | 'int' | 'void' | ID );
     public final DefRef.type_return type() throws RecognitionException {
         DefRef.type_return retval = new DefRef.type_return();
         retval.start = input.LT(1);
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:99:5: ( 'float' | 'int' | 'void' | ID )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:99:5: ( 'float' | 'int' | 'void' | ID )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:
             {
             if ( input.LA(1)==ID||(input.LA(1)>=24 && input.LA(1)<=26) ) {
                 input.consume();
@@ -653,15 +645,15 @@ public class DefRef extends TreeFilter {
 
 
     // $ANTLR start "assignment"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:107:1: assignment : ^(eq= '=' member . ) ;
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:107:1: assignment : ^(eq= '=' member . ) ;
     public final void assignment() throws RecognitionException {
         CommonTree eq=null;
         Type member6 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:108:5: ( ^(eq= '=' member . ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:108:9: ^(eq= '=' member . )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:108:5: ( ^(eq= '=' member . ) )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:108:9: ^(eq= '=' member . )
             {
             eq=(CommonTree)match(input,27,FOLLOW_27_in_assignment469); if (state.failed) return ;
 
@@ -696,11 +688,11 @@ public class DefRef extends TreeFilter {
 
 
     // $ANTLR start "resolveExpr"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:115:1: resolveExpr : ^( EXPR member ) ;
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:115:1: resolveExpr : ^( EXPR member ) ;
     public final void resolveExpr() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:115:13: ( ^( EXPR member ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:115:15: ^( EXPR member )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:115:13: ( ^( EXPR member ) )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:115:15: ^( EXPR member )
             {
             match(input,EXPR,FOLLOW_EXPR_in_resolveExpr499); if (state.failed) return ;
 
@@ -728,7 +720,7 @@ public class DefRef extends TreeFilter {
 
 
     // $ANTLR start "member"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:118:1: member returns [Type type] : ( ^( '.' m= member ID ) | ID );
+    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:118:1: member returns [Type type] : ( ^( '.' m= member ID ) | ID );
     public final Type member() throws RecognitionException {
         Type type = null;
 
@@ -738,7 +730,7 @@ public class DefRef extends TreeFilter {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:119:5: ( ^( '.' m= member ID ) | ID )
+            // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:119:5: ( ^( '.' m= member ID ) | ID )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -757,7 +749,7 @@ public class DefRef extends TreeFilter {
             }
             switch (alt6) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:119:7: ^( '.' m= member ID )
+                    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:119:7: ^( '.' m= member ID )
                     {
                     match(input,30,FOLLOW_30_in_member522); if (state.failed) return type;
 
@@ -783,7 +775,7 @@ public class DefRef extends TreeFilter {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/aggr/DefRef.g:127:7: ID
+                    // /Users/hotoku/projects/lip/code/symtab/aggr/DefRef.g:127:7: ID
                     {
                     ID8=(CommonTree)match(input,ID,FOLLOW_ID_in_member545); if (state.failed) return type;
                     if ( state.backtracking==1 ) {

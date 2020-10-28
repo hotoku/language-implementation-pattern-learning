@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g 2009-09-23 17:38:00
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g 2020-10-28 21:00:37
 
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;import java.util.Stack;
@@ -21,62 +13,62 @@ public class Gen extends TreeParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CLASS_DECL", "METHOD_DECL", "ARG_DECL", "BLOCK", "VAR_DECL", "FIELD_DECL", "CALL", "ELIST", "EXPR", "UNARY_MINUS", "UNARY_NOT", "ASSIGN", "ADDR", "DEREF", "ADD", "MEMBER", "ID", "INT", "FLOAT", "CHAR", "LETTER", "WS", "SL_COMMENT", "'{'", "'}'", "';'", "':'", "'('", "')'", "','", "'[]'", "'*'", "'float'", "'int'", "'char'", "'boolean'", "'void'", "'if'", "'else'", "'return'", "'!='", "'=='", "'<'", "'>'", "'<='", "'>='", "'-'", "'/'", "'!'", "'&'", "'['", "']'", "'->'", "'true'", "'false'"
     };
-    public static final int T__42=42;
-    public static final int T__28=28;
-    public static final int T__57=57;
-    public static final int T__51=51;
-    public static final int EXPR=12;
-    public static final int T__47=47;
-    public static final int FLOAT=22;
-    public static final int T__50=50;
-    public static final int FIELD_DECL=9;
-    public static final int BLOCK=7;
-    public static final int T__39=39;
-    public static final int T__30=30;
-    public static final int T__52=52;
-    public static final int T__46=46;
-    public static final int UNARY_MINUS=13;
-    public static final int INT=21;
-    public static final int UNARY_NOT=14;
-    public static final int T__27=27;
-    public static final int ASSIGN=15;
-    public static final int T__49=49;
-    public static final int METHOD_DECL=5;
-    public static final int T__48=48;
-    public static final int T__54=54;
-    public static final int MEMBER=19;
-    public static final int T__34=34;
-    public static final int SL_COMMENT=26;
-    public static final int ELIST=11;
-    public static final int T__56=56;
-    public static final int ID=20;
+    public static final int VAR_DECL=8;
+    public static final int ADD=18;
     public static final int LETTER=24;
+    public static final int T__50=50;
+    public static final int METHOD_DECL=5;
+    public static final int ELIST=11;
+    public static final int DEREF=17;
+    public static final int T__55=55;
+    public static final int T__56=56;
+    public static final int T__57=57;
+    public static final int T__58=58;
+    public static final int ID=20;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__54=54;
+    public static final int BLOCK=7;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int CALL=10;
+    public static final int FLOAT=22;
+    public static final int CHAR=23;
+    public static final int UNARY_NOT=14;
+    public static final int ASSIGN=15;
+    public static final int INT=21;
+    public static final int MEMBER=19;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int EXPR=12;
+    public static final int T__39=39;
+    public static final int T__33=33;
+    public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int ARG_DECL=6;
     public static final int WS=25;
-    public static final int CHAR=23;
-    public static final int T__58=58;
-    public static final int T__44=44;
-    public static final int T__33=33;
-    public static final int T__55=55;
-    public static final int T__29=29;
-    public static final int T__45=45;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int FIELD_DECL=9;
     public static final int CLASS_DECL=4;
     public static final int ADDR=16;
-    public static final int T__43=43;
-    public static final int T__31=31;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int UNARY_MINUS=13;
+    public static final int T__44=44;
+    public static final int SL_COMMENT=26;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
     public static final int T__40=40;
-    public static final int EOF=-1;
-    public static final int T__53=53;
-    public static final int T__32=32;
-    public static final int CALL=10;
-    public static final int T__38=38;
-    public static final int T__37=37;
-    public static final int VAR_DECL=8;
-    public static final int DEREF=17;
     public static final int T__41=41;
-    public static final int ADD=18;
+    public static final int ARG_DECL=6;
+    public static final int T__42=42;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -114,7 +106,7 @@ public class Gen extends TreeParser {
     }
 
     public String[] getTokenNames() { return Gen.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/trans/ast-st/Gen.g"; }
 
 
     public static class compilationUnit_return extends TreeRuleReturnScope {
@@ -124,7 +116,7 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "compilationUnit"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:11:1: compilationUnit : (d+= classDeclaration | d+= methodDeclaration | d+= varDeclaration )+ -> file(defs=$d);
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:11:1: compilationUnit : (d+= classDeclaration | d+= methodDeclaration | d+= varDeclaration )+ -> file(defs=$d);
     public final Gen.compilationUnit_return compilationUnit() throws RecognitionException {
         Gen.compilationUnit_return retval = new Gen.compilationUnit_return();
         retval.start = input.LT(1);
@@ -132,10 +124,10 @@ public class Gen extends TreeParser {
         List list_d=null;
         RuleReturnScope d = null;
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:12:5: ( (d+= classDeclaration | d+= methodDeclaration | d+= varDeclaration )+ -> file(defs=$d))
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:12:9: (d+= classDeclaration | d+= methodDeclaration | d+= varDeclaration )+
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:12:5: ( (d+= classDeclaration | d+= methodDeclaration | d+= varDeclaration )+ -> file(defs=$d))
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:12:9: (d+= classDeclaration | d+= methodDeclaration | d+= varDeclaration )+
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:12:9: (d+= classDeclaration | d+= methodDeclaration | d+= varDeclaration )+
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:12:9: (d+= classDeclaration | d+= methodDeclaration | d+= varDeclaration )+
             int cnt1=0;
             loop1:
             do {
@@ -161,7 +153,7 @@ public class Gen extends TreeParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:12:11: d+= classDeclaration
+            	    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:12:11: d+= classDeclaration
             	    {
             	    pushFollow(FOLLOW_classDeclaration_in_compilationUnit56);
             	    d=classDeclaration();
@@ -175,7 +167,7 @@ public class Gen extends TreeParser {
             	    }
             	    break;
             	case 2 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:12:33: d+= methodDeclaration
+            	    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:12:33: d+= methodDeclaration
             	    {
             	    pushFollow(FOLLOW_methodDeclaration_in_compilationUnit62);
             	    d=methodDeclaration();
@@ -189,7 +181,7 @@ public class Gen extends TreeParser {
             	    }
             	    break;
             	case 3 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:12:56: d+= varDeclaration
+            	    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:12:56: d+= varDeclaration
             	    {
             	    pushFollow(FOLLOW_varDeclaration_in_compilationUnit68);
             	    d=varDeclaration();
@@ -244,7 +236,7 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "classDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:18:1: classDeclaration : ^( 'class' name= ID ( ^( ':' sup= ID ) )? (m+= classMember )+ ) -> class(name=$name.textsup=$sup.textmembers=$m);
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:18:1: classDeclaration : ^( 'class' name= ID ( ^( ':' sup= ID ) )? (m+= classMember )+ ) -> class(name=$name.textsup=$sup.textmembers=$m);
     public final Gen.classDeclaration_return classDeclaration() throws RecognitionException {
         Gen.classDeclaration_return retval = new Gen.classDeclaration_return();
         retval.start = input.LT(1);
@@ -254,14 +246,14 @@ public class Gen extends TreeParser {
         List list_m=null;
         RuleReturnScope m = null;
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:19:5: ( ^( 'class' name= ID ( ^( ':' sup= ID ) )? (m+= classMember )+ ) -> class(name=$name.textsup=$sup.textmembers=$m))
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:19:9: ^( 'class' name= ID ( ^( ':' sup= ID ) )? (m+= classMember )+ )
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:19:5: ( ^( 'class' name= ID ( ^( ':' sup= ID ) )? (m+= classMember )+ ) -> class(name=$name.textsup=$sup.textmembers=$m))
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:19:9: ^( 'class' name= ID ( ^( ':' sup= ID ) )? (m+= classMember )+ )
             {
             match(input,CLASS_DECL,FOLLOW_CLASS_DECL_in_classDeclaration110); if (state.failed) return retval;
 
             match(input, Token.DOWN, null); if (state.failed) return retval;
             name=(CommonTree)match(input,ID,FOLLOW_ID_in_classDeclaration114); if (state.failed) return retval;
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:19:27: ( ^( ':' sup= ID ) )?
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:19:27: ( ^( ':' sup= ID ) )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -270,7 +262,7 @@ public class Gen extends TreeParser {
             }
             switch (alt2) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:19:28: ^( ':' sup= ID )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:19:28: ^( ':' sup= ID )
                     {
                     match(input,30,FOLLOW_30_in_classDeclaration118); if (state.failed) return retval;
 
@@ -284,7 +276,7 @@ public class Gen extends TreeParser {
 
             }
 
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:19:45: (m+= classMember )+
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:19:45: (m+= classMember )+
             int cnt3=0;
             loop3:
             do {
@@ -298,7 +290,7 @@ public class Gen extends TreeParser {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:19:45: m+= classMember
+            	    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:19:45: m+= classMember
             	    {
             	    pushFollow(FOLLOW_classMember_in_classDeclaration129);
             	    m=classMember();
@@ -355,7 +347,7 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "classMember"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:24:1: classMember : ( varDeclaration -> {$varDeclaration.st} | methodDeclaration -> {$methodDeclaration.st});
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:24:1: classMember : ( varDeclaration -> {$varDeclaration.st} | methodDeclaration -> {$methodDeclaration.st});
     public final Gen.classMember_return classMember() throws RecognitionException {
         Gen.classMember_return retval = new Gen.classMember_return();
         retval.start = input.LT(1);
@@ -366,7 +358,7 @@ public class Gen extends TreeParser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:25:5: ( varDeclaration -> {$varDeclaration.st} | methodDeclaration -> {$methodDeclaration.st})
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:25:5: ( varDeclaration -> {$varDeclaration.st} | methodDeclaration -> {$methodDeclaration.st})
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -385,7 +377,7 @@ public class Gen extends TreeParser {
             }
             switch (alt4) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:25:9: varDeclaration
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:25:9: varDeclaration
                     {
                     pushFollow(FOLLOW_varDeclaration_in_classMember178);
                     varDeclaration1=varDeclaration();
@@ -405,7 +397,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:26:9: methodDeclaration
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:26:9: methodDeclaration
                     {
                     pushFollow(FOLLOW_methodDeclaration_in_classMember197);
                     methodDeclaration2=methodDeclaration();
@@ -444,7 +436,7 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "methodDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:29:1: methodDeclaration : ^( METHOD_DECL type ID (a+= parameter )* block ) -> method(name=$ID.textretType=$type.stargs=$ablock=$block.st);
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:29:1: methodDeclaration : ^( METHOD_DECL type ID (a+= parameter )* block ) -> method(name=$ID.textretType=$type.stargs=$ablock=$block.st);
     public final Gen.methodDeclaration_return methodDeclaration() throws RecognitionException {
         Gen.methodDeclaration_return retval = new Gen.methodDeclaration_return();
         retval.start = input.LT(1);
@@ -457,8 +449,8 @@ public class Gen extends TreeParser {
 
         RuleReturnScope a = null;
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:30:5: ( ^( METHOD_DECL type ID (a+= parameter )* block ) -> method(name=$ID.textretType=$type.stargs=$ablock=$block.st))
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:30:9: ^( METHOD_DECL type ID (a+= parameter )* block )
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:30:5: ( ^( METHOD_DECL type ID (a+= parameter )* block ) -> method(name=$ID.textretType=$type.stargs=$ablock=$block.st))
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:30:9: ^( METHOD_DECL type ID (a+= parameter )* block )
             {
             match(input,METHOD_DECL,FOLLOW_METHOD_DECL_in_methodDeclaration226); if (state.failed) return retval;
 
@@ -469,7 +461,7 @@ public class Gen extends TreeParser {
             state._fsp--;
             if (state.failed) return retval;
             ID3=(CommonTree)match(input,ID,FOLLOW_ID_in_methodDeclaration230); if (state.failed) return retval;
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:30:32: (a+= parameter )*
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:30:32: (a+= parameter )*
             loop5:
             do {
                 int alt5=2;
@@ -482,7 +474,7 @@ public class Gen extends TreeParser {
 
                 switch (alt5) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:30:32: a+= parameter
+            	    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:30:32: a+= parameter
             	    {
             	    pushFollow(FOLLOW_parameter_in_methodDeclaration234);
             	    a=parameter();
@@ -539,7 +531,7 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "parameter"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:34:1: parameter : ^( ARG_DECL ( ^(p= '*' t= type ) | t= type ) ID ) -> arg(name=$ID.texttype=$t.stptr=p!=null?\"*\":null);
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:34:1: parameter : ^( ARG_DECL ( ^(p= '*' t= type ) | t= type ) ID ) -> arg(name=$ID.texttype=$t.stptr=p!=null?\"*\":null);
     public final Gen.parameter_return parameter() throws RecognitionException {
         Gen.parameter_return retval = new Gen.parameter_return();
         retval.start = input.LT(1);
@@ -550,13 +542,13 @@ public class Gen extends TreeParser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:35:5: ( ^( ARG_DECL ( ^(p= '*' t= type ) | t= type ) ID ) -> arg(name=$ID.texttype=$t.stptr=p!=null?\"*\":null))
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:35:9: ^( ARG_DECL ( ^(p= '*' t= type ) | t= type ) ID )
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:35:5: ( ^( ARG_DECL ( ^(p= '*' t= type ) | t= type ) ID ) -> arg(name=$ID.texttype=$t.stptr=p!=null?\"*\":null))
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:35:9: ^( ARG_DECL ( ^(p= '*' t= type ) | t= type ) ID )
             {
             match(input,ARG_DECL,FOLLOW_ARG_DECL_in_parameter290); if (state.failed) return retval;
 
             match(input, Token.DOWN, null); if (state.failed) return retval;
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:35:20: ( ^(p= '*' t= type ) | t= type )
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:35:20: ( ^(p= '*' t= type ) | t= type )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -575,7 +567,7 @@ public class Gen extends TreeParser {
             }
             switch (alt6) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:35:21: ^(p= '*' t= type )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:35:21: ^(p= '*' t= type )
                     {
                     p=(CommonTree)match(input,35,FOLLOW_35_in_parameter296); if (state.failed) return retval;
 
@@ -591,7 +583,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:35:37: t= type
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:35:37: t= type
                     {
                     pushFollow(FOLLOW_type_in_parameter305);
                     t=type();
@@ -638,7 +630,7 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "type"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:40:1: type : ( primitiveType -> {$primitiveType.st} | ID -> {%{$ID.text}});
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:40:1: type : ( primitiveType -> {$primitiveType.st} | ID -> {%{$ID.text}});
     public final Gen.type_return type() throws RecognitionException {
         Gen.type_return retval = new Gen.type_return();
         retval.start = input.LT(1);
@@ -648,7 +640,7 @@ public class Gen extends TreeParser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:40:5: ( primitiveType -> {$primitiveType.st} | ID -> {%{$ID.text}})
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:40:5: ( primitiveType -> {$primitiveType.st} | ID -> {%{$ID.text}})
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -667,7 +659,7 @@ public class Gen extends TreeParser {
             }
             switch (alt7) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:40:9: primitiveType
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:40:9: primitiveType
                     {
                     pushFollow(FOLLOW_primitiveType_in_type351);
                     primitiveType7=primitiveType();
@@ -687,7 +679,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:41:9: ID
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:41:9: ID
                     {
                     ID8=(CommonTree)match(input,ID,FOLLOW_ID_in_type367); if (state.failed) return retval;
 
@@ -722,14 +714,14 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "primitiveType"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:46:1: primitiveType : ( 'float' | 'int' | 'char' | 'boolean' | 'void' );
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:46:1: primitiveType : ( 'float' | 'int' | 'char' | 'boolean' | 'void' );
     public final Gen.primitiveType_return primitiveType() throws RecognitionException {
         Gen.primitiveType_return retval = new Gen.primitiveType_return();
         retval.start = input.LT(1);
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:48:5: ( 'float' | 'int' | 'char' | 'boolean' | 'void' )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:48:5: ( 'float' | 'int' | 'char' | 'boolean' | 'void' )
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:
             {
             if ( (input.LA(1)>=36 && input.LA(1)<=40) ) {
                 input.consume();
@@ -767,7 +759,7 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "block"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:57:1: block : ^( BLOCK (s+= statement )* ) -> block(stats=$s);
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:57:1: block : ^( BLOCK (s+= statement )* ) -> block(stats=$s);
     public final Gen.block_return block() throws RecognitionException {
         Gen.block_return retval = new Gen.block_return();
         retval.start = input.LT(1);
@@ -775,14 +767,14 @@ public class Gen extends TreeParser {
         List list_s=null;
         RuleReturnScope s = null;
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:58:5: ( ^( BLOCK (s+= statement )* ) -> block(stats=$s))
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:58:9: ^( BLOCK (s+= statement )* )
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:58:5: ( ^( BLOCK (s+= statement )* ) -> block(stats=$s))
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:58:9: ^( BLOCK (s+= statement )* )
             {
             match(input,BLOCK,FOLLOW_BLOCK_in_block472); if (state.failed) return retval;
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); if (state.failed) return retval;
-                // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:58:18: (s+= statement )*
+                // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:58:18: (s+= statement )*
                 loop8:
                 do {
                     int alt8=2;
@@ -795,7 +787,7 @@ public class Gen extends TreeParser {
 
                     switch (alt8) {
                 	case 1 :
-                	    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:58:18: s+= statement
+                	    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:58:18: s+= statement
                 	    {
                 	    pushFollow(FOLLOW_statement_in_block476);
                 	    s=statement();
@@ -848,7 +840,7 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "varDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:63:1: varDeclaration : ( ^( VAR_DECL ^(p= '*' type ) ID ( expression )? ) -> var(name=$ID.texttype=$type.stinit=$expression.stptr=$p) | ^( VAR_DECL type ID ( expression )? ) -> var(name=$ID.texttype=$type.stinit=$expression.st));
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:63:1: varDeclaration : ( ^( VAR_DECL ^(p= '*' type ) ID ( expression )? ) -> var(name=$ID.texttype=$type.stinit=$expression.stptr=$p) | ^( VAR_DECL type ID ( expression )? ) -> var(name=$ID.texttype=$type.stinit=$expression.st));
     public final Gen.varDeclaration_return varDeclaration() throws RecognitionException {
         Gen.varDeclaration_return retval = new Gen.varDeclaration_return();
         retval.start = input.LT(1);
@@ -866,7 +858,7 @@ public class Gen extends TreeParser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:64:5: ( ^( VAR_DECL ^(p= '*' type ) ID ( expression )? ) -> var(name=$ID.texttype=$type.stinit=$expression.stptr=$p) | ^( VAR_DECL type ID ( expression )? ) -> var(name=$ID.texttype=$type.stinit=$expression.st))
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:64:5: ( ^( VAR_DECL ^(p= '*' type ) ID ( expression )? ) -> var(name=$ID.texttype=$type.stinit=$expression.stptr=$p) | ^( VAR_DECL type ID ( expression )? ) -> var(name=$ID.texttype=$type.stinit=$expression.st))
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -907,7 +899,7 @@ public class Gen extends TreeParser {
             }
             switch (alt11) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:64:9: ^( VAR_DECL ^(p= '*' type ) ID ( expression )? )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:64:9: ^( VAR_DECL ^(p= '*' type ) ID ( expression )? )
                     {
                     match(input,VAR_DECL,FOLLOW_VAR_DECL_in_varDeclaration509); if (state.failed) return retval;
 
@@ -923,7 +915,7 @@ public class Gen extends TreeParser {
 
                     match(input, Token.UP, null); if (state.failed) return retval;
                     ID9=(CommonTree)match(input,ID,FOLLOW_ID_in_varDeclaration519); if (state.failed) return retval;
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:64:37: ( expression )?
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:64:37: ( expression )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -932,7 +924,7 @@ public class Gen extends TreeParser {
                     }
                     switch (alt9) {
                         case 1 :
-                            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:64:37: expression
+                            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:64:37: expression
                             {
                             pushFollow(FOLLOW_expression_in_varDeclaration521);
                             expression11=expression();
@@ -961,7 +953,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:66:9: ^( VAR_DECL type ID ( expression )? )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:66:9: ^( VAR_DECL type ID ( expression )? )
                     {
                     match(input,VAR_DECL,FOLLOW_VAR_DECL_in_varDeclaration566); if (state.failed) return retval;
 
@@ -972,7 +964,7 @@ public class Gen extends TreeParser {
                     state._fsp--;
                     if (state.failed) return retval;
                     ID12=(CommonTree)match(input,ID,FOLLOW_ID_in_varDeclaration570); if (state.failed) return retval;
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:66:28: ( expression )?
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:66:28: ( expression )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -981,7 +973,7 @@ public class Gen extends TreeParser {
                     }
                     switch (alt10) {
                         case 1 :
-                            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:66:28: expression
+                            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:66:28: expression
                             {
                             pushFollow(FOLLOW_expression_in_varDeclaration572);
                             expression14=expression();
@@ -1029,7 +1021,7 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "statement"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:71:1: statement : ( block -> {$block.st} | varDeclaration -> {$varDeclaration.st} | ^( 'if' expression s1= statement (s2= statement )? ) -> if(cond=$expression.ststat1=$s1.ststat2=$s2.st) | ^( 'return' ( expression )? ) -> return(v=$expression.st) | ^( '=' a= expression b= expression ) -> assign(a=$a.stb=$b.st) | ^( EXPR ^( CALL ID ^( ELIST (p+= expr )* ) ) ) -> callstat(name=$ID.textargs=$p));
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:71:1: statement : ( block -> {$block.st} | varDeclaration -> {$varDeclaration.st} | ^( 'if' expression s1= statement (s2= statement )? ) -> if(cond=$expression.ststat1=$s1.ststat2=$s2.st) | ^( 'return' ( expression )? ) -> return(v=$expression.st) | ^( '=' a= expression b= expression ) -> assign(a=$a.stb=$b.st) | ^( EXPR ^( CALL ID ^( ELIST (p+= expr )* ) ) ) -> callstat(name=$ID.textargs=$p));
     public final Gen.statement_return statement() throws RecognitionException {
         Gen.statement_return retval = new Gen.statement_return();
         retval.start = input.LT(1);
@@ -1054,7 +1046,7 @@ public class Gen extends TreeParser {
 
         RuleReturnScope p = null;
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:72:5: ( block -> {$block.st} | varDeclaration -> {$varDeclaration.st} | ^( 'if' expression s1= statement (s2= statement )? ) -> if(cond=$expression.ststat1=$s1.ststat2=$s2.st) | ^( 'return' ( expression )? ) -> return(v=$expression.st) | ^( '=' a= expression b= expression ) -> assign(a=$a.stb=$b.st) | ^( EXPR ^( CALL ID ^( ELIST (p+= expr )* ) ) ) -> callstat(name=$ID.textargs=$p))
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:72:5: ( block -> {$block.st} | varDeclaration -> {$varDeclaration.st} | ^( 'if' expression s1= statement (s2= statement )? ) -> if(cond=$expression.ststat1=$s1.ststat2=$s2.st) | ^( 'return' ( expression )? ) -> return(v=$expression.st) | ^( '=' a= expression b= expression ) -> assign(a=$a.stb=$b.st) | ^( EXPR ^( CALL ID ^( ELIST (p+= expr )* ) ) ) -> callstat(name=$ID.textargs=$p))
             int alt15=6;
             switch ( input.LA(1) ) {
             case BLOCK:
@@ -1097,7 +1089,7 @@ public class Gen extends TreeParser {
 
             switch (alt15) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:72:9: block
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:72:9: block
                     {
                     pushFollow(FOLLOW_block_in_statement621);
                     block15=block();
@@ -1117,7 +1109,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:73:9: varDeclaration
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:73:9: varDeclaration
                     {
                     pushFollow(FOLLOW_varDeclaration_in_statement645);
                     varDeclaration16=varDeclaration();
@@ -1137,7 +1129,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:74:9: ^( 'if' expression s1= statement (s2= statement )? )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:74:9: ^( 'if' expression s1= statement (s2= statement )? )
                     {
                     match(input,41,FOLLOW_41_in_statement661); if (state.failed) return retval;
 
@@ -1152,7 +1144,7 @@ public class Gen extends TreeParser {
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:74:42: (s2= statement )?
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:74:42: (s2= statement )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -1161,7 +1153,7 @@ public class Gen extends TreeParser {
                     }
                     switch (alt12) {
                         case 1 :
-                            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:74:42: s2= statement
+                            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:74:42: s2= statement
                             {
                             pushFollow(FOLLOW_statement_in_statement671);
                             s2=statement();
@@ -1190,13 +1182,13 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:76:9: ^( 'return' ( expression )? )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:76:9: ^( 'return' ( expression )? )
                     {
                     match(input,43,FOLLOW_43_in_statement727); if (state.failed) return retval;
 
                     if ( input.LA(1)==Token.DOWN ) {
                         match(input, Token.DOWN, null); if (state.failed) return retval;
-                        // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:76:20: ( expression )?
+                        // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:76:20: ( expression )?
                         int alt13=2;
                         int LA13_0 = input.LA(1);
 
@@ -1205,7 +1197,7 @@ public class Gen extends TreeParser {
                         }
                         switch (alt13) {
                             case 1 :
-                                // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:76:20: expression
+                                // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:76:20: expression
                                 {
                                 pushFollow(FOLLOW_expression_in_statement729);
                                 expression18=expression();
@@ -1235,7 +1227,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:79:9: ^( '=' a= expression b= expression )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:79:9: ^( '=' a= expression b= expression )
                     {
                     match(input,ASSIGN,FOLLOW_ASSIGN_in_statement776); if (state.failed) return retval;
 
@@ -1266,7 +1258,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 6 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:81:9: ^( EXPR ^( CALL ID ^( ELIST (p+= expr )* ) ) )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:81:9: ^( EXPR ^( CALL ID ^( ELIST (p+= expr )* ) ) )
                     {
                     match(input,EXPR,FOLLOW_EXPR_in_statement812); if (state.failed) return retval;
 
@@ -1279,7 +1271,7 @@ public class Gen extends TreeParser {
 
                     if ( input.LA(1)==Token.DOWN ) {
                         match(input, Token.DOWN, null); if (state.failed) return retval;
-                        // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:81:36: (p+= expr )*
+                        // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:81:36: (p+= expr )*
                         loop14:
                         do {
                             int alt14=2;
@@ -1292,7 +1284,7 @@ public class Gen extends TreeParser {
 
                             switch (alt14) {
                         	case 1 :
-                        	    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:81:36: p+= expr
+                        	    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:81:36: p+= expr
                         	    {
                         	    pushFollow(FOLLOW_expr_in_statement824);
                         	    p=expr();
@@ -1351,7 +1343,7 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "expression"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:85:1: expression : ^( EXPR expr ) -> {$expr.st};
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:85:1: expression : ^( EXPR expr ) -> {$expr.st};
     public final Gen.expression_return expression() throws RecognitionException {
         Gen.expression_return retval = new Gen.expression_return();
         retval.start = input.LT(1);
@@ -1360,8 +1352,8 @@ public class Gen extends TreeParser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:86:5: ( ^( EXPR expr ) -> {$expr.st})
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:86:9: ^( EXPR expr )
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:86:5: ( ^( EXPR expr ) -> {$expr.st})
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:86:9: ^( EXPR expr )
             {
             match(input,EXPR,FOLLOW_EXPR_in_expression887); if (state.failed) return retval;
 
@@ -1403,7 +1395,7 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "expr"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:89:1: expr options {backtrack=true; } : ( atom -> {$atom.st} | ^( UNARY_MINUS v= expr ) -> unary_minus(v=$v.st) | ^( UNARY_NOT v= expr ) -> unary_not(v=$v.st) | ^( ADDR v= expr ) -> addr(v=$v.st) | ^( DEREF ^( '+' ID v= expr ) ) -> index(array=$ID.texti=$v.st) | ^( DEREF v= expr ) -> deref(v=$v.st) | ^( '.' o= expr ID ) -> member(obj=$o.stname=$ID.text) | ^( CALL ID ^( ELIST (a+= expr )* ) ) -> call(name=$ID.textargs=$a) | ^( op x= expr y= expr ) -> operation(op=$op.stx=$x.sty=$y.st));
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:89:1: expr options {backtrack=true; } : ( atom -> {$atom.st} | ^( UNARY_MINUS v= expr ) -> unary_minus(v=$v.st) | ^( UNARY_NOT v= expr ) -> unary_not(v=$v.st) | ^( ADDR v= expr ) -> addr(v=$v.st) | ^( DEREF ^( '+' ID v= expr ) ) -> index(array=$ID.texti=$v.st) | ^( DEREF v= expr ) -> deref(v=$v.st) | ^( '.' o= expr ID ) -> member(obj=$o.stname=$ID.text) | ^( CALL ID ^( ELIST (a+= expr )* ) ) -> call(name=$ID.textargs=$a) | ^( op x= expr y= expr ) -> operation(op=$op.stx=$x.sty=$y.st));
     public final Gen.expr_return expr() throws RecognitionException {
         Gen.expr_return retval = new Gen.expr_return();
         retval.start = input.LT(1);
@@ -1426,12 +1418,12 @@ public class Gen extends TreeParser {
 
         RuleReturnScope a = null;
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:91:5: ( atom -> {$atom.st} | ^( UNARY_MINUS v= expr ) -> unary_minus(v=$v.st) | ^( UNARY_NOT v= expr ) -> unary_not(v=$v.st) | ^( ADDR v= expr ) -> addr(v=$v.st) | ^( DEREF ^( '+' ID v= expr ) ) -> index(array=$ID.texti=$v.st) | ^( DEREF v= expr ) -> deref(v=$v.st) | ^( '.' o= expr ID ) -> member(obj=$o.stname=$ID.text) | ^( CALL ID ^( ELIST (a+= expr )* ) ) -> call(name=$ID.textargs=$a) | ^( op x= expr y= expr ) -> operation(op=$op.stx=$x.sty=$y.st))
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:91:5: ( atom -> {$atom.st} | ^( UNARY_MINUS v= expr ) -> unary_minus(v=$v.st) | ^( UNARY_NOT v= expr ) -> unary_not(v=$v.st) | ^( ADDR v= expr ) -> addr(v=$v.st) | ^( DEREF ^( '+' ID v= expr ) ) -> index(array=$ID.texti=$v.st) | ^( DEREF v= expr ) -> deref(v=$v.st) | ^( '.' o= expr ID ) -> member(obj=$o.stname=$ID.text) | ^( CALL ID ^( ELIST (a+= expr )* ) ) -> call(name=$ID.textargs=$a) | ^( op x= expr y= expr ) -> operation(op=$op.stx=$x.sty=$y.st))
             int alt17=9;
             alt17 = dfa17.predict(input);
             switch (alt17) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:91:9: atom
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:91:9: atom
                     {
                     pushFollow(FOLLOW_atom_in_expr920);
                     atom21=atom();
@@ -1451,7 +1443,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:92:9: ^( UNARY_MINUS v= expr )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:92:9: ^( UNARY_MINUS v= expr )
                     {
                     match(input,UNARY_MINUS,FOLLOW_UNARY_MINUS_in_expr958); if (state.failed) return retval;
 
@@ -1477,7 +1469,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:93:9: ^( UNARY_NOT v= expr )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:93:9: ^( UNARY_NOT v= expr )
                     {
                     match(input,UNARY_NOT,FOLLOW_UNARY_NOT_in_expr989); if (state.failed) return retval;
 
@@ -1503,7 +1495,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:94:9: ^( ADDR v= expr )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:94:9: ^( ADDR v= expr )
                     {
                     match(input,ADDR,FOLLOW_ADDR_in_expr1022); if (state.failed) return retval;
 
@@ -1529,7 +1521,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:95:9: ^( DEREF ^( '+' ID v= expr ) )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:95:9: ^( DEREF ^( '+' ID v= expr ) )
                     {
                     match(input,DEREF,FOLLOW_DEREF_in_expr1065); if (state.failed) return retval;
 
@@ -1561,7 +1553,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 6 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:96:9: ^( DEREF v= expr )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:96:9: ^( DEREF v= expr )
                     {
                     match(input,DEREF,FOLLOW_DEREF_in_expr1103); if (state.failed) return retval;
 
@@ -1587,7 +1579,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 7 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:97:9: ^( '.' o= expr ID )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:97:9: ^( '.' o= expr ID )
                     {
                     match(input,MEMBER,FOLLOW_MEMBER_in_expr1140); if (state.failed) return retval;
 
@@ -1614,7 +1606,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 8 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:98:9: ^( CALL ID ^( ELIST (a+= expr )* ) )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:98:9: ^( CALL ID ^( ELIST (a+= expr )* ) )
                     {
                     match(input,CALL,FOLLOW_CALL_in_expr1183); if (state.failed) return retval;
 
@@ -1624,7 +1616,7 @@ public class Gen extends TreeParser {
 
                     if ( input.LA(1)==Token.DOWN ) {
                         match(input, Token.DOWN, null); if (state.failed) return retval;
-                        // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:98:28: (a+= expr )*
+                        // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:98:28: (a+= expr )*
                         loop16:
                         do {
                             int alt16=2;
@@ -1637,7 +1629,7 @@ public class Gen extends TreeParser {
 
                             switch (alt16) {
                         	case 1 :
-                        	    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:98:28: a+= expr
+                        	    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:98:28: a+= expr
                         	    {
                         	    pushFollow(FOLLOW_expr_in_expr1192);
                         	    a=expr();
@@ -1675,7 +1667,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 9 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:99:9: ^( op x= expr y= expr )
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:99:9: ^( op x= expr y= expr )
                     {
                     pushFollow(FOLLOW_op_in_expr1219);
                     op25=op();
@@ -1729,14 +1721,14 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "atom"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:102:1: atom : ( 'true' | 'false' | CHAR | INT | FLOAT | ID );
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:102:1: atom : ( 'true' | 'false' | CHAR | INT | FLOAT | ID );
     public final Gen.atom_return atom() throws RecognitionException {
         Gen.atom_return retval = new Gen.atom_return();
         retval.start = input.LT(1);
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:104:5: ( 'true' | 'false' | CHAR | INT | FLOAT | ID )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:104:5: ( 'true' | 'false' | CHAR | INT | FLOAT | ID )
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:
             {
             if ( (input.LA(1)>=ID && input.LA(1)<=CHAR)||(input.LA(1)>=57 && input.LA(1)<=58) ) {
                 input.consume();
@@ -1774,13 +1766,13 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "op"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:113:1: op : ( bop | relop | eqop );
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:113:1: op : ( bop | relop | eqop );
     public final Gen.op_return op() throws RecognitionException {
         Gen.op_return retval = new Gen.op_return();
         retval.start = input.LT(1);
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:116:5: ( bop | relop | eqop )
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:116:5: ( bop | relop | eqop )
             int alt18=3;
             switch ( input.LA(1) ) {
             case ADD:
@@ -1815,7 +1807,7 @@ public class Gen extends TreeParser {
 
             switch (alt18) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:116:9: bop
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:116:9: bop
                     {
                     pushFollow(FOLLOW_bop_in_op1372);
                     bop();
@@ -1826,7 +1818,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:116:15: relop
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:116:15: relop
                     {
                     pushFollow(FOLLOW_relop_in_op1376);
                     relop();
@@ -1837,7 +1829,7 @@ public class Gen extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:116:23: eqop
+                    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:116:23: eqop
                     {
                     pushFollow(FOLLOW_eqop_in_op1380);
                     eqop();
@@ -1871,14 +1863,14 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "bop"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:120:1: bop : ( '+' | '-' | '*' | '/' );
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:120:1: bop : ( '+' | '-' | '*' | '/' );
     public final Gen.bop_return bop() throws RecognitionException {
         Gen.bop_return retval = new Gen.bop_return();
         retval.start = input.LT(1);
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:120:5: ( '+' | '-' | '*' | '/' )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:120:5: ( '+' | '-' | '*' | '/' )
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:
             {
             if ( input.LA(1)==ADD||input.LA(1)==35||(input.LA(1)>=50 && input.LA(1)<=51) ) {
                 input.consume();
@@ -1911,14 +1903,14 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "relop"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:122:1: relop : ( '<' | '>' | '<=' | '>=' );
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:122:1: relop : ( '<' | '>' | '<=' | '>=' );
     public final Gen.relop_return relop() throws RecognitionException {
         Gen.relop_return retval = new Gen.relop_return();
         retval.start = input.LT(1);
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:122:6: ( '<' | '>' | '<=' | '>=' )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:122:6: ( '<' | '>' | '<=' | '>=' )
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:
             {
             if ( (input.LA(1)>=46 && input.LA(1)<=49) ) {
                 input.consume();
@@ -1951,14 +1943,14 @@ public class Gen extends TreeParser {
     };
 
     // $ANTLR start "eqop"
-    // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:124:1: eqop : ( '!=' | '==' );
+    // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:124:1: eqop : ( '!=' | '==' );
     public final Gen.eqop_return eqop() throws RecognitionException {
         Gen.eqop_return retval = new Gen.eqop_return();
         retval.start = input.LT(1);
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:124:5: ( '!=' | '==' )
-            // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:124:5: ( '!=' | '==' )
+            // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:
             {
             if ( (input.LA(1)>=44 && input.LA(1)<=45) ) {
                 input.consume();
@@ -1989,8 +1981,8 @@ public class Gen extends TreeParser {
         Gen.expr_return v = null;
 
 
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:95:9: ( ^( DEREF ^( '+' ID v= expr ) ) )
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:95:9: ^( DEREF ^( '+' ID v= expr ) )
+        // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:95:9: ( ^( DEREF ^( '+' ID v= expr ) ) )
+        // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:95:9: ^( DEREF ^( '+' ID v= expr ) )
         {
         match(input,DEREF,FOLLOW_DEREF_in_synpred5_Gen1065); if (state.failed) return ;
 
@@ -2018,8 +2010,8 @@ public class Gen extends TreeParser {
         Gen.expr_return v = null;
 
 
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:96:9: ( ^( DEREF v= expr ) )
-        // /Users/parrt/research/book/TPDSL/Book/code/trans/ast-st/Gen.g:96:9: ^( DEREF v= expr )
+        // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:96:9: ( ^( DEREF v= expr ) )
+        // /Users/hotoku/projects/lip/code/trans/ast-st/Gen.g:96:9: ^( DEREF v= expr )
         {
         match(input,DEREF,FOLLOW_DEREF_in_synpred6_Gen1103); if (state.failed) return ;
 

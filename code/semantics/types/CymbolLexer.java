@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g 2009-09-23 17:37:53
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g 2020-10-28 21:00:26
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -14,58 +6,58 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class CymbolLexer extends Lexer {
-    public static final int INDEX=15;
-    public static final int T__42=42;
-    public static final int T__28=28;
-    public static final int T__23=23;
-    public static final int EXPR=11;
-    public static final int T__51=51;
-    public static final int T__47=47;
-    public static final int FLOAT=18;
-    public static final int T__50=50;
-    public static final int FIELD_DECL=8;
-    public static final int BLOCK=6;
-    public static final int T__39=39;
-    public static final int T__30=30;
-    public static final int T__52=52;
-    public static final int T__46=46;
-    public static final int UNARY_MINUS=12;
-    public static final int INT=17;
-    public static final int UNARY_NOT=13;
-    public static final int T__27=27;
-    public static final int ASSIGN=14;
-    public static final int T__24=24;
-    public static final int T__49=49;
-    public static final int METHOD_DECL=4;
-    public static final int T__48=48;
-    public static final int T__54=54;
-    public static final int T__34=34;
-    public static final int SL_COMMENT=22;
-    public static final int ELIST=10;
-    public static final int ID=16;
+    public static final int VAR_DECL=7;
     public static final int LETTER=20;
+    public static final int T__50=50;
+    public static final int METHOD_DECL=4;
+    public static final int ELIST=10;
+    public static final int INDEX=15;
+    public static final int ID=16;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__54=54;
+    public static final int BLOCK=6;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int CALL=9;
+    public static final int FLOAT=18;
+    public static final int CHAR=19;
+    public static final int UNARY_NOT=13;
+    public static final int ASSIGN=14;
+    public static final int INT=17;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int EXPR=11;
+    public static final int T__39=39;
+    public static final int T__33=33;
+    public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int ARG_DECL=5;
     public static final int WS=21;
-    public static final int CHAR=19;
-    public static final int T__44=44;
-    public static final int T__33=33;
-    public static final int T__29=29;
-    public static final int T__45=45;
-    public static final int T__43=43;
-    public static final int T__31=31;
-    public static final int T__40=40;
     public static final int EOF=-1;
-    public static final int T__53=53;
+    public static final int T__30=30;
+    public static final int T__31=31;
     public static final int T__32=32;
-    public static final int CALL=9;
-    public static final int T__38=38;
-    public static final int T__37=37;
-    public static final int T__26=26;
-    public static final int T__25=25;
-    public static final int VAR_DECL=7;
+    public static final int FIELD_DECL=8;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int UNARY_MINUS=12;
+    public static final int T__44=44;
+    public static final int SL_COMMENT=22;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__40=40;
     public static final int T__41=41;
+    public static final int ARG_DECL=5;
+    public static final int T__42=42;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -78,15 +70,15 @@ public class CymbolLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/semantics/types/Cymbol.g"; }
 
     // $ANTLR start "ASSIGN"
     public final void mASSIGN() throws RecognitionException {
         try {
             int _type = ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:3:8: ( '=' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:3:10: '='
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:3:8: ( '=' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:3:10: '='
             {
             match('='); 
 
@@ -105,8 +97,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:4:7: ( 'struct' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:4:9: 'struct'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:4:7: ( 'struct' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:4:9: 'struct'
             {
             match("struct"); 
 
@@ -126,8 +118,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:5:7: ( '{' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:5:9: '{'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:5:7: ( '{' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:5:9: '{'
             {
             match('{'); 
 
@@ -146,8 +138,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:6:7: ( '}' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:6:9: '}'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:6:7: ( '}' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:6:9: '}'
             {
             match('}'); 
 
@@ -166,8 +158,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:7:7: ( ';' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:7:9: ';'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:7:7: ( ';' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:7:9: ';'
             {
             match(';'); 
 
@@ -186,8 +178,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:8:7: ( '[]' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:8:9: '[]'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:8:7: ( '[]' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:8:9: '[]'
             {
             match("[]"); 
 
@@ -207,8 +199,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:9:7: ( '(' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:9:9: '('
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:9:7: ( '(' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:9:9: '('
             {
             match('('); 
 
@@ -227,8 +219,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:10:7: ( ')' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:10:9: ')'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:10:7: ( ')' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:10:9: ')'
             {
             match(')'); 
 
@@ -247,8 +239,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:11:7: ( ',' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:11:9: ','
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:11:7: ( ',' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:11:9: ','
             {
             match(','); 
 
@@ -267,8 +259,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:12:7: ( 'float' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:12:9: 'float'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:12:7: ( 'float' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:12:9: 'float'
             {
             match("float"); 
 
@@ -288,8 +280,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:13:7: ( 'int' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:13:9: 'int'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:13:7: ( 'int' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:13:9: 'int'
             {
             match("int"); 
 
@@ -309,8 +301,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:14:7: ( 'char' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:14:9: 'char'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:14:7: ( 'char' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:14:9: 'char'
             {
             match("char"); 
 
@@ -330,8 +322,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:15:7: ( 'boolean' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:15:9: 'boolean'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:15:7: ( 'boolean' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:15:9: 'boolean'
             {
             match("boolean"); 
 
@@ -351,8 +343,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:16:7: ( 'void' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:16:9: 'void'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:16:7: ( 'void' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:16:9: 'void'
             {
             match("void"); 
 
@@ -372,8 +364,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:17:7: ( 'if' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:17:9: 'if'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:17:7: ( 'if' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:17:9: 'if'
             {
             match("if"); 
 
@@ -393,8 +385,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:18:7: ( 'else' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:18:9: 'else'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:18:7: ( 'else' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:18:9: 'else'
             {
             match("else"); 
 
@@ -414,8 +406,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:19:7: ( 'return' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:19:9: 'return'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:19:7: ( 'return' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:19:9: 'return'
             {
             match("return"); 
 
@@ -435,8 +427,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:20:7: ( '!=' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:20:9: '!='
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:20:7: ( '!=' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:20:9: '!='
             {
             match("!="); 
 
@@ -456,8 +448,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:21:7: ( '==' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:21:9: '=='
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:21:7: ( '==' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:21:9: '=='
             {
             match("=="); 
 
@@ -477,8 +469,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:22:7: ( '<' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:22:9: '<'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:22:7: ( '<' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:22:9: '<'
             {
             match('<'); 
 
@@ -497,8 +489,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:23:7: ( '>' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:23:9: '>'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:23:7: ( '>' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:23:9: '>'
             {
             match('>'); 
 
@@ -517,8 +509,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:24:7: ( '<=' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:24:9: '<='
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:24:7: ( '<=' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:24:9: '<='
             {
             match("<="); 
 
@@ -538,8 +530,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:25:7: ( '>=' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:25:9: '>='
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:25:7: ( '>=' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:25:9: '>='
             {
             match(">="); 
 
@@ -559,8 +551,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:26:7: ( '+' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:26:9: '+'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:26:7: ( '+' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:26:9: '+'
             {
             match('+'); 
 
@@ -579,8 +571,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:27:7: ( '-' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:27:9: '-'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:27:7: ( '-' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:27:9: '-'
             {
             match('-'); 
 
@@ -599,8 +591,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:28:7: ( '*' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:28:9: '*'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:28:7: ( '*' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:28:9: '*'
             {
             match('*'); 
 
@@ -619,8 +611,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:29:7: ( '/' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:29:9: '/'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:29:7: ( '/' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:29:9: '/'
             {
             match('/'); 
 
@@ -639,8 +631,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:30:7: ( '!' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:30:9: '!'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:30:7: ( '!' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:30:9: '!'
             {
             match('!'); 
 
@@ -659,8 +651,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:31:7: ( '[' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:31:9: '['
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:31:7: ( '[' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:31:9: '['
             {
             match('['); 
 
@@ -679,8 +671,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:32:7: ( ']' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:32:9: ']'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:32:7: ( ']' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:32:9: ']'
             {
             match(']'); 
 
@@ -699,8 +691,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:33:7: ( '.' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:33:9: '.'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:33:7: ( '.' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:33:9: '.'
             {
             match('.'); 
 
@@ -719,8 +711,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:34:7: ( 'true' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:34:9: 'true'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:34:7: ( 'true' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:34:9: 'true'
             {
             match("true"); 
 
@@ -740,8 +732,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:35:7: ( 'false' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:35:9: 'false'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:35:7: ( 'false' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:35:9: 'false'
             {
             match("false"); 
 
@@ -761,11 +753,11 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:163:5: ( LETTER ( LETTER | '0' .. '9' )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:163:9: LETTER ( LETTER | '0' .. '9' )*
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:163:5: ( LETTER ( LETTER | '0' .. '9' )* )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:163:9: LETTER ( LETTER | '0' .. '9' )*
             {
             mLETTER(); 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:163:16: ( LETTER | '0' .. '9' )*
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:163:16: ( LETTER | '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -778,7 +770,7 @@ public class CymbolLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:
+            	    // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -812,8 +804,8 @@ public class CymbolLexer extends Lexer {
     // $ANTLR start "LETTER"
     public final void mLETTER() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:168:2: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:168:6: ( 'a' .. 'z' | 'A' .. 'Z' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:168:2: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:168:6: ( 'a' .. 'z' | 'A' .. 'Z' )
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -838,8 +830,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = CHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:171:5: ( '\\'' . '\\'' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:171:7: '\\'' . '\\''
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:171:5: ( '\\'' . '\\'' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:171:7: '\\'' . '\\''
             {
             match('\''); 
             matchAny(); 
@@ -860,10 +852,10 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:173:5: ( ( '0' .. '9' )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:173:9: ( '0' .. '9' )+
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:173:5: ( ( '0' .. '9' )+ )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:173:9: ( '0' .. '9' )+
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:173:9: ( '0' .. '9' )+
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:173:9: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -877,7 +869,7 @@ public class CymbolLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:173:9: '0' .. '9'
+            	    // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:173:9: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -909,7 +901,7 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:176:2: ( INT '.' ( INT )* | '.' ( INT )+ )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:176:2: ( INT '.' ( INT )* | '.' ( INT )+ )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -927,11 +919,11 @@ public class CymbolLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:176:4: INT '.' ( INT )*
+                    // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:176:4: INT '.' ( INT )*
                     {
                     mINT(); 
                     match('.'); 
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:176:12: ( INT )*
+                    // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:176:12: ( INT )*
                     loop3:
                     do {
                         int alt3=2;
@@ -944,7 +936,7 @@ public class CymbolLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:176:12: INT
+                    	    // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:176:12: INT
                     	    {
                     	    mINT(); 
 
@@ -960,10 +952,10 @@ public class CymbolLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:177:4: '.' ( INT )+
+                    // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:177:4: '.' ( INT )+
                     {
                     match('.'); 
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:177:8: ( INT )+
+                    // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:177:8: ( INT )+
                     int cnt4=0;
                     loop4:
                     do {
@@ -977,7 +969,7 @@ public class CymbolLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:177:8: INT
+                    	    // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:177:8: INT
                     	    {
                     	    mINT(); 
 
@@ -1011,8 +1003,8 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:180:5: ( ( ' ' | '\\r' | '\\t' | '\\n' ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:180:9: ( ' ' | '\\r' | '\\t' | '\\n' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:180:5: ( ( ' ' | '\\r' | '\\t' | '\\n' ) )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:180:9: ( ' ' | '\\r' | '\\t' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -1040,12 +1032,12 @@ public class CymbolLexer extends Lexer {
         try {
             int _type = SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:184:5: ( '//' (~ ( '\\r' | '\\n' ) )* ( '\\r' )? '\\n' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:184:9: '//' (~ ( '\\r' | '\\n' ) )* ( '\\r' )? '\\n'
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:184:5: ( '//' (~ ( '\\r' | '\\n' ) )* ( '\\r' )? '\\n' )
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:184:9: '//' (~ ( '\\r' | '\\n' ) )* ( '\\r' )? '\\n'
             {
             match("//"); 
 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:184:14: (~ ( '\\r' | '\\n' ) )*
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:184:14: (~ ( '\\r' | '\\n' ) )*
             loop6:
             do {
                 int alt6=2;
@@ -1058,7 +1050,7 @@ public class CymbolLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:184:14: ~ ( '\\r' | '\\n' )
+            	    // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:184:14: ~ ( '\\r' | '\\n' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1078,7 +1070,7 @@ public class CymbolLexer extends Lexer {
                 }
             } while (true);
 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:184:28: ( '\\r' )?
+            // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:184:28: ( '\\r' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1087,7 +1079,7 @@ public class CymbolLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:184:28: '\\r'
+                    // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:184:28: '\\r'
                     {
                     match('\r'); 
 
@@ -1110,278 +1102,278 @@ public class CymbolLexer extends Lexer {
     // $ANTLR end "SL_COMMENT"
 
     public void mTokens() throws RecognitionException {
-        // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:8: ( ASSIGN | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | ID | CHAR | INT | FLOAT | WS | SL_COMMENT )
+        // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:8: ( ASSIGN | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | ID | CHAR | INT | FLOAT | WS | SL_COMMENT )
         int alt8=39;
         alt8 = dfa8.predict(input);
         switch (alt8) {
             case 1 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:10: ASSIGN
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:10: ASSIGN
                 {
                 mASSIGN(); 
 
                 }
                 break;
             case 2 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:17: T__23
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:17: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
             case 3 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:23: T__24
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:23: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
             case 4 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:29: T__25
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:29: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
             case 5 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:35: T__26
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:35: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
             case 6 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:41: T__27
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:41: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
             case 7 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:47: T__28
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:47: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
             case 8 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:53: T__29
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:53: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
             case 9 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:59: T__30
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:59: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
             case 10 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:65: T__31
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:65: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
             case 11 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:71: T__32
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:71: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
             case 12 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:77: T__33
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:77: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
             case 13 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:83: T__34
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:83: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
             case 14 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:89: T__35
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:89: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
             case 15 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:95: T__36
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:95: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
             case 16 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:101: T__37
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:101: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
             case 17 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:107: T__38
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:107: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
             case 18 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:113: T__39
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:113: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
             case 19 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:119: T__40
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:119: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
             case 20 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:125: T__41
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:125: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
             case 21 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:131: T__42
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:131: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
             case 22 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:137: T__43
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:137: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
             case 23 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:143: T__44
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:143: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
             case 24 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:149: T__45
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:149: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
             case 25 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:155: T__46
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:155: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
             case 26 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:161: T__47
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:161: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
             case 27 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:167: T__48
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:167: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
             case 28 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:173: T__49
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:173: T__49
                 {
                 mT__49(); 
 
                 }
                 break;
             case 29 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:179: T__50
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:179: T__50
                 {
                 mT__50(); 
 
                 }
                 break;
             case 30 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:185: T__51
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:185: T__51
                 {
                 mT__51(); 
 
                 }
                 break;
             case 31 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:191: T__52
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:191: T__52
                 {
                 mT__52(); 
 
                 }
                 break;
             case 32 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:197: T__53
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:197: T__53
                 {
                 mT__53(); 
 
                 }
                 break;
             case 33 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:203: T__54
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:203: T__54
                 {
                 mT__54(); 
 
                 }
                 break;
             case 34 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:209: ID
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:209: ID
                 {
                 mID(); 
 
                 }
                 break;
             case 35 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:212: CHAR
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:212: CHAR
                 {
                 mCHAR(); 
 
                 }
                 break;
             case 36 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:217: INT
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:217: INT
                 {
                 mINT(); 
 
                 }
                 break;
             case 37 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:221: FLOAT
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:221: FLOAT
                 {
                 mFLOAT(); 
 
                 }
                 break;
             case 38 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:227: WS
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:227: WS
                 {
                 mWS(); 
 
                 }
                 break;
             case 39 :
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/types/Cymbol.g:1:230: SL_COMMENT
+                // /Users/hotoku/projects/lip/code/semantics/types/Cymbol.g:1:230: SL_COMMENT
                 {
                 mSL_COMMENT(); 
 
@@ -1396,7 +1388,7 @@ public class CymbolLexer extends Lexer {
     protected DFA8 dfa8 = new DFA8(this);
     static final String DFA8_eotS =
         "\1\uffff\1\40\1\33\3\uffff\1\43\3\uffff\7\33\1\56\1\60\1\62\3\uffff"+
-        "\1\64\1\uffff\1\66\1\33\2\uffff\1\70\3\uffff\1\33\2\uffff\3\33\1"+
+        "\1\64\1\uffff\1\65\1\33\2\uffff\1\70\3\uffff\1\33\2\uffff\3\33\1"+
         "\75\5\33\12\uffff\1\33\1\uffff\3\33\1\107\1\uffff\11\33\1\uffff"+
         "\1\121\1\33\1\123\1\124\1\33\1\126\1\33\1\130\1\131\1\uffff\1\33"+
         "\2\uffff\1\33\1\uffff\1\134\2\uffff\1\33\1\136\1\uffff\1\137\2\uffff";
@@ -1421,8 +1413,8 @@ public class CymbolLexer extends Lexer {
     static final String DFA8_acceptS =
         "\3\uffff\1\3\1\4\1\5\1\uffff\1\7\1\10\1\11\12\uffff\1\30\1\31\1"+
         "\32\1\uffff\1\36\2\uffff\1\42\1\43\1\uffff\1\46\1\23\1\1\1\uffff"+
-        "\1\6\1\35\11\uffff\1\22\1\34\1\26\1\24\1\27\1\25\1\47\1\33\1\45"+
-        "\1\37\1\uffff\1\44\4\uffff\1\17\11\uffff\1\13\11\uffff\1\14\1\uffff"+
+        "\1\6\1\35\11\uffff\1\22\1\34\1\26\1\24\1\27\1\25\1\47\1\33\1\37"+
+        "\1\45\1\uffff\1\44\4\uffff\1\17\11\uffff\1\13\11\uffff\1\14\1\uffff"+
         "\1\16\1\20\1\uffff\1\40\1\uffff\1\12\1\41\2\uffff\1\2\1\uffff\1"+
         "\21\1\15";
     static final String DFA8_specialS =
@@ -1457,11 +1449,11 @@ public class CymbolLexer extends Lexer {
             "",
             "\1\63",
             "",
-            "\12\65",
+            "\12\66",
             "\1\67",
             "",
             "",
-            "\1\65\1\uffff\12\35",
+            "\1\66\1\uffff\12\35",
             "",
             "",
             "",

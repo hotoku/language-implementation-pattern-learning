@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g 2009-09-23 17:37:56
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/symtab/class/Ref.g 2020-10-28 21:00:30
 
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;import java.util.Stack;
@@ -18,40 +10,40 @@ public class Ref extends TreeFilter {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "METHOD_DECL", "ARG_DECL", "BLOCK", "MEMBERS", "VAR_DECL", "FIELD_DECL", "CALL", "ELIST", "EXPR", "ASSIGN", "EXTENDS", "ID", "INT", "LETTER", "WS", "SL_COMMENT", "'class'", "'{'", "'}'", "';'", "':'", "'public'", "'('", "')'", "','", "'float'", "'int'", "'void'", "'return'", "'+'", "'.'", "'this'", "'super'"
     };
-    public static final int T__35=35;
+    public static final int VAR_DECL=8;
+    public static final int CALL=10;
+    public static final int EXTENDS=14;
     public static final int LETTER=17;
-    public static final int T__28=28;
-    public static final int T__23=23;
-    public static final int T__36=36;
-    public static final int T__20=20;
+    public static final int METHOD_DECL=4;
+    public static final int ELIST=11;
+    public static final int ASSIGN=13;
+    public static final int INT=16;
     public static final int EXPR=12;
-    public static final int ARG_DECL=5;
-    public static final int WS=18;
-    public static final int T__21=21;
-    public static final int FIELD_DECL=9;
     public static final int T__33=33;
-    public static final int T__22=22;
-    public static final int T__29=29;
-    public static final int MEMBERS=7;
-    public static final int BLOCK=6;
+    public static final int T__34=34;
+    public static final int T__35=35;
+    public static final int T__36=36;
+    public static final int ID=15;
+    public static final int WS=18;
+    public static final int EOF=-1;
     public static final int T__30=30;
     public static final int T__31=31;
-    public static final int INT=16;
-    public static final int EOF=-1;
-    public static final int T__27=27;
     public static final int T__32=32;
-    public static final int ASSIGN=13;
-    public static final int T__24=24;
-    public static final int CALL=10;
-    public static final int METHOD_DECL=4;
+    public static final int MEMBERS=7;
+    public static final int BLOCK=6;
+    public static final int FIELD_DECL=9;
     public static final int T__26=26;
-    public static final int T__25=25;
-    public static final int VAR_DECL=8;
-    public static final int T__34=34;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__22=22;
     public static final int SL_COMMENT=19;
-    public static final int ELIST=11;
-    public static final int EXTENDS=14;
-    public static final int ID=15;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int ARG_DECL=5;
+    public static final int T__20=20;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -67,7 +59,7 @@ public class Ref extends TreeFilter {
         
 
     public String[] getTokenNames() { return Ref.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/symtab/class/Ref.g"; }
 
 
         SymbolTable symtab;
@@ -80,10 +72,10 @@ public class Ref extends TreeFilter {
 
 
     // $ANTLR start "topdown"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:18:1: topdown : ( enterMethod | enterClass | varDeclaration | assignment | resolveExpr );
+    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:18:1: topdown : ( enterMethod | enterClass | varDeclaration | assignment | resolveExpr );
     public final void topdown() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:22:5: ( enterMethod | enterClass | varDeclaration | assignment | resolveExpr )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:22:5: ( enterMethod | enterClass | varDeclaration | assignment | resolveExpr )
             int alt1=5;
             switch ( input.LA(1) ) {
             case METHOD_DECL:
@@ -123,7 +115,7 @@ public class Ref extends TreeFilter {
 
             switch (alt1) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:22:9: enterMethod
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:22:9: enterMethod
                     {
                     pushFollow(FOLLOW_enterMethod_in_topdown58);
                     enterMethod();
@@ -134,7 +126,7 @@ public class Ref extends TreeFilter {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:23:9: enterClass
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:23:9: enterClass
                     {
                     pushFollow(FOLLOW_enterClass_in_topdown68);
                     enterClass();
@@ -145,7 +137,7 @@ public class Ref extends TreeFilter {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:24:9: varDeclaration
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:24:9: varDeclaration
                     {
                     pushFollow(FOLLOW_varDeclaration_in_topdown78);
                     varDeclaration();
@@ -156,7 +148,7 @@ public class Ref extends TreeFilter {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:25:9: assignment
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:25:9: assignment
                     {
                     pushFollow(FOLLOW_assignment_in_topdown88);
                     assignment();
@@ -167,7 +159,7 @@ public class Ref extends TreeFilter {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:26:9: resolveExpr
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:26:9: resolveExpr
                     {
                     pushFollow(FOLLOW_resolveExpr_in_topdown98);
                     resolveExpr();
@@ -192,20 +184,20 @@ public class Ref extends TreeFilter {
 
 
     // $ANTLR start "enterClass"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:32:1: enterClass : ^( 'class' name= ID ( ^( EXTENDS sup= ID ) )? ^( MEMBERS ( . )* ) ) ;
+    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:32:1: enterClass : ^( 'class' name= ID ( ^( EXTENDS sup= ID ) )? ^( MEMBERS ( . )* ) ) ;
     public final void enterClass() throws RecognitionException {
         CymbolAST name=null;
         CymbolAST sup=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:33:5: ( ^( 'class' name= ID ( ^( EXTENDS sup= ID ) )? ^( MEMBERS ( . )* ) ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:33:9: ^( 'class' name= ID ( ^( EXTENDS sup= ID ) )? ^( MEMBERS ( . )* ) )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:33:5: ( ^( 'class' name= ID ( ^( EXTENDS sup= ID ) )? ^( MEMBERS ( . )* ) ) )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:33:9: ^( 'class' name= ID ( ^( EXTENDS sup= ID ) )? ^( MEMBERS ( . )* ) )
             {
             match(input,20,FOLLOW_20_in_enterClass121); if (state.failed) return ;
 
             match(input, Token.DOWN, null); if (state.failed) return ;
             name=(CymbolAST)match(input,ID,FOLLOW_ID_in_enterClass125); if (state.failed) return ;
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:33:27: ( ^( EXTENDS sup= ID ) )?
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:33:27: ( ^( EXTENDS sup= ID ) )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -214,7 +206,7 @@ public class Ref extends TreeFilter {
             }
             switch (alt2) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:33:28: ^( EXTENDS sup= ID )
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:33:28: ^( EXTENDS sup= ID )
                     {
                     match(input,EXTENDS,FOLLOW_EXTENDS_in_enterClass129); if (state.failed) return ;
 
@@ -232,7 +224,7 @@ public class Ref extends TreeFilter {
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); if (state.failed) return ;
-                // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:33:58: ( . )*
+                // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:33:58: ( . )*
                 loop3:
                 do {
                     int alt3=2;
@@ -248,7 +240,7 @@ public class Ref extends TreeFilter {
 
                     switch (alt3) {
                 	case 1 :
-                	    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:33:58: .
+                	    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:33:58: .
                 	    {
                 	    matchAny(input); if (state.failed) return ;
 
@@ -296,15 +288,15 @@ public class Ref extends TreeFilter {
 
 
     // $ANTLR start "enterMethod"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:50:1: enterMethod : ^( METHOD_DECL type ID ( . )* ) ;
+    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:50:1: enterMethod : ^( METHOD_DECL type ID ( . )* ) ;
     public final void enterMethod() throws RecognitionException {
         CymbolAST ID1=null;
         Ref.type_return type2 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:51:5: ( ^( METHOD_DECL type ID ( . )* ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:51:9: ^( METHOD_DECL type ID ( . )* )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:51:5: ( ^( METHOD_DECL type ID ( . )* ) )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:51:9: ^( METHOD_DECL type ID ( . )* )
             {
             match(input,METHOD_DECL,FOLLOW_METHOD_DECL_in_enterMethod175); if (state.failed) return ;
 
@@ -315,7 +307,7 @@ public class Ref extends TreeFilter {
             state._fsp--;
             if (state.failed) return ;
             ID1=(CymbolAST)match(input,ID,FOLLOW_ID_in_enterMethod179); if (state.failed) return ;
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:51:31: ( . )*
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:51:31: ( . )*
             loop4:
             do {
                 int alt4=2;
@@ -331,7 +323,7 @@ public class Ref extends TreeFilter {
 
                 switch (alt4) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:51:31: .
+            	    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:51:31: .
             	    {
             	    matchAny(input); if (state.failed) return ;
 
@@ -367,15 +359,15 @@ public class Ref extends TreeFilter {
 
 
     // $ANTLR start "varDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:61:1: varDeclaration : ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? ) ;
+    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:61:1: varDeclaration : ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? ) ;
     public final void varDeclaration() throws RecognitionException {
         CymbolAST ID3=null;
         Ref.type_return type4 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:62:5: ( ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:62:9: ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:62:5: ( ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? ) )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:62:9: ^( ( FIELD_DECL | VAR_DECL | ARG_DECL ) type ID ( . )? )
             {
             if ( input.LA(1)==ARG_DECL||(input.LA(1)>=VAR_DECL && input.LA(1)<=FIELD_DECL) ) {
                 input.consume();
@@ -395,7 +387,7 @@ public class Ref extends TreeFilter {
             state._fsp--;
             if (state.failed) return ;
             ID3=(CymbolAST)match(input,ID,FOLLOW_ID_in_varDeclaration228); if (state.failed) return ;
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:62:50: ( . )?
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:62:50: ( . )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -404,7 +396,7 @@ public class Ref extends TreeFilter {
             }
             switch (alt5) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:62:50: .
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:62:50: .
                     {
                     matchAny(input); if (state.failed) return ;
 
@@ -440,7 +432,7 @@ public class Ref extends TreeFilter {
     };
 
     // $ANTLR start "type"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:70:1: type returns [Type tsym] : ( 'float' | 'int' | 'void' | ID );
+    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:70:1: type returns [Type tsym] : ( 'float' | 'int' | 'void' | ID );
     public final Ref.type_return type() throws RecognitionException {
         Ref.type_return retval = new Ref.type_return();
         retval.start = input.LT(1);
@@ -451,8 +443,8 @@ public class Ref extends TreeFilter {
             retval.tsym = (Type)((CymbolAST)retval.start).symbol; // return Type from this rule
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:77:5: ( 'float' | 'int' | 'void' | ID )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:77:5: ( 'float' | 'int' | 'void' | ID )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:
             {
             if ( input.LA(1)==ID||(input.LA(1)>=29 && input.LA(1)<=31) ) {
                 input.consume();
@@ -480,11 +472,11 @@ public class Ref extends TreeFilter {
 
 
     // $ANTLR start "assignment"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:84:1: assignment : ^( '=' expr expr ) ;
+    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:84:1: assignment : ^( '=' expr expr ) ;
     public final void assignment() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:84:13: ( ^( '=' expr expr ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:84:15: ^( '=' expr expr )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:84:13: ( ^( '=' expr expr ) )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:84:15: ^( '=' expr expr )
             {
             match(input,ASSIGN,FOLLOW_ASSIGN_in_assignment321); if (state.failed) return ;
 
@@ -517,11 +509,11 @@ public class Ref extends TreeFilter {
 
 
     // $ANTLR start "resolveExpr"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:85:1: resolveExpr : ^( EXPR expr ) ;
+    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:85:1: resolveExpr : ^( EXPR expr ) ;
     public final void resolveExpr() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:85:13: ( ^( EXPR expr ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:85:15: ^( EXPR expr )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:85:13: ( ^( EXPR expr ) )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:85:15: ^( EXPR expr )
             {
             match(input,EXPR,FOLLOW_EXPR_in_resolveExpr337); if (state.failed) return ;
 
@@ -552,7 +544,7 @@ public class Ref extends TreeFilter {
     };
 
     // $ANTLR start "expr"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:89:1: expr returns [Type type] : ( member | ^( CALL expr ) | ^( '+' expr expr ) | id | INT );
+    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:89:1: expr returns [Type type] : ( member | ^( CALL expr ) | ^( '+' expr expr ) | id | INT );
     public final Ref.expr_return expr() throws RecognitionException {
         Ref.expr_return retval = new Ref.expr_return();
         retval.start = input.LT(1);
@@ -563,7 +555,7 @@ public class Ref extends TreeFilter {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:93:5: ( member | ^( CALL expr ) | ^( '+' expr expr ) | id | INT )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:93:5: ( member | ^( CALL expr ) | ^( '+' expr expr ) | id | INT )
             int alt6=5;
             switch ( input.LA(1) ) {
             case 34:
@@ -602,7 +594,7 @@ public class Ref extends TreeFilter {
 
             switch (alt6) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:93:9: member
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:93:9: member
                     {
                     pushFollow(FOLLOW_member_in_expr364);
                     member5=member();
@@ -616,7 +608,7 @@ public class Ref extends TreeFilter {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:94:9: ^( CALL expr )
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:94:9: ^( CALL expr )
                     {
                     match(input,CALL,FOLLOW_CALL_in_expr378); if (state.failed) return retval;
 
@@ -632,7 +624,7 @@ public class Ref extends TreeFilter {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:95:9: ^( '+' expr expr )
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:95:9: ^( '+' expr expr )
                     {
                     match(input,33,FOLLOW_33_in_expr392); if (state.failed) return retval;
 
@@ -653,7 +645,7 @@ public class Ref extends TreeFilter {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:96:9: id
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:96:9: id
                     {
                     pushFollow(FOLLOW_id_in_expr407);
                     id6=id();
@@ -667,7 +659,7 @@ public class Ref extends TreeFilter {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:97:9: INT
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:97:9: INT
                     {
                     match(input,INT,FOLLOW_INT_in_expr428); if (state.failed) return retval;
 
@@ -688,7 +680,7 @@ public class Ref extends TreeFilter {
 
 
     // $ANTLR start "id"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:102:1: id returns [Type type] : ( ID | t= 'this' );
+    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:102:1: id returns [Type type] : ( ID | t= 'this' );
     public final Type id() throws RecognitionException {
         Type type = null;
 
@@ -696,7 +688,7 @@ public class Ref extends TreeFilter {
         CymbolAST ID7=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:103:5: ( ID | t= 'this' )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:103:5: ( ID | t= 'this' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -715,7 +707,7 @@ public class Ref extends TreeFilter {
             }
             switch (alt7) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:103:9: ID
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:103:9: ID
                     {
                     ID7=(CymbolAST)match(input,ID,FOLLOW_ID_in_id453); if (state.failed) return type;
                     if ( state.backtracking==1 ) {
@@ -729,7 +721,7 @@ public class Ref extends TreeFilter {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:109:9: t= 'this'
+                    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:109:9: t= 'this'
                     {
                     t=(CymbolAST)match(input,35,FOLLOW_35_in_id475); if (state.failed) return type;
                     if ( state.backtracking==1 ) {
@@ -753,7 +745,7 @@ public class Ref extends TreeFilter {
 
 
     // $ANTLR start "member"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:114:1: member returns [Type type] : ^( '.' m= expr ID ) ;
+    // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:114:1: member returns [Type type] : ^( '.' m= expr ID ) ;
     public final Type member() throws RecognitionException {
         Type type = null;
 
@@ -762,8 +754,8 @@ public class Ref extends TreeFilter {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:115:5: ( ^( '.' m= expr ID ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/class/Ref.g:115:9: ^( '.' m= expr ID )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:115:5: ( ^( '.' m= expr ID ) )
+            // /Users/hotoku/projects/lip/code/symtab/class/Ref.g:115:9: ^( '.' m= expr ID )
             {
             match(input,34,FOLLOW_34_in_member504); if (state.failed) return type;
 

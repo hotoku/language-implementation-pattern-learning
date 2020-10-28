@@ -1,45 +1,45 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g 2020-10-28 21:00:41
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g 2020-10-28 21:00:42
 
 import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
-public class VecMathLexer extends Lexer {
-    public static final int T__9=9;
-    public static final int T__8=8;
-    public static final int INT=6;
+public class VecMathHeteroLexer extends Lexer {
+    public static final int PRINT=6;
+    public static final int DOT=9;
+    public static final int ASSIGN=5;
+    public static final int INT=11;
     public static final int T__15=15;
+    public static final int MULT=8;
     public static final int VEC=4;
-    public static final int T__11=11;
-    public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
-    public static final int ID=5;
-    public static final int WS=7;
+    public static final int ID=10;
+    public static final int WS=12;
     public static final int EOF=-1;
-    public static final int T__10=10;
+    public static final int PLUS=7;
 
     // delegates
     // delegators
 
-    public VecMathLexer() {;} 
-    public VecMathLexer(CharStream input) {
+    public VecMathHeteroLexer() {;} 
+    public VecMathHeteroLexer(CharStream input) {
         this(input, new RecognizerSharedState());
     }
-    public VecMathLexer(CharStream input, RecognizerSharedState state) {
+    public VecMathHeteroLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g"; }
 
-    // $ANTLR start "T__8"
-    public final void mT__8() throws RecognitionException {
+    // $ANTLR start "ASSIGN"
+    public final void mASSIGN() throws RecognitionException {
         try {
-            int _type = T__8;
+            int _type = ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:3:6: ( '=' )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:3:8: '='
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:3:8: ( '=' )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:3:10: '='
             {
             match('='); 
 
@@ -51,15 +51,15 @@ public class VecMathLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__8"
+    // $ANTLR end "ASSIGN"
 
-    // $ANTLR start "T__9"
-    public final void mT__9() throws RecognitionException {
+    // $ANTLR start "PRINT"
+    public final void mPRINT() throws RecognitionException {
         try {
-            int _type = T__9;
+            int _type = PRINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:4:6: ( 'print' )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:4:8: 'print'
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:4:7: ( 'print' )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:4:9: 'print'
             {
             match("print"); 
 
@@ -72,15 +72,15 @@ public class VecMathLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__9"
+    // $ANTLR end "PRINT"
 
-    // $ANTLR start "T__10"
-    public final void mT__10() throws RecognitionException {
+    // $ANTLR start "PLUS"
+    public final void mPLUS() throws RecognitionException {
         try {
-            int _type = T__10;
+            int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:5:7: ( '+' )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:5:9: '+'
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:5:6: ( '+' )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:5:8: '+'
             {
             match('+'); 
 
@@ -92,15 +92,15 @@ public class VecMathLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__10"
+    // $ANTLR end "PLUS"
 
-    // $ANTLR start "T__11"
-    public final void mT__11() throws RecognitionException {
+    // $ANTLR start "MULT"
+    public final void mMULT() throws RecognitionException {
         try {
-            int _type = T__11;
+            int _type = MULT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:6:7: ( '*' )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:6:9: '*'
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:6:6: ( '*' )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:6:8: '*'
             {
             match('*'); 
 
@@ -112,15 +112,15 @@ public class VecMathLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__11"
+    // $ANTLR end "MULT"
 
-    // $ANTLR start "T__12"
-    public final void mT__12() throws RecognitionException {
+    // $ANTLR start "DOT"
+    public final void mDOT() throws RecognitionException {
         try {
-            int _type = T__12;
+            int _type = DOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:7:7: ( '.' )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:7:9: '.'
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:7:5: ( '.' )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:7:7: '.'
             {
             match('.'); 
 
@@ -132,15 +132,15 @@ public class VecMathLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__12"
+    // $ANTLR end "DOT"
 
     // $ANTLR start "T__13"
     public final void mT__13() throws RecognitionException {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:8:7: ( '[' )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:8:9: '['
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:8:7: ( '[' )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:8:9: '['
             {
             match('['); 
 
@@ -159,8 +159,8 @@ public class VecMathLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:9:7: ( ',' )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:9:9: ','
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:9:7: ( ',' )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:9:9: ','
             {
             match(','); 
 
@@ -179,8 +179,8 @@ public class VecMathLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:10:7: ( ']' )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:10:9: ']'
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:10:7: ( ']' )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:10:9: ']'
             {
             match(']'); 
 
@@ -199,10 +199,10 @@ public class VecMathLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:28:5: ( ( 'a' .. 'z' )+ )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:28:9: ( 'a' .. 'z' )+
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:31:5: ( ( 'a' .. 'z' )+ )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:31:9: ( 'a' .. 'z' )+
             {
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:28:9: ( 'a' .. 'z' )+
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:31:9: ( 'a' .. 'z' )+
             int cnt1=0;
             loop1:
             do {
@@ -216,7 +216,7 @@ public class VecMathLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:28:9: 'a' .. 'z'
+            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:31:9: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); 
 
@@ -248,10 +248,10 @@ public class VecMathLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:29:5: ( ( '0' .. '9' )+ )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:29:9: ( '0' .. '9' )+
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:32:5: ( ( '0' .. '9' )+ )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:32:9: ( '0' .. '9' )+
             {
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:29:9: ( '0' .. '9' )+
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:32:9: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -265,7 +265,7 @@ public class VecMathLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:29:9: '0' .. '9'
+            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:32:9: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -297,10 +297,10 @@ public class VecMathLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:30:5: ( ( ' ' | '\\r' | '\\n' )+ )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:30:9: ( ' ' | '\\r' | '\\n' )+
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:33:5: ( ( ' ' | '\\r' | '\\n' )+ )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:33:9: ( ' ' | '\\r' | '\\n' )+
             {
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:30:9: ( ' ' | '\\r' | '\\n' )+
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:33:9: ( ' ' | '\\r' | '\\n' )+
             int cnt3=0;
             loop3:
             do {
@@ -314,7 +314,7 @@ public class VecMathLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:
+            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:
             	    {
             	    if ( input.LA(1)=='\n'||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -351,82 +351,82 @@ public class VecMathLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | ID | INT | WS )
+        // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:1:8: ( ASSIGN | PRINT | PLUS | MULT | DOT | T__13 | T__14 | T__15 | ID | INT | WS )
         int alt4=11;
         alt4 = dfa4.predict(input);
         switch (alt4) {
             case 1 :
-                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:1:10: T__8
+                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:1:10: ASSIGN
                 {
-                mT__8(); 
+                mASSIGN(); 
 
                 }
                 break;
             case 2 :
-                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:1:15: T__9
+                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:1:17: PRINT
                 {
-                mT__9(); 
+                mPRINT(); 
 
                 }
                 break;
             case 3 :
-                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:1:20: T__10
+                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:1:23: PLUS
                 {
-                mT__10(); 
+                mPLUS(); 
 
                 }
                 break;
             case 4 :
-                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:1:26: T__11
+                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:1:28: MULT
                 {
-                mT__11(); 
+                mMULT(); 
 
                 }
                 break;
             case 5 :
-                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:1:32: T__12
+                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:1:33: DOT
                 {
-                mT__12(); 
+                mDOT(); 
 
                 }
                 break;
             case 6 :
-                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:1:38: T__13
+                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:1:37: T__13
                 {
                 mT__13(); 
 
                 }
                 break;
             case 7 :
-                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:1:44: T__14
+                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:1:43: T__14
                 {
                 mT__14(); 
 
                 }
                 break;
             case 8 :
-                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:1:50: T__15
+                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:1:49: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
             case 9 :
-                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:1:56: ID
+                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:1:55: ID
                 {
                 mID(); 
 
                 }
                 break;
             case 10 :
-                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:1:59: INT
+                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:1:58: INT
                 {
                 mINT(); 
 
                 }
                 break;
             case 11 :
-                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:1:63: WS
+                // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:1:62: WS
                 {
                 mWS(); 
 
@@ -504,7 +504,7 @@ public class VecMathLexer extends Lexer {
             this.transition = DFA4_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | ID | INT | WS );";
+            return "1:1: Tokens : ( ASSIGN | PRINT | PLUS | MULT | DOT | T__13 | T__14 | T__15 | ID | INT | WS );";
         }
     }
  

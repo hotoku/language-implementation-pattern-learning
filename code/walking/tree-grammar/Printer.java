@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g 2009-09-23 17:38:03
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g 2020-10-28 21:00:41
 
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;import java.util.Stack;
@@ -17,19 +9,19 @@ public class Printer extends TreeParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "VEC", "ID", "INT", "WS", "'='", "'print'", "'+'", "'*'", "'.'", "'['", "','", "']'"
     };
-    public static final int VEC=4;
-    public static final int T__12=12;
-    public static final int INT=6;
+    public static final int T__9=9;
     public static final int T__8=8;
+    public static final int INT=6;
+    public static final int T__15=15;
+    public static final int VEC=4;
+    public static final int T__11=11;
+    public static final int T__12=12;
+    public static final int T__13=13;
+    public static final int T__14=14;
+    public static final int ID=5;
     public static final int WS=7;
     public static final int EOF=-1;
-    public static final int T__13=13;
     public static final int T__10=10;
-    public static final int T__9=9;
-    public static final int T__14=14;
-    public static final int T__11=11;
-    public static final int T__15=15;
-    public static final int ID=5;
 
     // delegates
     // delegators
@@ -45,19 +37,19 @@ public class Printer extends TreeParser {
         
 
     public String[] getTokenNames() { return Printer.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g"; }
 
      void print(String s) { System.out.print(s); } 
 
 
     // $ANTLR start "prog"
-    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:11:1: prog : ( stat )+ ;
+    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:11:1: prog : ( stat )+ ;
     public final void prog() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:11:5: ( ( stat )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:11:9: ( stat )+
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:11:5: ( ( stat )+ )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:11:9: ( stat )+
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:11:9: ( stat )+
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:11:9: ( stat )+
             int cnt1=0;
             loop1:
             do {
@@ -71,7 +63,7 @@ public class Printer extends TreeParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:11:9: stat
+            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:11:9: stat
             	    {
             	    pushFollow(FOLLOW_stat_in_prog51);
             	    stat();
@@ -107,12 +99,12 @@ public class Printer extends TreeParser {
 
 
     // $ANTLR start "stat"
-    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:13:1: stat : ( ^( '=' ID expr ) | ^( 'print' expr ) );
+    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:13:1: stat : ( ^( '=' ID expr ) | ^( 'print' expr ) );
     public final void stat() throws RecognitionException {
         CommonTree ID1=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:13:5: ( ^( '=' ID expr ) | ^( 'print' expr ) )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:13:5: ( ^( '=' ID expr ) | ^( 'print' expr ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -130,7 +122,7 @@ public class Printer extends TreeParser {
             }
             switch (alt2) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:13:9: ^( '=' ID expr )
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:13:9: ^( '=' ID expr )
                     {
                     match(input,8,FOLLOW_8_in_stat64); 
 
@@ -149,7 +141,7 @@ public class Printer extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:14:9: ^( 'print' expr )
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:14:9: ^( 'print' expr )
                     {
                     match(input,9,FOLLOW_9_in_stat85); 
 
@@ -182,13 +174,13 @@ public class Printer extends TreeParser {
 
 
     // $ANTLR start "expr"
-    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:19:1: expr : ( ^( '+' expr expr ) | ^( '*' expr expr ) | ^( '.' expr expr ) | ^( VEC expr ( expr )* ) | INT | ID );
+    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:19:1: expr : ( ^( '+' expr expr ) | ^( '*' expr expr ) | ^( '.' expr expr ) | ^( VEC expr ( expr )* ) | INT | ID );
     public final void expr() throws RecognitionException {
         CommonTree INT2=null;
         CommonTree ID3=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:19:5: ( ^( '+' expr expr ) | ^( '*' expr expr ) | ^( '.' expr expr ) | ^( VEC expr ( expr )* ) | INT | ID )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:19:5: ( ^( '+' expr expr ) | ^( '*' expr expr ) | ^( '.' expr expr ) | ^( VEC expr ( expr )* ) | INT | ID )
             int alt4=6;
             switch ( input.LA(1) ) {
             case 10:
@@ -230,7 +222,7 @@ public class Printer extends TreeParser {
 
             switch (alt4) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:19:9: ^( '+' expr expr )
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:19:9: ^( '+' expr expr )
                     {
                     match(input,10,FOLLOW_10_in_expr115); 
 
@@ -252,7 +244,7 @@ public class Printer extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:20:9: ^( '*' expr expr )
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:20:9: ^( '*' expr expr )
                     {
                     match(input,11,FOLLOW_11_in_expr133); 
 
@@ -274,7 +266,7 @@ public class Printer extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:21:9: ^( '.' expr expr )
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:21:9: ^( '.' expr expr )
                     {
                     match(input,12,FOLLOW_12_in_expr151); 
 
@@ -296,7 +288,7 @@ public class Printer extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:22:9: ^( VEC expr ( expr )* )
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:22:9: ^( VEC expr ( expr )* )
                     {
                     match(input,VEC,FOLLOW_VEC_in_expr169); 
 
@@ -308,7 +300,7 @@ public class Printer extends TreeParser {
 
                     state._fsp--;
 
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:22:34: ( expr )*
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:22:34: ( expr )*
                     loop3:
                     do {
                         int alt3=2;
@@ -321,7 +313,7 @@ public class Printer extends TreeParser {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:22:35: expr
+                    	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:22:35: expr
                     	    {
                     	    print(", ");
                     	    pushFollow(FOLLOW_expr_in_expr178);
@@ -345,7 +337,7 @@ public class Printer extends TreeParser {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:23:9: INT
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:23:9: INT
                     {
                     INT2=(CommonTree)match(input,INT,FOLLOW_INT_in_expr193); 
                     print((INT2!=null?INT2.getText():null));
@@ -353,7 +345,7 @@ public class Printer extends TreeParser {
                     }
                     break;
                 case 6 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Printer.g:24:9: ID
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Printer.g:24:9: ID
                     {
                     ID3=(CommonTree)match(input,ID,FOLLOW_ID_in_expr205); 
                     print((ID3!=null?ID3.getText():null));

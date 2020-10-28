@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g 2020-10-28 21:00:41
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g 2020-10-28 21:00:42
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -8,32 +8,32 @@ import java.util.ArrayList;
 
 import org.antlr.runtime.tree.*;
 
-public class VecMathParser extends Parser {
+public class VecMathHeteroParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "VEC", "ID", "INT", "WS", "'='", "'print'", "'+'", "'*'", "'.'", "'['", "','", "']'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "VEC", "ASSIGN", "PRINT", "PLUS", "MULT", "DOT", "ID", "INT", "WS", "'['", "','", "']'"
     };
-    public static final int T__9=9;
-    public static final int T__8=8;
-    public static final int INT=6;
+    public static final int PRINT=6;
+    public static final int DOT=9;
+    public static final int ASSIGN=5;
+    public static final int INT=11;
     public static final int T__15=15;
+    public static final int MULT=8;
     public static final int VEC=4;
-    public static final int T__11=11;
-    public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
-    public static final int ID=5;
-    public static final int WS=7;
+    public static final int ID=10;
+    public static final int WS=12;
     public static final int EOF=-1;
-    public static final int T__10=10;
+    public static final int PLUS=7;
 
     // delegates
     // delegators
 
 
-        public VecMathParser(TokenStream input) {
+        public VecMathHeteroParser(TokenStream input) {
             this(input, new RecognizerSharedState());
         }
-        public VecMathParser(TokenStream input, RecognizerSharedState state) {
+        public VecMathHeteroParser(TokenStream input, RecognizerSharedState state) {
             super(input, state);
              
         }
@@ -47,8 +47,8 @@ public class VecMathParser extends Parser {
         return adaptor;
     }
 
-    public String[] getTokenNames() { return VecMathParser.tokenNames; }
-    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g"; }
+    public String[] getTokenNames() { return VecMathHeteroParser.tokenNames; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g"; }
 
 
     public static class prog_return extends ParserRuleReturnScope {
@@ -57,40 +57,40 @@ public class VecMathParser extends Parser {
     };
 
     // $ANTLR start "prog"
-    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:8:1: prog : ( stat )+ ;
-    public final VecMathParser.prog_return prog() throws RecognitionException {
-        VecMathParser.prog_return retval = new VecMathParser.prog_return();
+    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:15:1: prog : ( stat )+ ;
+    public final VecMathHeteroParser.prog_return prog() throws RecognitionException {
+        VecMathHeteroParser.prog_return retval = new VecMathHeteroParser.prog_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        VecMathParser.stat_return stat1 = null;
+        VecMathHeteroParser.stat_return stat1 = null;
 
 
 
         try {
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:8:5: ( ( stat )+ )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:8:7: ( stat )+
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:15:5: ( ( stat )+ )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:15:7: ( stat )+
             {
             root_0 = (Object)adaptor.nil();
 
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:8:7: ( stat )+
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:15:7: ( stat )+
             int cnt1=0;
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==ID||LA1_0==9) ) {
+                if ( (LA1_0==PRINT||LA1_0==ID) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:8:7: stat
+            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:15:7: stat
             	    {
-            	    pushFollow(FOLLOW_stat_in_prog34);
+            	    pushFollow(FOLLOW_stat_in_prog68);
             	    stat1=stat();
 
             	    state._fsp--;
@@ -136,9 +136,9 @@ public class VecMathParser extends Parser {
     };
 
     // $ANTLR start "stat"
-    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:9:1: stat : ( ID '=' expr -> ^( '=' ID expr ) | 'print' expr -> ^( 'print' expr ) );
-    public final VecMathParser.stat_return stat() throws RecognitionException {
-        VecMathParser.stat_return retval = new VecMathParser.stat_return();
+    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:16:1: stat : ( ID '=' expr -> ^( '=' ID expr ) | 'print' expr -> ^( 'print' expr ) );
+    public final VecMathHeteroParser.stat_return stat() throws RecognitionException {
+        VecMathHeteroParser.stat_return retval = new VecMathHeteroParser.stat_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -146,27 +146,27 @@ public class VecMathParser extends Parser {
         Token ID2=null;
         Token char_literal3=null;
         Token string_literal5=null;
-        VecMathParser.expr_return expr4 = null;
+        VecMathHeteroParser.expr_return expr4 = null;
 
-        VecMathParser.expr_return expr6 = null;
+        VecMathHeteroParser.expr_return expr6 = null;
 
 
         Object ID2_tree=null;
         Object char_literal3_tree=null;
         Object string_literal5_tree=null;
-        RewriteRuleTokenStream stream_8=new RewriteRuleTokenStream(adaptor,"token 8");
-        RewriteRuleTokenStream stream_9=new RewriteRuleTokenStream(adaptor,"token 9");
+        RewriteRuleTokenStream stream_PRINT=new RewriteRuleTokenStream(adaptor,"token PRINT");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
+        RewriteRuleTokenStream stream_ASSIGN=new RewriteRuleTokenStream(adaptor,"token ASSIGN");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:9:5: ( ID '=' expr -> ^( '=' ID expr ) | 'print' expr -> ^( 'print' expr ) )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:16:5: ( ID '=' expr -> ^( '=' ID expr ) | 'print' expr -> ^( 'print' expr ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
             if ( (LA2_0==ID) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==9) ) {
+            else if ( (LA2_0==PRINT) ) {
                 alt2=2;
             }
             else {
@@ -177,15 +177,15 @@ public class VecMathParser extends Parser {
             }
             switch (alt2) {
                 case 1 :
-                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:9:7: ID '=' expr
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:16:7: ID '=' expr
                     {
-                    ID2=(Token)match(input,ID,FOLLOW_ID_in_stat67);  
+                    ID2=(Token)match(input,ID,FOLLOW_ID_in_stat101);  
                     stream_ID.add(ID2);
 
-                    char_literal3=(Token)match(input,8,FOLLOW_8_in_stat69);  
-                    stream_8.add(char_literal3);
+                    char_literal3=(Token)match(input,ASSIGN,FOLLOW_ASSIGN_in_stat103);  
+                    stream_ASSIGN.add(char_literal3);
 
-                    pushFollow(FOLLOW_expr_in_stat71);
+                    pushFollow(FOLLOW_expr_in_stat105);
                     expr4=expr();
 
                     state._fsp--;
@@ -194,7 +194,7 @@ public class VecMathParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: expr, 8, ID
+                    // elements: expr, ASSIGN, ID
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -204,14 +204,14 @@ public class VecMathParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 9:20: -> ^( '=' ID expr )
+                    // 16:20: -> ^( '=' ID expr )
                     {
-                        // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:9:23: ^( '=' ID expr )
+                        // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:16:23: ^( '=' ID expr )
                         {
                         Object root_1 = (Object)adaptor.nil();
-                        root_1 = (Object)adaptor.becomeRoot(stream_8.nextNode(), root_1);
+                        root_1 = (Object)adaptor.becomeRoot(stream_ASSIGN.nextNode(), root_1);
 
-                        adaptor.addChild(root_1, stream_ID.nextNode());
+                        adaptor.addChild(root_1, new VarNode(stream_ID.nextToken()));
                         adaptor.addChild(root_1, stream_expr.nextTree());
 
                         adaptor.addChild(root_0, root_1);
@@ -223,12 +223,12 @@ public class VecMathParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:10:7: 'print' expr
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:17:7: 'print' expr
                     {
-                    string_literal5=(Token)match(input,9,FOLLOW_9_in_stat92);  
-                    stream_9.add(string_literal5);
+                    string_literal5=(Token)match(input,PRINT,FOLLOW_PRINT_in_stat129);  
+                    stream_PRINT.add(string_literal5);
 
-                    pushFollow(FOLLOW_expr_in_stat94);
+                    pushFollow(FOLLOW_expr_in_stat131);
                     expr6=expr();
 
                     state._fsp--;
@@ -237,7 +237,7 @@ public class VecMathParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: expr, 9
+                    // elements: PRINT, expr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -247,12 +247,12 @@ public class VecMathParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 10:20: -> ^( 'print' expr )
+                    // 17:20: -> ^( 'print' expr )
                     {
-                        // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:10:23: ^( 'print' expr )
+                        // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:17:23: ^( 'print' expr )
                         {
                         Object root_1 = (Object)adaptor.nil();
-                        root_1 = (Object)adaptor.becomeRoot(stream_9.nextNode(), root_1);
+                        root_1 = (Object)adaptor.becomeRoot(stream_PRINT.nextNode(), root_1);
 
                         adaptor.addChild(root_1, stream_expr.nextTree());
 
@@ -290,53 +290,53 @@ public class VecMathParser extends Parser {
     };
 
     // $ANTLR start "expr"
-    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:15:1: expr : multExpr ( '+' multExpr )* ;
-    public final VecMathParser.expr_return expr() throws RecognitionException {
-        VecMathParser.expr_return retval = new VecMathParser.expr_return();
+    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:22:1: expr : multExpr ( '+' multExpr )* ;
+    public final VecMathHeteroParser.expr_return expr() throws RecognitionException {
+        VecMathHeteroParser.expr_return retval = new VecMathHeteroParser.expr_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token char_literal8=null;
-        VecMathParser.multExpr_return multExpr7 = null;
+        VecMathHeteroParser.multExpr_return multExpr7 = null;
 
-        VecMathParser.multExpr_return multExpr9 = null;
+        VecMathHeteroParser.multExpr_return multExpr9 = null;
 
 
         Object char_literal8_tree=null;
 
         try {
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:15:5: ( multExpr ( '+' multExpr )* )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:15:7: multExpr ( '+' multExpr )*
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:22:5: ( multExpr ( '+' multExpr )* )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:22:9: multExpr ( '+' multExpr )*
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_multExpr_in_expr117);
+            pushFollow(FOLLOW_multExpr_in_expr156);
             multExpr7=multExpr();
 
             state._fsp--;
 
             adaptor.addChild(root_0, multExpr7.getTree());
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:15:16: ( '+' multExpr )*
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:22:18: ( '+' multExpr )*
             loop3:
             do {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==10) ) {
+                if ( (LA3_0==PLUS) ) {
                     alt3=1;
                 }
 
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:15:17: '+' multExpr
+            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:22:19: '+' multExpr
             	    {
-            	    char_literal8=(Token)match(input,10,FOLLOW_10_in_expr120); 
-            	    char_literal8_tree = (Object)adaptor.create(char_literal8);
+            	    char_literal8=(Token)match(input,PLUS,FOLLOW_PLUS_in_expr159); 
+            	    char_literal8_tree = new AddNode(char_literal8) ;
             	    root_0 = (Object)adaptor.becomeRoot(char_literal8_tree, root_0);
 
-            	    pushFollow(FOLLOW_multExpr_in_expr123);
+            	    pushFollow(FOLLOW_multExpr_in_expr165);
             	    multExpr9=multExpr();
 
             	    state._fsp--;
@@ -378,58 +378,58 @@ public class VecMathParser extends Parser {
     };
 
     // $ANTLR start "multExpr"
-    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:17:1: multExpr : primary ( ( '*' | '.' ) primary )* ;
-    public final VecMathParser.multExpr_return multExpr() throws RecognitionException {
-        VecMathParser.multExpr_return retval = new VecMathParser.multExpr_return();
+    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:23:1: multExpr : primary ( ( '*' | '.' ) primary )* ;
+    public final VecMathHeteroParser.multExpr_return multExpr() throws RecognitionException {
+        VecMathHeteroParser.multExpr_return retval = new VecMathHeteroParser.multExpr_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token char_literal11=null;
         Token char_literal12=null;
-        VecMathParser.primary_return primary10 = null;
+        VecMathHeteroParser.primary_return primary10 = null;
 
-        VecMathParser.primary_return primary13 = null;
+        VecMathHeteroParser.primary_return primary13 = null;
 
 
         Object char_literal11_tree=null;
         Object char_literal12_tree=null;
 
         try {
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:18:5: ( primary ( ( '*' | '.' ) primary )* )
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:18:9: primary ( ( '*' | '.' ) primary )*
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:23:9: ( primary ( ( '*' | '.' ) primary )* )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:23:11: primary ( ( '*' | '.' ) primary )*
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_primary_in_multExpr145);
+            pushFollow(FOLLOW_primary_in_multExpr182);
             primary10=primary();
 
             state._fsp--;
 
             adaptor.addChild(root_0, primary10.getTree());
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:18:17: ( ( '*' | '.' ) primary )*
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:23:19: ( ( '*' | '.' ) primary )*
             loop5:
             do {
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( ((LA5_0>=11 && LA5_0<=12)) ) {
+                if ( ((LA5_0>=MULT && LA5_0<=DOT)) ) {
                     alt5=1;
                 }
 
 
                 switch (alt5) {
             	case 1 :
-            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:18:18: ( '*' | '.' ) primary
+            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:23:20: ( '*' | '.' ) primary
             	    {
-            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:18:18: ( '*' | '.' )
+            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:23:20: ( '*' | '.' )
             	    int alt4=2;
             	    int LA4_0 = input.LA(1);
 
-            	    if ( (LA4_0==11) ) {
+            	    if ( (LA4_0==MULT) ) {
             	        alt4=1;
             	    }
-            	    else if ( (LA4_0==12) ) {
+            	    else if ( (LA4_0==DOT) ) {
             	        alt4=2;
             	    }
             	    else {
@@ -440,20 +440,20 @@ public class VecMathParser extends Parser {
             	    }
             	    switch (alt4) {
             	        case 1 :
-            	            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:18:19: '*'
+            	            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:23:21: '*'
             	            {
-            	            char_literal11=(Token)match(input,11,FOLLOW_11_in_multExpr149); 
-            	            char_literal11_tree = (Object)adaptor.create(char_literal11);
+            	            char_literal11=(Token)match(input,MULT,FOLLOW_MULT_in_multExpr186); 
+            	            char_literal11_tree = new MultNode(char_literal11) ;
             	            root_0 = (Object)adaptor.becomeRoot(char_literal11_tree, root_0);
 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:18:24: '.'
+            	            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:23:36: '.'
             	            {
-            	            char_literal12=(Token)match(input,12,FOLLOW_12_in_multExpr152); 
-            	            char_literal12_tree = (Object)adaptor.create(char_literal12);
+            	            char_literal12=(Token)match(input,DOT,FOLLOW_DOT_in_multExpr192); 
+            	            char_literal12_tree = new DotProductNode(char_literal12) ;
             	            root_0 = (Object)adaptor.becomeRoot(char_literal12_tree, root_0);
 
 
@@ -462,7 +462,7 @@ public class VecMathParser extends Parser {
 
             	    }
 
-            	    pushFollow(FOLLOW_primary_in_multExpr156);
+            	    pushFollow(FOLLOW_primary_in_multExpr199);
             	    primary13=primary();
 
             	    state._fsp--;
@@ -504,9 +504,9 @@ public class VecMathParser extends Parser {
     };
 
     // $ANTLR start "primary"
-    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:21:1: primary : ( INT | ID | '[' expr ( ',' expr )* ']' -> ^( VEC ( expr )+ ) );
-    public final VecMathParser.primary_return primary() throws RecognitionException {
-        VecMathParser.primary_return retval = new VecMathParser.primary_return();
+    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:24:1: primary : ( INT | ID | '[' expr ( ',' expr )* ']' -> ^( VEC ( expr )+ ) );
+    public final VecMathHeteroParser.primary_return primary() throws RecognitionException {
+        VecMathHeteroParser.primary_return retval = new VecMathHeteroParser.primary_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -516,9 +516,9 @@ public class VecMathParser extends Parser {
         Token char_literal16=null;
         Token char_literal18=null;
         Token char_literal20=null;
-        VecMathParser.expr_return expr17 = null;
+        VecMathHeteroParser.expr_return expr17 = null;
 
-        VecMathParser.expr_return expr19 = null;
+        VecMathHeteroParser.expr_return expr19 = null;
 
 
         Object INT14_tree=null;
@@ -531,7 +531,7 @@ public class VecMathParser extends Parser {
         RewriteRuleTokenStream stream_15=new RewriteRuleTokenStream(adaptor,"token 15");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:22:5: ( INT | ID | '[' expr ( ',' expr )* ']' -> ^( VEC ( expr )+ ) )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:25:5: ( INT | ID | '[' expr ( ',' expr )* ']' -> ^( VEC ( expr )+ ) )
             int alt7=3;
             switch ( input.LA(1) ) {
             case INT:
@@ -558,42 +558,42 @@ public class VecMathParser extends Parser {
 
             switch (alt7) {
                 case 1 :
-                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:22:9: INT
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:25:9: INT
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    INT14=(Token)match(input,INT,FOLLOW_INT_in_primary183); 
-                    INT14_tree = (Object)adaptor.create(INT14);
+                    INT14=(Token)match(input,INT,FOLLOW_INT_in_primary216); 
+                    INT14_tree = new IntNode(INT14) ;
                     adaptor.addChild(root_0, INT14_tree);
 
 
                     }
                     break;
                 case 2 :
-                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:23:9: ID
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:26:9: ID
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    ID15=(Token)match(input,ID,FOLLOW_ID_in_primary193); 
-                    ID15_tree = (Object)adaptor.create(ID15);
+                    ID15=(Token)match(input,ID,FOLLOW_ID_in_primary229); 
+                    ID15_tree = new VarNode(ID15) ;
                     adaptor.addChild(root_0, ID15_tree);
 
 
                     }
                     break;
                 case 3 :
-                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:24:9: '[' expr ( ',' expr )* ']'
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:27:9: '[' expr ( ',' expr )* ']'
                     {
-                    char_literal16=(Token)match(input,13,FOLLOW_13_in_primary203);  
+                    char_literal16=(Token)match(input,13,FOLLOW_13_in_primary242);  
                     stream_13.add(char_literal16);
 
-                    pushFollow(FOLLOW_expr_in_primary205);
+                    pushFollow(FOLLOW_expr_in_primary244);
                     expr17=expr();
 
                     state._fsp--;
 
                     stream_expr.add(expr17.getTree());
-                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:24:18: ( ',' expr )*
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:27:18: ( ',' expr )*
                     loop6:
                     do {
                         int alt6=2;
@@ -606,12 +606,12 @@ public class VecMathParser extends Parser {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:24:19: ',' expr
+                    	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:27:19: ',' expr
                     	    {
-                    	    char_literal18=(Token)match(input,14,FOLLOW_14_in_primary208);  
+                    	    char_literal18=(Token)match(input,14,FOLLOW_14_in_primary247);  
                     	    stream_14.add(char_literal18);
 
-                    	    pushFollow(FOLLOW_expr_in_primary210);
+                    	    pushFollow(FOLLOW_expr_in_primary249);
                     	    expr19=expr();
 
                     	    state._fsp--;
@@ -626,7 +626,7 @@ public class VecMathParser extends Parser {
                         }
                     } while (true);
 
-                    char_literal20=(Token)match(input,15,FOLLOW_15_in_primary214);  
+                    char_literal20=(Token)match(input,15,FOLLOW_15_in_primary253);  
                     stream_15.add(char_literal20);
 
 
@@ -642,12 +642,12 @@ public class VecMathParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 24:34: -> ^( VEC ( expr )+ )
+                    // 27:34: -> ^( VEC ( expr )+ )
                     {
-                        // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMath.g:24:37: ^( VEC ( expr )+ )
+                        // /Users/hotoku/projects/lip/code/walking/tree-grammar/VecMathHetero.g:27:37: ^( VEC ( expr )+ )
                         {
                         Object root_1 = (Object)adaptor.nil();
-                        root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(VEC, "VEC"), root_1);
+                        root_1 = (Object)adaptor.becomeRoot(new VectorNode(VEC), root_1);
 
                         if ( !(stream_expr.hasNext()) ) {
                             throw new RewriteEarlyExitException();
@@ -691,25 +691,25 @@ public class VecMathParser extends Parser {
 
  
 
-    public static final BitSet FOLLOW_stat_in_prog34 = new BitSet(new long[]{0x0000000000000222L});
-    public static final BitSet FOLLOW_ID_in_stat67 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_8_in_stat69 = new BitSet(new long[]{0x0000000000002060L});
-    public static final BitSet FOLLOW_expr_in_stat71 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_9_in_stat92 = new BitSet(new long[]{0x0000000000002060L});
-    public static final BitSet FOLLOW_expr_in_stat94 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_multExpr_in_expr117 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_10_in_expr120 = new BitSet(new long[]{0x0000000000002060L});
-    public static final BitSet FOLLOW_multExpr_in_expr123 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_primary_in_multExpr145 = new BitSet(new long[]{0x0000000000001802L});
-    public static final BitSet FOLLOW_11_in_multExpr149 = new BitSet(new long[]{0x0000000000002060L});
-    public static final BitSet FOLLOW_12_in_multExpr152 = new BitSet(new long[]{0x0000000000002060L});
-    public static final BitSet FOLLOW_primary_in_multExpr156 = new BitSet(new long[]{0x0000000000001802L});
-    public static final BitSet FOLLOW_INT_in_primary183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_primary193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_primary203 = new BitSet(new long[]{0x0000000000002060L});
-    public static final BitSet FOLLOW_expr_in_primary205 = new BitSet(new long[]{0x000000000000C000L});
-    public static final BitSet FOLLOW_14_in_primary208 = new BitSet(new long[]{0x0000000000002060L});
-    public static final BitSet FOLLOW_expr_in_primary210 = new BitSet(new long[]{0x000000000000C000L});
-    public static final BitSet FOLLOW_15_in_primary214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_stat_in_prog68 = new BitSet(new long[]{0x0000000000000442L});
+    public static final BitSet FOLLOW_ID_in_stat101 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ASSIGN_in_stat103 = new BitSet(new long[]{0x0000000000002C00L});
+    public static final BitSet FOLLOW_expr_in_stat105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PRINT_in_stat129 = new BitSet(new long[]{0x0000000000002C00L});
+    public static final BitSet FOLLOW_expr_in_stat131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_multExpr_in_expr156 = new BitSet(new long[]{0x0000000000000082L});
+    public static final BitSet FOLLOW_PLUS_in_expr159 = new BitSet(new long[]{0x0000000000002C00L});
+    public static final BitSet FOLLOW_multExpr_in_expr165 = new BitSet(new long[]{0x0000000000000082L});
+    public static final BitSet FOLLOW_primary_in_multExpr182 = new BitSet(new long[]{0x0000000000000302L});
+    public static final BitSet FOLLOW_MULT_in_multExpr186 = new BitSet(new long[]{0x0000000000002C00L});
+    public static final BitSet FOLLOW_DOT_in_multExpr192 = new BitSet(new long[]{0x0000000000002C00L});
+    public static final BitSet FOLLOW_primary_in_multExpr199 = new BitSet(new long[]{0x0000000000000302L});
+    public static final BitSet FOLLOW_INT_in_primary216 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_primary229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_primary242 = new BitSet(new long[]{0x0000000000002C00L});
+    public static final BitSet FOLLOW_expr_in_primary244 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_14_in_primary247 = new BitSet(new long[]{0x0000000000002C00L});
+    public static final BitSet FOLLOW_expr_in_primary249 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_15_in_primary253 = new BitSet(new long[]{0x0000000000000002L});
 
 }

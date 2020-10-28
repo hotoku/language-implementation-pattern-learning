@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g 2009-09-23 17:38:03
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g 2020-10-28 21:00:42
 
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;import java.util.Stack;
@@ -18,19 +10,19 @@ public class Walker extends TreeParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "VEC", "ID", "INT", "WS", "'='", "'print'", "'+'", "'*'", "'.'", "'['", "','", "']'"
     };
-    public static final int VEC=4;
-    public static final int T__12=12;
-    public static final int INT=6;
+    public static final int T__9=9;
     public static final int T__8=8;
+    public static final int INT=6;
+    public static final int T__15=15;
+    public static final int VEC=4;
+    public static final int T__11=11;
+    public static final int T__12=12;
+    public static final int T__13=13;
+    public static final int T__14=14;
+    public static final int ID=5;
     public static final int WS=7;
     public static final int EOF=-1;
-    public static final int T__13=13;
     public static final int T__10=10;
-    public static final int T__9=9;
-    public static final int T__14=14;
-    public static final int T__11=11;
-    public static final int T__15=15;
-    public static final int ID=5;
 
     // delegates
     // delegators
@@ -46,18 +38,18 @@ public class Walker extends TreeParser {
         
 
     public String[] getTokenNames() { return Walker.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g"; }
 
 
 
     // $ANTLR start "prog"
-    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:9:1: prog : ( stat )+ ;
+    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:9:1: prog : ( stat )+ ;
     public final void prog() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:9:5: ( ( stat )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:9:9: ( stat )+
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:9:5: ( ( stat )+ )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:9:9: ( stat )+
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:9:9: ( stat )+
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:9:9: ( stat )+
             int cnt1=0;
             loop1:
             do {
@@ -71,7 +63,7 @@ public class Walker extends TreeParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:9:9: stat
+            	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:9:9: stat
             	    {
             	    pushFollow(FOLLOW_stat_in_prog38);
             	    stat();
@@ -107,10 +99,10 @@ public class Walker extends TreeParser {
 
 
     // $ANTLR start "stat"
-    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:13:1: stat : ( ^( '=' ID expr ) | ^( 'print' expr ) );
+    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:13:1: stat : ( ^( '=' ID expr ) | ^( 'print' expr ) );
     public final void stat() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:13:5: ( ^( '=' ID expr ) | ^( 'print' expr ) )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:13:5: ( ^( '=' ID expr ) | ^( 'print' expr ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -128,7 +120,7 @@ public class Walker extends TreeParser {
             }
             switch (alt2) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:13:9: ^( '=' ID expr )
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:13:9: ^( '=' ID expr )
                     {
                     match(input,8,FOLLOW_8_in_stat52); 
 
@@ -145,7 +137,7 @@ public class Walker extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:14:9: ^( 'print' expr )
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:14:9: ^( 'print' expr )
                     {
                     match(input,9,FOLLOW_9_in_stat70); 
 
@@ -175,10 +167,10 @@ public class Walker extends TreeParser {
 
 
     // $ANTLR start "expr"
-    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:19:1: expr : ( ^( '+' expr expr ) | ^( '*' expr expr ) | ^( '.' expr expr ) | ^( VEC ( expr )+ ) | INT | ID );
+    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:19:1: expr : ( ^( '+' expr expr ) | ^( '*' expr expr ) | ^( '.' expr expr ) | ^( VEC ( expr )+ ) | INT | ID );
     public final void expr() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:19:5: ( ^( '+' expr expr ) | ^( '*' expr expr ) | ^( '.' expr expr ) | ^( VEC ( expr )+ ) | INT | ID )
+            // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:19:5: ( ^( '+' expr expr ) | ^( '*' expr expr ) | ^( '.' expr expr ) | ^( VEC ( expr )+ ) | INT | ID )
             int alt4=6;
             switch ( input.LA(1) ) {
             case 10:
@@ -220,7 +212,7 @@ public class Walker extends TreeParser {
 
             switch (alt4) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:19:9: ^( '+' expr expr )
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:19:9: ^( '+' expr expr )
                     {
                     match(input,10,FOLLOW_10_in_expr91); 
 
@@ -241,7 +233,7 @@ public class Walker extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:20:9: ^( '*' expr expr )
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:20:9: ^( '*' expr expr )
                     {
                     match(input,11,FOLLOW_11_in_expr107); 
 
@@ -262,7 +254,7 @@ public class Walker extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:21:9: ^( '.' expr expr )
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:21:9: ^( '.' expr expr )
                     {
                     match(input,12,FOLLOW_12_in_expr123); 
 
@@ -283,12 +275,12 @@ public class Walker extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:22:9: ^( VEC ( expr )+ )
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:22:9: ^( VEC ( expr )+ )
                     {
                     match(input,VEC,FOLLOW_VEC_in_expr139); 
 
                     match(input, Token.DOWN, null); 
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:22:15: ( expr )+
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:22:15: ( expr )+
                     int cnt3=0;
                     loop3:
                     do {
@@ -302,7 +294,7 @@ public class Walker extends TreeParser {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:22:15: expr
+                    	    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:22:15: expr
                     	    {
                     	    pushFollow(FOLLOW_expr_in_expr141);
                     	    expr();
@@ -328,14 +320,14 @@ public class Walker extends TreeParser {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:23:9: INT
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:23:9: INT
                     {
                     match(input,INT,FOLLOW_INT_in_expr153); 
 
                     }
                     break;
                 case 6 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/walking/tree-grammar/Walker.g:24:9: ID
+                    // /Users/hotoku/projects/lip/code/walking/tree-grammar/Walker.g:24:9: ID
                     {
                     match(input,ID,FOLLOW_ID_in_expr163); 
 

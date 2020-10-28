@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g 2009-09-23 17:37:45
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/reader/fig/Fig.g 2020-10-28 21:00:16
 
 import java.util.Map;
 import java.util.HashMap;
@@ -22,22 +14,22 @@ public class FigParser extends Parser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ID", "STRING", "INT", "WS", "SLCMT", "CMT", "'{'", "'}'", "'.'", "'='", "';'", "'$'", "'['", "','", "']'"
     };
-    public static final int T__12=12;
-    public static final int T__17=17;
-    public static final int INT=6;
     public static final int SLCMT=8;
+    public static final int CMT=9;
+    public static final int INT=6;
+    public static final int T__15=15;
+    public static final int T__16=16;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int T__11=11;
+    public static final int T__12=12;
+    public static final int STRING=5;
+    public static final int T__13=13;
+    public static final int T__14=14;
+    public static final int ID=4;
     public static final int WS=7;
     public static final int EOF=-1;
-    public static final int T__13=13;
-    public static final int STRING=5;
-    public static final int T__16=16;
-    public static final int CMT=9;
     public static final int T__10=10;
-    public static final int T__14=14;
-    public static final int T__11=11;
-    public static final int T__18=18;
-    public static final int T__15=15;
-    public static final int ID=4;
 
     // delegates
     // delegators
@@ -53,7 +45,7 @@ public class FigParser extends Parser {
         
 
     public String[] getTokenNames() { return FigParser.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/reader/fig/Fig.g"; }
 
 
     /** Map object names to their instances */
@@ -62,15 +54,15 @@ public class FigParser extends Parser {
 
 
     // $ANTLR start "file"
-    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:19:1: file returns [Map<String,Object> instances] : ( object )+ ;
+    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:19:1: file returns [Map<String,Object> instances] : ( object )+ ;
     public final Map<String,Object> file() throws RecognitionException {
         Map<String,Object> instances = null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:20:5: ( ( object )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:20:9: ( object )+
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:20:5: ( ( object )+ )
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:20:9: ( object )+
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:20:9: ( object )+
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:20:9: ( object )+
             int cnt1=0;
             loop1:
             do {
@@ -84,7 +76,7 @@ public class FigParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:20:9: object
+            	    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:20:9: object
             	    {
             	    pushFollow(FOLLOW_object_in_file37);
             	    object();
@@ -121,7 +113,7 @@ public class FigParser extends Parser {
 
 
     // $ANTLR start "object"
-    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:25:1: object returns [Object o] : type v= ID '{' ( property[$o] )* '}' ;
+    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:25:1: object returns [Object o] : type v= ID '{' ( property[$o] )* '}' ;
     public final Object object() throws RecognitionException {
         Object o = null;
 
@@ -130,8 +122,8 @@ public class FigParser extends Parser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:26:5: ( type v= ID '{' ( property[$o] )* '}' )
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:26:9: type v= ID '{' ( property[$o] )* '}'
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:26:5: ( type v= ID '{' ( property[$o] )* '}' )
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:26:9: type v= ID '{' ( property[$o] )* '}'
             {
             pushFollow(FOLLOW_type_in_object68);
             type1=type();
@@ -144,7 +136,7 @@ public class FigParser extends Parser {
                     instances.put((v!=null?v.getText():null), o); // track in instances dictionary
                     
             match(input,10,FOLLOW_10_in_object92); 
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:31:13: ( property[$o] )*
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:31:13: ( property[$o] )*
             loop2:
             do {
                 int alt2=2;
@@ -157,7 +149,7 @@ public class FigParser extends Parser {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:31:13: property[$o]
+            	    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:31:13: property[$o]
             	    {
             	    pushFollow(FOLLOW_property_in_object94);
             	    property(o);
@@ -192,17 +184,17 @@ public class FigParser extends Parser {
     };
 
     // $ANTLR start "type"
-    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:35:1: type : ID ( '.' ID )* ;
+    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:35:1: type : ID ( '.' ID )* ;
     public final FigParser.type_return type() throws RecognitionException {
         FigParser.type_return retval = new FigParser.type_return();
         retval.start = input.LT(1);
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:35:5: ( ID ( '.' ID )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:35:9: ID ( '.' ID )*
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:35:5: ( ID ( '.' ID )* )
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:35:9: ID ( '.' ID )*
             {
             match(input,ID,FOLLOW_ID_in_type120); 
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:35:12: ( '.' ID )*
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:35:12: ( '.' ID )*
             loop3:
             do {
                 int alt3=2;
@@ -215,7 +207,7 @@ public class FigParser extends Parser {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:35:13: '.' ID
+            	    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:35:13: '.' ID
             	    {
             	    match(input,12,FOLLOW_12_in_type123); 
             	    match(input,ID,FOLLOW_ID_in_type125); 
@@ -246,15 +238,15 @@ public class FigParser extends Parser {
 
 
     // $ANTLR start "property"
-    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:38:1: property[Object o] : ID '=' expr ';' ;
+    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:38:1: property[Object o] : ID '=' expr ';' ;
     public final void property(Object o) throws RecognitionException {
         Token ID2=null;
         Object expr3 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:39:5: ( ID '=' expr ';' )
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:39:9: ID '=' expr ';'
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:39:5: ( ID '=' expr ';' )
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:39:9: ID '=' expr ';'
             {
             ID2=(Token)match(input,ID,FOLLOW_ID_in_property154); 
             match(input,13,FOLLOW_13_in_property156); 
@@ -281,7 +273,7 @@ public class FigParser extends Parser {
 
 
     // $ANTLR start "expr"
-    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:46:1: expr returns [Object value] : ( STRING | INT | '$' ID | list );
+    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:46:1: expr returns [Object value] : ( STRING | INT | '$' ID | list );
     public final Object expr() throws RecognitionException {
         Object value = null;
 
@@ -292,7 +284,7 @@ public class FigParser extends Parser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:47:5: ( STRING | INT | '$' ID | list )
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:47:5: ( STRING | INT | '$' ID | list )
             int alt4=4;
             switch ( input.LA(1) ) {
             case STRING:
@@ -324,7 +316,7 @@ public class FigParser extends Parser {
 
             switch (alt4) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:47:9: STRING
+                    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:47:9: STRING
                     {
                     STRING4=(Token)match(input,STRING,FOLLOW_STRING_in_expr204); 
                     String s = (STRING4!=null?STRING4.getText():null); // get string value
@@ -333,7 +325,7 @@ public class FigParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:49:9: INT
+                    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:49:9: INT
                     {
                     INT5=(Token)match(input,INT,FOLLOW_INT_in_expr218); 
                     value = Integer.valueOf((INT5!=null?INT5.getText():null));
@@ -341,7 +333,7 @@ public class FigParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:50:9: '$' ID
+                    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:50:9: '$' ID
                     {
                     match(input,15,FOLLOW_15_in_expr234); 
                     ID6=(Token)match(input,ID,FOLLOW_ID_in_expr236); 
@@ -350,7 +342,7 @@ public class FigParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:51:9: list
+                    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:51:9: list
                     {
                     pushFollow(FOLLOW_list_in_expr250);
                     list7=list();
@@ -376,7 +368,7 @@ public class FigParser extends Parser {
 
 
     // $ANTLR start "list"
-    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:56:1: list returns [List<Object> elements] : ( '[' e= expr ( ',' e= expr )* ']' | '[' ']' );
+    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:56:1: list returns [List<Object> elements] : ( '[' e= expr ( ',' e= expr )* ']' | '[' ']' );
     public final List<Object> list() throws RecognitionException {
         List<Object> elements = null;
 
@@ -387,7 +379,7 @@ public class FigParser extends Parser {
             elements = new ArrayList<Object>(); // init return value
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:60:5: ( '[' e= expr ( ',' e= expr )* ']' | '[' ']' )
+            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:60:5: ( '[' e= expr ( ',' e= expr )* ']' | '[' ']' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -415,7 +407,7 @@ public class FigParser extends Parser {
             }
             switch (alt6) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:60:9: '[' e= expr ( ',' e= expr )* ']'
+                    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:60:9: '[' e= expr ( ',' e= expr )* ']'
                     {
                     match(input,16,FOLLOW_16_in_list286); 
                     pushFollow(FOLLOW_expr_in_list290);
@@ -424,7 +416,7 @@ public class FigParser extends Parser {
                     state._fsp--;
 
                     elements.add(e);
-                    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:61:13: ( ',' e= expr )*
+                    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:61:13: ( ',' e= expr )*
                     loop5:
                     do {
                         int alt5=2;
@@ -437,7 +429,7 @@ public class FigParser extends Parser {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:61:14: ',' e= expr
+                    	    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:61:14: ',' e= expr
                     	    {
                     	    match(input,17,FOLLOW_17_in_list307); 
                     	    pushFollow(FOLLOW_expr_in_list311);
@@ -460,7 +452,7 @@ public class FigParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/reader/fig/Fig.g:63:9: '[' ']'
+                    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:63:9: '[' ']'
                     {
                     match(input,16,FOLLOW_16_in_list335); 
                     match(input,18,FOLLOW_18_in_list337); 

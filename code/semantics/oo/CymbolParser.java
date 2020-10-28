@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g 2009-09-23 17:37:46
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g 2020-10-28 21:00:18
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -21,62 +13,62 @@ public class CymbolParser extends Parser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "METHOD_DECL", "ARG_DECL", "BLOCK", "VAR_DECL", "FIELD_DECL", "CALL", "ELIST", "EXPR", "UNARY_MINUS", "UNARY_NOT", "ASSIGN", "ADDR", "DEREF", "ADD", "MEMBER", "ID", "INT", "FLOAT", "CHAR", "LETTER", "WS", "SL_COMMENT", "'class'", "'{'", "'}'", "';'", "':'", "'('", "')'", "','", "'[]'", "'*'", "'float'", "'int'", "'char'", "'boolean'", "'void'", "'if'", "'else'", "'return'", "'!='", "'=='", "'<'", "'>'", "'<='", "'>='", "'-'", "'/'", "'!'", "'&'", "'['", "']'", "'->'", "'true'", "'false'"
     };
-    public static final int T__42=42;
-    public static final int T__28=28;
-    public static final int T__57=57;
-    public static final int EXPR=11;
-    public static final int T__51=51;
-    public static final int T__47=47;
-    public static final int FLOAT=21;
-    public static final int T__50=50;
-    public static final int FIELD_DECL=8;
-    public static final int BLOCK=6;
-    public static final int T__39=39;
-    public static final int T__30=30;
-    public static final int T__46=46;
-    public static final int T__52=52;
-    public static final int UNARY_MINUS=12;
-    public static final int INT=20;
-    public static final int UNARY_NOT=13;
-    public static final int T__27=27;
-    public static final int ASSIGN=14;
-    public static final int T__49=49;
-    public static final int METHOD_DECL=4;
-    public static final int T__48=48;
-    public static final int T__54=54;
-    public static final int MEMBER=18;
-    public static final int T__34=34;
-    public static final int SL_COMMENT=25;
-    public static final int ELIST=10;
-    public static final int T__56=56;
-    public static final int ID=19;
-    public static final int LETTER=23;
-    public static final int T__35=35;
-    public static final int T__36=36;
-    public static final int ARG_DECL=5;
-    public static final int WS=24;
-    public static final int CHAR=22;
-    public static final int T__58=58;
-    public static final int T__44=44;
-    public static final int T__33=33;
-    public static final int T__29=29;
-    public static final int T__45=45;
-    public static final int T__55=55;
-    public static final int ADDR=15;
-    public static final int T__43=43;
-    public static final int T__31=31;
-    public static final int T__40=40;
-    public static final int EOF=-1;
-    public static final int T__53=53;
-    public static final int T__32=32;
-    public static final int T__38=38;
-    public static final int CALL=9;
-    public static final int T__37=37;
-    public static final int T__26=26;
-    public static final int DEREF=16;
     public static final int VAR_DECL=7;
     public static final int ADD=17;
+    public static final int LETTER=23;
+    public static final int T__50=50;
+    public static final int METHOD_DECL=4;
+    public static final int ELIST=10;
+    public static final int DEREF=16;
+    public static final int T__55=55;
+    public static final int T__56=56;
+    public static final int T__57=57;
+    public static final int T__58=58;
+    public static final int ID=19;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__54=54;
+    public static final int BLOCK=6;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int CALL=9;
+    public static final int FLOAT=21;
+    public static final int CHAR=22;
+    public static final int UNARY_NOT=13;
+    public static final int ASSIGN=14;
+    public static final int INT=20;
+    public static final int MEMBER=18;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int EXPR=11;
+    public static final int T__39=39;
+    public static final int T__33=33;
+    public static final int T__34=34;
+    public static final int T__35=35;
+    public static final int T__36=36;
+    public static final int WS=24;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int FIELD_DECL=8;
+    public static final int ADDR=15;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int UNARY_MINUS=12;
+    public static final int T__44=44;
+    public static final int SL_COMMENT=25;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__40=40;
     public static final int T__41=41;
+    public static final int ARG_DECL=5;
+    public static final int T__42=42;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -100,7 +92,7 @@ public class CymbolParser extends Parser {
     }
 
     public String[] getTokenNames() { return CymbolParser.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g"; }
 
 
     public static class compilationUnit_return extends ParserRuleReturnScope {
@@ -109,7 +101,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "compilationUnit"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:25:1: compilationUnit : ( classDeclaration | methodDeclaration | varDeclaration )+ ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:25:1: compilationUnit : ( classDeclaration | methodDeclaration | varDeclaration )+ ;
     public final CymbolParser.compilationUnit_return compilationUnit() throws RecognitionException {
         CymbolParser.compilationUnit_return retval = new CymbolParser.compilationUnit_return();
         retval.start = input.LT(1);
@@ -125,12 +117,12 @@ public class CymbolParser extends Parser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:27:5: ( ( classDeclaration | methodDeclaration | varDeclaration )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:27:9: ( classDeclaration | methodDeclaration | varDeclaration )+
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:27:5: ( ( classDeclaration | methodDeclaration | varDeclaration )+ )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:27:9: ( classDeclaration | methodDeclaration | varDeclaration )+
             {
             root_0 = (CymbolAST)adaptor.nil();
 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:27:9: ( classDeclaration | methodDeclaration | varDeclaration )+
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:27:9: ( classDeclaration | methodDeclaration | varDeclaration )+
             int cnt1=0;
             loop1:
             do {
@@ -149,20 +141,20 @@ public class CymbolParser extends Parser {
                     {
                     int LA1_3 = input.LA(2);
 
-                    if ( (LA1_3==35) ) {
-                        alt1=3;
-                    }
-                    else if ( (LA1_3==ID) ) {
-                        int LA1_6 = input.LA(3);
+                    if ( (LA1_3==ID) ) {
+                        int LA1_5 = input.LA(3);
 
-                        if ( (LA1_6==31) ) {
+                        if ( (LA1_5==31) ) {
                             alt1=2;
                         }
-                        else if ( (LA1_6==ASSIGN||LA1_6==29||LA1_6==34) ) {
+                        else if ( (LA1_5==ASSIGN||LA1_5==29||LA1_5==34) ) {
                             alt1=3;
                         }
 
 
+                    }
+                    else if ( (LA1_3==35) ) {
+                        alt1=3;
                     }
 
 
@@ -173,12 +165,12 @@ public class CymbolParser extends Parser {
                     int LA1_4 = input.LA(2);
 
                     if ( (LA1_4==ID) ) {
-                        int LA1_6 = input.LA(3);
+                        int LA1_5 = input.LA(3);
 
-                        if ( (LA1_6==31) ) {
+                        if ( (LA1_5==31) ) {
                             alt1=2;
                         }
-                        else if ( (LA1_6==ASSIGN||LA1_6==29||LA1_6==34) ) {
+                        else if ( (LA1_5==ASSIGN||LA1_5==29||LA1_5==34) ) {
                             alt1=3;
                         }
 
@@ -196,7 +188,7 @@ public class CymbolParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:27:13: classDeclaration
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:27:13: classDeclaration
             	    {
             	    pushFollow(FOLLOW_classDeclaration_in_compilationUnit188);
             	    classDeclaration1=classDeclaration();
@@ -208,7 +200,7 @@ public class CymbolParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:27:32: methodDeclaration
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:27:32: methodDeclaration
             	    {
             	    pushFollow(FOLLOW_methodDeclaration_in_compilationUnit192);
             	    methodDeclaration2=methodDeclaration();
@@ -220,7 +212,7 @@ public class CymbolParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:27:52: varDeclaration
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:27:52: varDeclaration
             	    {
             	    pushFollow(FOLLOW_varDeclaration_in_compilationUnit196);
             	    varDeclaration3=varDeclaration();
@@ -274,7 +266,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "classDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:31:1: classDeclaration : 'class' ID ( superClass )? '{' ( classMember )+ '}' ';' -> ^( 'class' ID ( superClass )? ( classMember )+ ) ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:31:1: classDeclaration : 'class' ID ( superClass )? '{' ( classMember )+ '}' ';' -> ^( 'class' ID ( superClass )? ( classMember )+ ) ;
     public final CymbolParser.classDeclaration_return classDeclaration() throws RecognitionException {
         CymbolParser.classDeclaration_return retval = new CymbolParser.classDeclaration_return();
         retval.start = input.LT(1);
@@ -296,16 +288,16 @@ public class CymbolParser extends Parser {
         CymbolAST char_literal7_tree=null;
         CymbolAST char_literal9_tree=null;
         CymbolAST char_literal10_tree=null;
-        RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
-        RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
         RewriteRuleTokenStream stream_26=new RewriteRuleTokenStream(adaptor,"token 26");
         RewriteRuleTokenStream stream_27=new RewriteRuleTokenStream(adaptor,"token 27");
+        RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
+        RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleSubtreeStream stream_classMember=new RewriteRuleSubtreeStream(adaptor,"rule classMember");
         RewriteRuleSubtreeStream stream_superClass=new RewriteRuleSubtreeStream(adaptor,"rule superClass");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:32:5: ( 'class' ID ( superClass )? '{' ( classMember )+ '}' ';' -> ^( 'class' ID ( superClass )? ( classMember )+ ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:32:9: 'class' ID ( superClass )? '{' ( classMember )+ '}' ';'
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:32:5: ( 'class' ID ( superClass )? '{' ( classMember )+ '}' ';' -> ^( 'class' ID ( superClass )? ( classMember )+ ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:32:9: 'class' ID ( superClass )? '{' ( classMember )+ '}' ';'
             {
             string_literal4=(Token)match(input,26,FOLLOW_26_in_classDeclaration226); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_26.add(string_literal4);
@@ -313,7 +305,7 @@ public class CymbolParser extends Parser {
             ID5=(Token)match(input,ID,FOLLOW_ID_in_classDeclaration228); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_ID.add(ID5);
 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:32:20: ( superClass )?
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:32:20: ( superClass )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -322,7 +314,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt2) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:32:20: superClass
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:32:20: superClass
                     {
                     pushFollow(FOLLOW_superClass_in_classDeclaration230);
                     superClass6=superClass();
@@ -339,7 +331,7 @@ public class CymbolParser extends Parser {
             char_literal7=(Token)match(input,27,FOLLOW_27_in_classDeclaration233); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_27.add(char_literal7);
 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:32:36: ( classMember )+
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:32:36: ( classMember )+
             int cnt3=0;
             loop3:
             do {
@@ -353,7 +345,7 @@ public class CymbolParser extends Parser {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:32:36: classMember
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:32:36: classMember
             	    {
             	    pushFollow(FOLLOW_classMember_in_classDeclaration235);
             	    classMember8=classMember();
@@ -384,7 +376,7 @@ public class CymbolParser extends Parser {
 
 
             // AST REWRITE
-            // elements: 26, superClass, ID, classMember
+            // elements: 26, ID, classMember, superClass
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -397,13 +389,13 @@ public class CymbolParser extends Parser {
             root_0 = (CymbolAST)adaptor.nil();
             // 33:9: -> ^( 'class' ID ( superClass )? ( classMember )+ )
             {
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:33:12: ^( 'class' ID ( superClass )? ( classMember )+ )
+                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:33:12: ^( 'class' ID ( superClass )? ( classMember )+ )
                 {
                 CymbolAST root_1 = (CymbolAST)adaptor.nil();
                 root_1 = (CymbolAST)adaptor.becomeRoot(stream_26.nextNode(), root_1);
 
                 adaptor.addChild(root_1, stream_ID.nextNode());
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:33:25: ( superClass )?
+                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:33:25: ( superClass )?
                 if ( stream_superClass.hasNext() ) {
                     adaptor.addChild(root_1, stream_superClass.nextTree());
 
@@ -452,7 +444,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "superClass"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:35:1: superClass : ':' ID -> ^( ':' ID ) ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:35:1: superClass : ':' ID -> ^( ':' ID ) ;
     public final CymbolParser.superClass_return superClass() throws RecognitionException {
         CymbolParser.superClass_return retval = new CymbolParser.superClass_return();
         retval.start = input.LT(1);
@@ -464,12 +456,12 @@ public class CymbolParser extends Parser {
 
         CymbolAST char_literal11_tree=null;
         CymbolAST ID12_tree=null;
-        RewriteRuleTokenStream stream_30=new RewriteRuleTokenStream(adaptor,"token 30");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
+        RewriteRuleTokenStream stream_30=new RewriteRuleTokenStream(adaptor,"token 30");
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:36:5: ( ':' ID -> ^( ':' ID ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:36:9: ':' ID
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:36:5: ( ':' ID -> ^( ':' ID ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:36:9: ':' ID
             {
             char_literal11=(Token)match(input,30,FOLLOW_30_in_superClass280); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_30.add(char_literal11);
@@ -493,7 +485,7 @@ public class CymbolParser extends Parser {
             root_0 = (CymbolAST)adaptor.nil();
             // 36:16: -> ^( ':' ID )
             {
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:36:19: ^( ':' ID )
+                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:36:19: ^( ':' ID )
                 {
                 CymbolAST root_1 = (CymbolAST)adaptor.nil();
                 root_1 = (CymbolAST)adaptor.becomeRoot(stream_30.nextNode(), root_1);
@@ -534,7 +526,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "classMember"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:39:1: classMember : ( varDeclaration | methodDeclaration );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:39:1: classMember : ( varDeclaration | methodDeclaration );
     public final CymbolParser.classMember_return classMember() throws RecognitionException {
         CymbolParser.classMember_return retval = new CymbolParser.classMember_return();
         retval.start = input.LT(1);
@@ -548,7 +540,7 @@ public class CymbolParser extends Parser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:40:5: ( varDeclaration | methodDeclaration )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:40:5: ( varDeclaration | methodDeclaration )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -623,7 +615,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt4) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:40:9: varDeclaration
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:40:9: varDeclaration
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -637,7 +629,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:41:9: methodDeclaration
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:41:9: methodDeclaration
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -678,7 +670,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "methodDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:45:1: methodDeclaration : type ID '(' ( formalParameters )? ')' block -> ^( METHOD_DECL type ID ( formalParameters )? block ) ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:45:1: methodDeclaration : type ID '(' ( formalParameters )? ')' block -> ^( METHOD_DECL type ID ( formalParameters )? block ) ;
     public final CymbolParser.methodDeclaration_return methodDeclaration() throws RecognitionException {
         CymbolParser.methodDeclaration_return retval = new CymbolParser.methodDeclaration_return();
         retval.start = input.LT(1);
@@ -698,15 +690,15 @@ public class CymbolParser extends Parser {
         CymbolAST ID16_tree=null;
         CymbolAST char_literal17_tree=null;
         CymbolAST char_literal19_tree=null;
-        RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
-        RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
+        RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
+        RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
         RewriteRuleSubtreeStream stream_formalParameters=new RewriteRuleSubtreeStream(adaptor,"rule formalParameters");
-        RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
+        RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:46:5: ( type ID '(' ( formalParameters )? ')' block -> ^( METHOD_DECL type ID ( formalParameters )? block ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:46:9: type ID '(' ( formalParameters )? ')' block
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:46:5: ( type ID '(' ( formalParameters )? ')' block -> ^( METHOD_DECL type ID ( formalParameters )? block ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:46:9: type ID '(' ( formalParameters )? ')' block
             {
             pushFollow(FOLLOW_type_in_methodDeclaration342);
             type15=type();
@@ -720,7 +712,7 @@ public class CymbolParser extends Parser {
             char_literal17=(Token)match(input,31,FOLLOW_31_in_methodDeclaration346); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_31.add(char_literal17);
 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:46:21: ( formalParameters )?
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:46:21: ( formalParameters )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -729,7 +721,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt5) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:46:21: formalParameters
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:46:21: formalParameters
                     {
                     pushFollow(FOLLOW_formalParameters_in_methodDeclaration348);
                     formalParameters18=formalParameters();
@@ -755,7 +747,7 @@ public class CymbolParser extends Parser {
 
 
             // AST REWRITE
-            // elements: ID, formalParameters, block, type
+            // elements: ID, formalParameters, type, block
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -768,14 +760,14 @@ public class CymbolParser extends Parser {
             root_0 = (CymbolAST)adaptor.nil();
             // 47:9: -> ^( METHOD_DECL type ID ( formalParameters )? block )
             {
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:47:12: ^( METHOD_DECL type ID ( formalParameters )? block )
+                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:47:12: ^( METHOD_DECL type ID ( formalParameters )? block )
                 {
                 CymbolAST root_1 = (CymbolAST)adaptor.nil();
                 root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(METHOD_DECL, "METHOD_DECL"), root_1);
 
                 adaptor.addChild(root_1, stream_type.nextTree());
                 adaptor.addChild(root_1, stream_ID.nextNode());
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:47:34: ( formalParameters )?
+                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:47:34: ( formalParameters )?
                 if ( stream_formalParameters.hasNext() ) {
                     adaptor.addChild(root_1, stream_formalParameters.nextTree());
 
@@ -817,7 +809,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "formalParameters"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:51:1: formalParameters : parameter ( ',' parameter )* -> ( parameter )+ ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:51:1: formalParameters : parameter ( ',' parameter )* -> ( parameter )+ ;
     public final CymbolParser.formalParameters_return formalParameters() throws RecognitionException {
         CymbolParser.formalParameters_return retval = new CymbolParser.formalParameters_return();
         retval.start = input.LT(1);
@@ -834,8 +826,8 @@ public class CymbolParser extends Parser {
         RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
         RewriteRuleSubtreeStream stream_parameter=new RewriteRuleSubtreeStream(adaptor,"rule parameter");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:52:5: ( parameter ( ',' parameter )* -> ( parameter )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:52:9: parameter ( ',' parameter )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:52:5: ( parameter ( ',' parameter )* -> ( parameter )+ )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:52:9: parameter ( ',' parameter )*
             {
             pushFollow(FOLLOW_parameter_in_formalParameters396);
             parameter21=parameter();
@@ -843,7 +835,7 @@ public class CymbolParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_parameter.add(parameter21.getTree());
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:52:19: ( ',' parameter )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:52:19: ( ',' parameter )*
             loop6:
             do {
                 int alt6=2;
@@ -856,7 +848,7 @@ public class CymbolParser extends Parser {
 
                 switch (alt6) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:52:20: ',' parameter
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:52:20: ',' parameter
             	    {
             	    char_literal22=(Token)match(input,33,FOLLOW_33_in_formalParameters399); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_33.add(char_literal22);
@@ -932,7 +924,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "parameter"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:55:1: parameter : ( type ID -> ^( ARG_DECL type ID ) | type ID '[]' -> ^( ARG_DECL ^( '*' type ) ID ) | type '*' ID -> ^( ARG_DECL ^( '*' type ) ID ) );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:55:1: parameter : ( type ID -> ^( ARG_DECL type ID ) | type ID '[]' -> ^( ARG_DECL ^( '*' type ) ID ) | type '*' ID -> ^( ARG_DECL ^( '*' type ) ID ) );
     public final CymbolParser.parameter_return parameter() throws RecognitionException {
         CymbolParser.parameter_return retval = new CymbolParser.parameter_return();
         retval.start = input.LT(1);
@@ -956,37 +948,37 @@ public class CymbolParser extends Parser {
         CymbolAST string_literal28_tree=null;
         CymbolAST char_literal30_tree=null;
         CymbolAST ID31_tree=null;
-        RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
         RewriteRuleTokenStream stream_34=new RewriteRuleTokenStream(adaptor,"token 34");
+        RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:56:5: ( type ID -> ^( ARG_DECL type ID ) | type ID '[]' -> ^( ARG_DECL ^( '*' type ) ID ) | type '*' ID -> ^( ARG_DECL ^( '*' type ) ID ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:56:5: ( type ID -> ^( ARG_DECL type ID ) | type ID '[]' -> ^( ARG_DECL ^( '*' type ) ID ) | type '*' ID -> ^( ARG_DECL ^( '*' type ) ID ) )
             int alt7=3;
             int LA7_0 = input.LA(1);
 
             if ( ((LA7_0>=36 && LA7_0<=40)) ) {
                 int LA7_1 = input.LA(2);
 
-                if ( (LA7_1==ID) ) {
-                    int LA7_3 = input.LA(3);
+                if ( (LA7_1==35) ) {
+                    alt7=3;
+                }
+                else if ( (LA7_1==ID) ) {
+                    int LA7_4 = input.LA(3);
 
-                    if ( (LA7_3==34) ) {
+                    if ( (LA7_4==34) ) {
                         alt7=2;
                     }
-                    else if ( ((LA7_3>=32 && LA7_3<=33)) ) {
+                    else if ( ((LA7_4>=32 && LA7_4<=33)) ) {
                         alt7=1;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return retval;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 7, 3, input);
+                            new NoViableAltException("", 7, 4, input);
 
                         throw nvae;
                     }
-                }
-                else if ( (LA7_1==35) ) {
-                    alt7=3;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return retval;}
@@ -1003,18 +995,18 @@ public class CymbolParser extends Parser {
                     alt7=3;
                 }
                 else if ( (LA7_2==ID) ) {
-                    int LA7_3 = input.LA(3);
+                    int LA7_4 = input.LA(3);
 
-                    if ( (LA7_3==34) ) {
+                    if ( (LA7_4==34) ) {
                         alt7=2;
                     }
-                    else if ( ((LA7_3>=32 && LA7_3<=33)) ) {
+                    else if ( ((LA7_4>=32 && LA7_4<=33)) ) {
                         alt7=1;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return retval;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 7, 3, input);
+                            new NoViableAltException("", 7, 4, input);
 
                         throw nvae;
                     }
@@ -1036,7 +1028,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt7) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:56:9: type ID
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:56:9: type ID
                     {
                     pushFollow(FOLLOW_type_in_parameter431);
                     type24=type();
@@ -1063,7 +1055,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 56:22: -> ^( ARG_DECL type ID )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:56:25: ^( ARG_DECL type ID )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:56:25: ^( ARG_DECL type ID )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(ARG_DECL, "ARG_DECL"), root_1);
@@ -1080,7 +1072,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:57:9: type ID '[]'
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:57:9: type ID '[]'
                     {
                     pushFollow(FOLLOW_type_in_parameter458);
                     type26=type();
@@ -1097,7 +1089,7 @@ public class CymbolParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: type, ID, 35
+                    // elements: 35, ID, type
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1110,12 +1102,12 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 57:22: -> ^( ARG_DECL ^( '*' type ) ID )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:57:25: ^( ARG_DECL ^( '*' type ) ID )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:57:25: ^( ARG_DECL ^( '*' type ) ID )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(ARG_DECL, "ARG_DECL"), root_1);
 
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:57:36: ^( '*' type )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:57:36: ^( '*' type )
                         {
                         CymbolAST root_2 = (CymbolAST)adaptor.nil();
                         root_2 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(35, "35"), root_2);
@@ -1135,7 +1127,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:58:9: type '*' ID
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:58:9: type '*' ID
                     {
                     pushFollow(FOLLOW_type_in_parameter486);
                     type29=type();
@@ -1152,7 +1144,7 @@ public class CymbolParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: type, ID, 35
+                    // elements: ID, type, 35
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1165,12 +1157,12 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 58:22: -> ^( ARG_DECL ^( '*' type ) ID )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:58:25: ^( ARG_DECL ^( '*' type ) ID )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:58:25: ^( ARG_DECL ^( '*' type ) ID )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(ARG_DECL, "ARG_DECL"), root_1);
 
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:58:36: ^( '*' type )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:58:36: ^( '*' type )
                         {
                         CymbolAST root_2 = (CymbolAST)adaptor.nil();
                         root_2 = (CymbolAST)adaptor.becomeRoot(stream_35.nextNode(), root_2);
@@ -1217,7 +1209,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "type"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:61:1: type : ( primitiveType | ID );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:61:1: type : ( primitiveType | ID );
     public final CymbolParser.type_return type() throws RecognitionException {
         CymbolParser.type_return retval = new CymbolParser.type_return();
         retval.start = input.LT(1);
@@ -1231,7 +1223,7 @@ public class CymbolParser extends Parser {
         CymbolAST ID33_tree=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:61:5: ( primitiveType | ID )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:61:5: ( primitiveType | ID )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1250,7 +1242,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt8) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:61:9: primitiveType
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:61:9: primitiveType
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -1264,7 +1256,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:62:9: ID
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:62:9: ID
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -1304,7 +1296,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "primitiveType"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:65:1: primitiveType : ( 'float' | 'int' | 'char' | 'boolean' | 'void' );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:65:1: primitiveType : ( 'float' | 'int' | 'char' | 'boolean' | 'void' );
     public final CymbolParser.primitiveType_return primitiveType() throws RecognitionException {
         CymbolParser.primitiveType_return retval = new CymbolParser.primitiveType_return();
         retval.start = input.LT(1);
@@ -1316,8 +1308,8 @@ public class CymbolParser extends Parser {
         CymbolAST set34_tree=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:66:5: ( 'float' | 'int' | 'char' | 'boolean' | 'void' )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:66:5: ( 'float' | 'int' | 'char' | 'boolean' | 'void' )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -1362,7 +1354,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "block"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:74:1: block : '{' ( statement )* '}' -> ^( BLOCK ( statement )* ) ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:74:1: block : '{' ( statement )* '}' -> ^( BLOCK ( statement )* ) ;
     public final CymbolParser.block_return block() throws RecognitionException {
         CymbolParser.block_return retval = new CymbolParser.block_return();
         retval.start = input.LT(1);
@@ -1376,17 +1368,17 @@ public class CymbolParser extends Parser {
 
         CymbolAST char_literal35_tree=null;
         CymbolAST char_literal37_tree=null;
-        RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
         RewriteRuleTokenStream stream_27=new RewriteRuleTokenStream(adaptor,"token 27");
+        RewriteRuleTokenStream stream_28=new RewriteRuleTokenStream(adaptor,"token 28");
         RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:75:5: ( '{' ( statement )* '}' -> ^( BLOCK ( statement )* ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:75:9: '{' ( statement )* '}'
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:75:5: ( '{' ( statement )* '}' -> ^( BLOCK ( statement )* ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:75:9: '{' ( statement )* '}'
             {
             char_literal35=(Token)match(input,27,FOLLOW_27_in_block608); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_27.add(char_literal35);
 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:75:13: ( statement )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:75:13: ( statement )*
             loop9:
             do {
                 int alt9=2;
@@ -1399,7 +1391,7 @@ public class CymbolParser extends Parser {
 
                 switch (alt9) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:75:13: statement
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:75:13: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_block610);
             	    statement36=statement();
@@ -1435,12 +1427,12 @@ public class CymbolParser extends Parser {
             root_0 = (CymbolAST)adaptor.nil();
             // 75:28: -> ^( BLOCK ( statement )* )
             {
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:75:31: ^( BLOCK ( statement )* )
+                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:75:31: ^( BLOCK ( statement )* )
                 {
                 CymbolAST root_1 = (CymbolAST)adaptor.nil();
                 root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(BLOCK, "BLOCK"), root_1);
 
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:75:39: ( statement )*
+                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:75:39: ( statement )*
                 while ( stream_statement.hasNext() ) {
                     adaptor.addChild(root_1, stream_statement.nextTree());
 
@@ -1481,7 +1473,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "varDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:80:1: varDeclaration : ( type ID ( '=' expression )? ';' -> ^( VAR_DECL type ID ( expression )? ) | type ID '[]' ( '=' expression )? ';' -> ^( VAR_DECL ^( '*' type ) ID ( expression )? ) | type '*' ID ( '=' expression )? ';' -> ^( VAR_DECL ^( '*' type ) ID ( expression )? ) );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:80:1: varDeclaration : ( type ID ( '=' expression )? ';' -> ^( VAR_DECL type ID ( expression )? ) | type ID '[]' ( '=' expression )? ';' -> ^( VAR_DECL ^( '*' type ) ID ( expression )? ) | type '*' ID ( '=' expression )? ';' -> ^( VAR_DECL ^( '*' type ) ID ( expression )? ) );
     public final CymbolParser.varDeclaration_return varDeclaration() throws RecognitionException {
         CymbolParser.varDeclaration_return retval = new CymbolParser.varDeclaration_return();
         retval.start = input.LT(1);
@@ -1523,15 +1515,15 @@ public class CymbolParser extends Parser {
         CymbolAST ID51_tree=null;
         CymbolAST char_literal52_tree=null;
         CymbolAST char_literal54_tree=null;
-        RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
-        RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
-        RewriteRuleTokenStream stream_ASSIGN=new RewriteRuleTokenStream(adaptor,"token ASSIGN");
         RewriteRuleTokenStream stream_34=new RewriteRuleTokenStream(adaptor,"token 34");
+        RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
+        RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
-        RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
+        RewriteRuleTokenStream stream_ASSIGN=new RewriteRuleTokenStream(adaptor,"token ASSIGN");
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
+        RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:81:5: ( type ID ( '=' expression )? ';' -> ^( VAR_DECL type ID ( expression )? ) | type ID '[]' ( '=' expression )? ';' -> ^( VAR_DECL ^( '*' type ) ID ( expression )? ) | type '*' ID ( '=' expression )? ';' -> ^( VAR_DECL ^( '*' type ) ID ( expression )? ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:81:5: ( type ID ( '=' expression )? ';' -> ^( VAR_DECL type ID ( expression )? ) | type ID '[]' ( '=' expression )? ';' -> ^( VAR_DECL ^( '*' type ) ID ( expression )? ) | type '*' ID ( '=' expression )? ';' -> ^( VAR_DECL ^( '*' type ) ID ( expression )? ) )
             int alt13=3;
             int LA13_0 = input.LA(1);
 
@@ -1606,7 +1598,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt13) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:81:9: type ID ( '=' expression )? ';'
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:81:9: type ID ( '=' expression )? ';'
                     {
                     pushFollow(FOLLOW_type_in_varDeclaration643);
                     type38=type();
@@ -1617,7 +1609,7 @@ public class CymbolParser extends Parser {
                     ID39=(Token)match(input,ID,FOLLOW_ID_in_varDeclaration645); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ID.add(ID39);
 
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:81:17: ( '=' expression )?
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:81:17: ( '=' expression )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1626,7 +1618,7 @@ public class CymbolParser extends Parser {
                     }
                     switch (alt10) {
                         case 1 :
-                            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:81:18: '=' expression
+                            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:81:18: '=' expression
                             {
                             char_literal40=(Token)match(input,ASSIGN,FOLLOW_ASSIGN_in_varDeclaration648); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_ASSIGN.add(char_literal40);
@@ -1649,7 +1641,7 @@ public class CymbolParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: ID, type, expression
+                    // elements: ID, expression, type
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1662,14 +1654,14 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 82:13: -> ^( VAR_DECL type ID ( expression )? )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:82:16: ^( VAR_DECL type ID ( expression )? )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:82:16: ^( VAR_DECL type ID ( expression )? )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(VAR_DECL, "VAR_DECL"), root_1);
 
                         adaptor.addChild(root_1, stream_type.nextTree());
                         adaptor.addChild(root_1, stream_ID.nextNode());
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:82:35: ( expression )?
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:82:35: ( expression )?
                         if ( stream_expression.hasNext() ) {
                             adaptor.addChild(root_1, stream_expression.nextTree());
 
@@ -1685,7 +1677,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:83:9: type ID '[]' ( '=' expression )? ';'
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:83:9: type ID '[]' ( '=' expression )? ';'
                     {
                     pushFollow(FOLLOW_type_in_varDeclaration689);
                     type43=type();
@@ -1699,7 +1691,7 @@ public class CymbolParser extends Parser {
                     string_literal45=(Token)match(input,34,FOLLOW_34_in_varDeclaration693); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_34.add(string_literal45);
 
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:83:22: ( '=' expression )?
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:83:22: ( '=' expression )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -1708,7 +1700,7 @@ public class CymbolParser extends Parser {
                     }
                     switch (alt11) {
                         case 1 :
-                            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:83:23: '=' expression
+                            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:83:23: '=' expression
                             {
                             char_literal46=(Token)match(input,ASSIGN,FOLLOW_ASSIGN_in_varDeclaration696); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_ASSIGN.add(char_literal46);
@@ -1731,7 +1723,7 @@ public class CymbolParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: 35, expression, type, ID
+                    // elements: expression, type, 35, ID
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1744,12 +1736,12 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 84:13: -> ^( VAR_DECL ^( '*' type ) ID ( expression )? )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:84:16: ^( VAR_DECL ^( '*' type ) ID ( expression )? )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:84:16: ^( VAR_DECL ^( '*' type ) ID ( expression )? )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(VAR_DECL, "VAR_DECL"), root_1);
 
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:84:27: ^( '*' type )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:84:27: ^( '*' type )
                         {
                         CymbolAST root_2 = (CymbolAST)adaptor.nil();
                         root_2 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(35, "35"), root_2);
@@ -1759,7 +1751,7 @@ public class CymbolParser extends Parser {
                         adaptor.addChild(root_1, root_2);
                         }
                         adaptor.addChild(root_1, stream_ID.nextNode());
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:84:42: ( expression )?
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:84:42: ( expression )?
                         if ( stream_expression.hasNext() ) {
                             adaptor.addChild(root_1, stream_expression.nextTree());
 
@@ -1775,7 +1767,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:85:9: type '*' ID ( '=' expression )? ';'
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:85:9: type '*' ID ( '=' expression )? ';'
                     {
                     pushFollow(FOLLOW_type_in_varDeclaration741);
                     type49=type();
@@ -1789,7 +1781,7 @@ public class CymbolParser extends Parser {
                     ID51=(Token)match(input,ID,FOLLOW_ID_in_varDeclaration745); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ID.add(ID51);
 
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:85:21: ( '=' expression )?
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:85:21: ( '=' expression )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -1798,7 +1790,7 @@ public class CymbolParser extends Parser {
                     }
                     switch (alt12) {
                         case 1 :
-                            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:85:22: '=' expression
+                            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:85:22: '=' expression
                             {
                             char_literal52=(Token)match(input,ASSIGN,FOLLOW_ASSIGN_in_varDeclaration748); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_ASSIGN.add(char_literal52);
@@ -1821,7 +1813,7 @@ public class CymbolParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: expression, ID, type, 35
+                    // elements: 35, expression, ID, type
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1834,12 +1826,12 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 86:13: -> ^( VAR_DECL ^( '*' type ) ID ( expression )? )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:86:16: ^( VAR_DECL ^( '*' type ) ID ( expression )? )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:86:16: ^( VAR_DECL ^( '*' type ) ID ( expression )? )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(VAR_DECL, "VAR_DECL"), root_1);
 
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:86:27: ^( '*' type )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:86:27: ^( '*' type )
                         {
                         CymbolAST root_2 = (CymbolAST)adaptor.nil();
                         root_2 = (CymbolAST)adaptor.becomeRoot(stream_35.nextNode(), root_2);
@@ -1849,7 +1841,7 @@ public class CymbolParser extends Parser {
                         adaptor.addChild(root_1, root_2);
                         }
                         adaptor.addChild(root_1, stream_ID.nextNode());
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:86:42: ( expression )?
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:86:42: ( expression )?
                         if ( stream_expression.hasNext() ) {
                             adaptor.addChild(root_1, stream_expression.nextTree());
 
@@ -1892,7 +1884,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "statement"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:90:1: statement options {backtrack=true; } : ( block | varDeclaration | 'if' '(' expression ')' s= statement ( 'else' e= statement )? -> ^( 'if' expression $s ( $e)? ) | 'return' ( expression )? ';' -> ^( 'return' ( expression )? ) | lhs '=' expression ';' -> ^( '=' lhs expression ) | a= postfixExpression ';' -> ^( EXPR postfixExpression ) );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:90:1: statement options {backtrack=true; } : ( block | varDeclaration | 'if' '(' expression ')' s= statement ( 'else' e= statement )? -> ^( 'if' expression $s ( $e)? ) | 'return' ( expression )? ';' -> ^( 'return' ( expression )? ) | lhs '=' expression ';' -> ^( '=' lhs expression ) | a= postfixExpression ';' -> ^( EXPR postfixExpression ) );
     public final CymbolParser.statement_return statement() throws RecognitionException {
         CymbolParser.statement_return retval = new CymbolParser.statement_return();
         retval.start = input.LT(1);
@@ -1936,24 +1928,24 @@ public class CymbolParser extends Parser {
         CymbolAST char_literal66_tree=null;
         CymbolAST char_literal68_tree=null;
         CymbolAST char_literal69_tree=null;
+        RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
+        RewriteRuleTokenStream stream_ASSIGN=new RewriteRuleTokenStream(adaptor,"token ASSIGN");
+        RewriteRuleTokenStream stream_41=new RewriteRuleTokenStream(adaptor,"token 41");
+        RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
+        RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
         RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
         RewriteRuleTokenStream stream_43=new RewriteRuleTokenStream(adaptor,"token 43");
-        RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
-        RewriteRuleTokenStream stream_41=new RewriteRuleTokenStream(adaptor,"token 41");
-        RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
-        RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
-        RewriteRuleTokenStream stream_ASSIGN=new RewriteRuleTokenStream(adaptor,"token ASSIGN");
+        RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         RewriteRuleSubtreeStream stream_lhs=new RewriteRuleSubtreeStream(adaptor,"rule lhs");
         RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
-        RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         RewriteRuleSubtreeStream stream_postfixExpression=new RewriteRuleSubtreeStream(adaptor,"rule postfixExpression");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:92:5: ( block | varDeclaration | 'if' '(' expression ')' s= statement ( 'else' e= statement )? -> ^( 'if' expression $s ( $e)? ) | 'return' ( expression )? ';' -> ^( 'return' ( expression )? ) | lhs '=' expression ';' -> ^( '=' lhs expression ) | a= postfixExpression ';' -> ^( EXPR postfixExpression ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:92:5: ( block | varDeclaration | 'if' '(' expression ')' s= statement ( 'else' e= statement )? -> ^( 'if' expression $s ( $e)? ) | 'return' ( expression )? ';' -> ^( 'return' ( expression )? ) | lhs '=' expression ';' -> ^( '=' lhs expression ) | a= postfixExpression ';' -> ^( EXPR postfixExpression ) )
             int alt16=6;
             alt16 = dfa16.predict(input);
             switch (alt16) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:92:9: block
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:92:9: block
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -1967,7 +1959,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:93:9: varDeclaration
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:93:9: varDeclaration
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -1981,7 +1973,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:94:9: 'if' '(' expression ')' s= statement ( 'else' e= statement )?
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:94:9: 'if' '(' expression ')' s= statement ( 'else' e= statement )?
                     {
                     string_literal57=(Token)match(input,41,FOLLOW_41_in_statement830); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_41.add(string_literal57);
@@ -2004,7 +1996,7 @@ public class CymbolParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_statement.add(s.getTree());
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:94:45: ( 'else' e= statement )?
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:94:45: ( 'else' e= statement )?
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -2013,7 +2005,7 @@ public class CymbolParser extends Parser {
                     }
                     switch (alt14) {
                         case 1 :
-                            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:94:46: 'else' e= statement
+                            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:94:46: 'else' e= statement
                             {
                             string_literal61=(Token)match(input,42,FOLLOW_42_in_statement843); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_42.add(string_literal61);
@@ -2033,29 +2025,29 @@ public class CymbolParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: 41, s, e, expression
+                    // elements: expression, s, e, 41
                     // token labels: 
-                    // rule labels: retval, s, e
+                    // rule labels: s, e, retval
                     // token list labels: 
                     // rule list labels: 
                     // wildcard labels: 
                     if ( state.backtracking==0 ) {
                     retval.tree = root_0;
-                    RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
                     RewriteRuleSubtreeStream stream_s=new RewriteRuleSubtreeStream(adaptor,"rule s",s!=null?s.tree:null);
                     RewriteRuleSubtreeStream stream_e=new RewriteRuleSubtreeStream(adaptor,"rule e",e!=null?e.tree:null);
+                    RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CymbolAST)adaptor.nil();
                     // 95:9: -> ^( 'if' expression $s ( $e)? )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:95:12: ^( 'if' expression $s ( $e)? )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:95:12: ^( 'if' expression $s ( $e)? )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot(stream_41.nextNode(), root_1);
 
                         adaptor.addChild(root_1, stream_expression.nextTree());
                         adaptor.addChild(root_1, stream_s.nextTree());
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:95:33: ( $e)?
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:95:33: ( $e)?
                         if ( stream_e.hasNext() ) {
                             adaptor.addChild(root_1, stream_e.nextTree());
 
@@ -2071,12 +2063,12 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:96:9: 'return' ( expression )? ';'
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:96:9: 'return' ( expression )? ';'
                     {
                     string_literal62=(Token)match(input,43,FOLLOW_43_in_statement882); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_43.add(string_literal62);
 
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:96:18: ( expression )?
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:96:18: ( expression )?
                     int alt15=2;
                     int LA15_0 = input.LA(1);
 
@@ -2085,7 +2077,7 @@ public class CymbolParser extends Parser {
                     }
                     switch (alt15) {
                         case 1 :
-                            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:96:18: expression
+                            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:96:18: expression
                             {
                             pushFollow(FOLLOW_expression_in_statement884);
                             expression63=expression();
@@ -2118,12 +2110,12 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 96:34: -> ^( 'return' ( expression )? )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:96:37: ^( 'return' ( expression )? )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:96:37: ^( 'return' ( expression )? )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot(stream_43.nextNode(), root_1);
 
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:96:48: ( expression )?
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:96:48: ( expression )?
                         if ( stream_expression.hasNext() ) {
                             adaptor.addChild(root_1, stream_expression.nextTree());
 
@@ -2139,7 +2131,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:97:9: lhs '=' expression ';'
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:97:9: lhs '=' expression ';'
                     {
                     pushFollow(FOLLOW_lhs_in_statement906);
                     lhs65=lhs();
@@ -2162,7 +2154,7 @@ public class CymbolParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: lhs, ASSIGN, expression
+                    // elements: expression, ASSIGN, lhs
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2175,7 +2167,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 97:32: -> ^( '=' lhs expression )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:97:35: ^( '=' lhs expression )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:97:35: ^( '=' lhs expression )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot(stream_ASSIGN.nextNode(), root_1);
@@ -2192,7 +2184,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:98:9: a= postfixExpression ';'
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:98:9: a= postfixExpression ';'
                     {
                     pushFollow(FOLLOW_postfixExpression_in_statement934);
                     a=postfixExpression();
@@ -2219,7 +2211,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 99:13: -> ^( EXPR postfixExpression )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:99:16: ^( EXPR postfixExpression )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:99:16: ^( EXPR postfixExpression )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(EXPR, "EXPR"), root_1);
@@ -2262,7 +2254,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "lhs"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:102:1: lhs : unaryExpression -> ^( EXPR unaryExpression ) ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:102:1: lhs : unaryExpression -> ^( EXPR unaryExpression ) ;
     public final CymbolParser.lhs_return lhs() throws RecognitionException {
         CymbolParser.lhs_return retval = new CymbolParser.lhs_return();
         retval.start = input.LT(1);
@@ -2274,8 +2266,8 @@ public class CymbolParser extends Parser {
 
         RewriteRuleSubtreeStream stream_unaryExpression=new RewriteRuleSubtreeStream(adaptor,"rule unaryExpression");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:102:5: ( unaryExpression -> ^( EXPR unaryExpression ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:102:9: unaryExpression
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:102:5: ( unaryExpression -> ^( EXPR unaryExpression ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:102:9: unaryExpression
             {
             pushFollow(FOLLOW_unaryExpression_in_lhs972);
             unaryExpression70=unaryExpression();
@@ -2299,7 +2291,7 @@ public class CymbolParser extends Parser {
             root_0 = (CymbolAST)adaptor.nil();
             // 102:25: -> ^( EXPR unaryExpression )
             {
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:102:28: ^( EXPR unaryExpression )
+                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:102:28: ^( EXPR unaryExpression )
                 {
                 CymbolAST root_1 = (CymbolAST)adaptor.nil();
                 root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(EXPR, "EXPR"), root_1);
@@ -2340,7 +2332,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "expressionList"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:104:1: expressionList : ( expr ( ',' expr )* -> ^( ELIST ( expr )+ ) | -> ELIST );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:104:1: expressionList : ( expr ( ',' expr )* -> ^( ELIST ( expr )+ ) | -> ELIST );
     public final CymbolParser.expressionList_return expressionList() throws RecognitionException {
         CymbolParser.expressionList_return retval = new CymbolParser.expressionList_return();
         retval.start = input.LT(1);
@@ -2357,7 +2349,7 @@ public class CymbolParser extends Parser {
         RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:105:5: ( expr ( ',' expr )* -> ^( ELIST ( expr )+ ) | -> ELIST )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:105:5: ( expr ( ',' expr )* -> ^( ELIST ( expr )+ ) | -> ELIST )
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -2376,7 +2368,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt18) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:105:9: expr ( ',' expr )*
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:105:9: expr ( ',' expr )*
                     {
                     pushFollow(FOLLOW_expr_in_expressionList999);
                     expr71=expr();
@@ -2384,7 +2376,7 @@ public class CymbolParser extends Parser {
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_expr.add(expr71.getTree());
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:105:14: ( ',' expr )*
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:105:14: ( ',' expr )*
                     loop17:
                     do {
                         int alt17=2;
@@ -2397,7 +2389,7 @@ public class CymbolParser extends Parser {
 
                         switch (alt17) {
                     	case 1 :
-                    	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:105:15: ',' expr
+                    	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:105:15: ',' expr
                     	    {
                     	    char_literal72=(Token)match(input,33,FOLLOW_33_in_expressionList1002); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_33.add(char_literal72);
@@ -2433,7 +2425,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 105:26: -> ^( ELIST ( expr )+ )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:105:29: ^( ELIST ( expr )+ )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:105:29: ^( ELIST ( expr )+ )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(ELIST, "ELIST"), root_1);
@@ -2456,7 +2448,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:106:9: 
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:106:9: 
                     {
 
                     // AST REWRITE
@@ -2508,7 +2500,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "expression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:109:1: expression : expr -> ^( EXPR expr ) ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:109:1: expression : expr -> ^( EXPR expr ) ;
     public final CymbolParser.expression_return expression() throws RecognitionException {
         CymbolParser.expression_return retval = new CymbolParser.expression_return();
         retval.start = input.LT(1);
@@ -2520,8 +2512,8 @@ public class CymbolParser extends Parser {
 
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:110:5: ( expr -> ^( EXPR expr ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:110:9: expr
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:110:5: ( expr -> ^( EXPR expr ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:110:9: expr
             {
             pushFollow(FOLLOW_expr_in_expression1046);
             expr74=expr();
@@ -2545,7 +2537,7 @@ public class CymbolParser extends Parser {
             root_0 = (CymbolAST)adaptor.nil();
             // 110:14: -> ^( EXPR expr )
             {
-                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:110:17: ^( EXPR expr )
+                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:110:17: ^( EXPR expr )
                 {
                 CymbolAST root_1 = (CymbolAST)adaptor.nil();
                 root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(EXPR, "EXPR"), root_1);
@@ -2586,7 +2578,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "expr"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:113:1: expr : equalityExpression ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:113:1: expr : equalityExpression ;
     public final CymbolParser.expr_return expr() throws RecognitionException {
         CymbolParser.expr_return retval = new CymbolParser.expr_return();
         retval.start = input.LT(1);
@@ -2598,8 +2590,8 @@ public class CymbolParser extends Parser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:113:5: ( equalityExpression )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:113:9: equalityExpression
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:113:5: ( equalityExpression )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:113:9: equalityExpression
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -2638,7 +2630,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "equalityExpression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:116:1: equalityExpression : relationalExpression ( ( '!=' | '==' ) relationalExpression )* ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:116:1: equalityExpression : relationalExpression ( ( '!=' | '==' ) relationalExpression )* ;
     public final CymbolParser.equalityExpression_return equalityExpression() throws RecognitionException {
         CymbolParser.equalityExpression_return retval = new CymbolParser.equalityExpression_return();
         retval.start = input.LT(1);
@@ -2656,8 +2648,8 @@ public class CymbolParser extends Parser {
         CymbolAST string_literal78_tree=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:117:5: ( relationalExpression ( ( '!=' | '==' ) relationalExpression )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:117:9: relationalExpression ( ( '!=' | '==' ) relationalExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:117:5: ( relationalExpression ( ( '!=' | '==' ) relationalExpression )* )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:117:9: relationalExpression ( ( '!=' | '==' ) relationalExpression )*
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -2667,7 +2659,7 @@ public class CymbolParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, relationalExpression76.getTree());
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:117:30: ( ( '!=' | '==' ) relationalExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:117:30: ( ( '!=' | '==' ) relationalExpression )*
             loop20:
             do {
                 int alt20=2;
@@ -2680,9 +2672,9 @@ public class CymbolParser extends Parser {
 
                 switch (alt20) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:117:31: ( '!=' | '==' ) relationalExpression
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:117:31: ( '!=' | '==' ) relationalExpression
             	    {
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:117:31: ( '!=' | '==' )
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:117:31: ( '!=' | '==' )
             	    int alt19=2;
             	    int LA19_0 = input.LA(1);
 
@@ -2701,7 +2693,7 @@ public class CymbolParser extends Parser {
             	    }
             	    switch (alt19) {
             	        case 1 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:117:32: '!='
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:117:32: '!='
             	            {
             	            string_literal77=(Token)match(input,44,FOLLOW_44_in_equalityExpression1095); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2712,7 +2704,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:117:40: '=='
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:117:40: '=='
             	            {
             	            string_literal78=(Token)match(input,45,FOLLOW_45_in_equalityExpression1100); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2769,7 +2761,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "relationalExpression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:120:1: relationalExpression : additiveExpression ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* ) ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:120:1: relationalExpression : additiveExpression ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* ) ;
     public final CymbolParser.relationalExpression_return relationalExpression() throws RecognitionException {
         CymbolParser.relationalExpression_return retval = new CymbolParser.relationalExpression_return();
         retval.start = input.LT(1);
@@ -2791,8 +2783,8 @@ public class CymbolParser extends Parser {
         CymbolAST string_literal84_tree=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:121:5: ( additiveExpression ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:121:9: additiveExpression ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:121:5: ( additiveExpression ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* ) )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:121:9: additiveExpression ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* )
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -2802,10 +2794,10 @@ public class CymbolParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, additiveExpression80.getTree());
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:122:9: ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:122:13: ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:122:9: ( ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )* )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:122:13: ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )*
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:122:13: ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:122:13: ( ( '<' | '>' | '<=' | '>=' ) additiveExpression )*
             loop22:
             do {
                 int alt22=2;
@@ -2818,9 +2810,9 @@ public class CymbolParser extends Parser {
 
                 switch (alt22) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:122:17: ( '<' | '>' | '<=' | '>=' ) additiveExpression
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:122:17: ( '<' | '>' | '<=' | '>=' ) additiveExpression
             	    {
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:122:17: ( '<' | '>' | '<=' | '>=' )
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:122:17: ( '<' | '>' | '<=' | '>=' )
             	    int alt21=4;
             	    switch ( input.LA(1) ) {
             	    case 46:
@@ -2853,7 +2845,7 @@ public class CymbolParser extends Parser {
 
             	    switch (alt21) {
             	        case 1 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:122:21: '<'
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:122:21: '<'
             	            {
             	            char_literal81=(Token)match(input,46,FOLLOW_46_in_relationalExpression1147); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2864,7 +2856,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:123:21: '>'
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:123:21: '>'
             	            {
             	            char_literal82=(Token)match(input,47,FOLLOW_47_in_relationalExpression1170); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2875,7 +2867,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 3 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:124:21: '<='
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:124:21: '<='
             	            {
             	            string_literal83=(Token)match(input,48,FOLLOW_48_in_relationalExpression1193); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2886,7 +2878,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 4 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:125:21: '>='
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:125:21: '>='
             	            {
             	            string_literal84=(Token)match(input,49,FOLLOW_49_in_relationalExpression1216); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -2946,7 +2938,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "additiveExpression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:132:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:132:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
     public final CymbolParser.additiveExpression_return additiveExpression() throws RecognitionException {
         CymbolParser.additiveExpression_return retval = new CymbolParser.additiveExpression_return();
         retval.start = input.LT(1);
@@ -2964,8 +2956,8 @@ public class CymbolParser extends Parser {
         CymbolAST char_literal88_tree=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:133:5: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:133:9: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:133:5: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:133:9: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -2975,7 +2967,7 @@ public class CymbolParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, multiplicativeExpression86.getTree());
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:133:34: ( ( '+' | '-' ) multiplicativeExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:133:34: ( ( '+' | '-' ) multiplicativeExpression )*
             loop24:
             do {
                 int alt24=2;
@@ -2988,9 +2980,9 @@ public class CymbolParser extends Parser {
 
                 switch (alt24) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:133:35: ( '+' | '-' ) multiplicativeExpression
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:133:35: ( '+' | '-' ) multiplicativeExpression
             	    {
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:133:35: ( '+' | '-' )
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:133:35: ( '+' | '-' )
             	    int alt23=2;
             	    int LA23_0 = input.LA(1);
 
@@ -3009,7 +3001,7 @@ public class CymbolParser extends Parser {
             	    }
             	    switch (alt23) {
             	        case 1 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:133:36: '+'
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:133:36: '+'
             	            {
             	            char_literal87=(Token)match(input,ADD,FOLLOW_ADD_in_additiveExpression1301); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -3020,7 +3012,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:133:43: '-'
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:133:43: '-'
             	            {
             	            char_literal88=(Token)match(input,50,FOLLOW_50_in_additiveExpression1306); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -3077,7 +3069,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "multiplicativeExpression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:136:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' ) unaryExpression )* ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:136:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' ) unaryExpression )* ;
     public final CymbolParser.multiplicativeExpression_return multiplicativeExpression() throws RecognitionException {
         CymbolParser.multiplicativeExpression_return retval = new CymbolParser.multiplicativeExpression_return();
         retval.start = input.LT(1);
@@ -3095,8 +3087,8 @@ public class CymbolParser extends Parser {
         CymbolAST char_literal92_tree=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:137:5: ( unaryExpression ( ( '*' | '/' ) unaryExpression )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:137:9: unaryExpression ( ( '*' | '/' ) unaryExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:137:5: ( unaryExpression ( ( '*' | '/' ) unaryExpression )* )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:137:9: unaryExpression ( ( '*' | '/' ) unaryExpression )*
             {
             root_0 = (CymbolAST)adaptor.nil();
 
@@ -3106,7 +3098,7 @@ public class CymbolParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, unaryExpression90.getTree());
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:137:25: ( ( '*' | '/' ) unaryExpression )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:137:25: ( ( '*' | '/' ) unaryExpression )*
             loop26:
             do {
                 int alt26=2;
@@ -3119,9 +3111,9 @@ public class CymbolParser extends Parser {
 
                 switch (alt26) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:137:26: ( '*' | '/' ) unaryExpression
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:137:26: ( '*' | '/' ) unaryExpression
             	    {
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:137:26: ( '*' | '/' )
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:137:26: ( '*' | '/' )
             	    int alt25=2;
             	    int LA25_0 = input.LA(1);
 
@@ -3140,7 +3132,7 @@ public class CymbolParser extends Parser {
             	    }
             	    switch (alt25) {
             	        case 1 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:137:27: '*'
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:137:27: '*'
             	            {
             	            char_literal91=(Token)match(input,35,FOLLOW_35_in_multiplicativeExpression1335); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -3151,7 +3143,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:137:34: '/'
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:137:34: '/'
             	            {
             	            char_literal92=(Token)match(input,51,FOLLOW_51_in_multiplicativeExpression1340); if (state.failed) return retval;
             	            if ( state.backtracking==0 ) {
@@ -3208,7 +3200,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "unaryExpression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:140:1: unaryExpression : (op= '-' unaryExpression -> ^( UNARY_MINUS[$op] unaryExpression ) | op= '!' unaryExpression -> ^( UNARY_NOT[$op] unaryExpression ) | op= '&' unaryExpression -> ^( ADDR[$op] unaryExpression ) | op= '*' unaryExpression -> ^( DEREF[$op] unaryExpression ) | postfixExpression );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:140:1: unaryExpression : (op= '-' unaryExpression -> ^( UNARY_MINUS[$op] unaryExpression ) | op= '!' unaryExpression -> ^( UNARY_NOT[$op] unaryExpression ) | op= '&' unaryExpression -> ^( ADDR[$op] unaryExpression ) | op= '*' unaryExpression -> ^( DEREF[$op] unaryExpression ) | postfixExpression );
     public final CymbolParser.unaryExpression_return unaryExpression() throws RecognitionException {
         CymbolParser.unaryExpression_return retval = new CymbolParser.unaryExpression_return();
         retval.start = input.LT(1);
@@ -3228,13 +3220,13 @@ public class CymbolParser extends Parser {
 
 
         CymbolAST op_tree=null;
-        RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
         RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
         RewriteRuleTokenStream stream_50=new RewriteRuleTokenStream(adaptor,"token 50");
+        RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
         RewriteRuleTokenStream stream_53=new RewriteRuleTokenStream(adaptor,"token 53");
         RewriteRuleSubtreeStream stream_unaryExpression=new RewriteRuleSubtreeStream(adaptor,"rule unaryExpression");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:141:5: (op= '-' unaryExpression -> ^( UNARY_MINUS[$op] unaryExpression ) | op= '!' unaryExpression -> ^( UNARY_NOT[$op] unaryExpression ) | op= '&' unaryExpression -> ^( ADDR[$op] unaryExpression ) | op= '*' unaryExpression -> ^( DEREF[$op] unaryExpression ) | postfixExpression )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:141:5: (op= '-' unaryExpression -> ^( UNARY_MINUS[$op] unaryExpression ) | op= '!' unaryExpression -> ^( UNARY_NOT[$op] unaryExpression ) | op= '&' unaryExpression -> ^( ADDR[$op] unaryExpression ) | op= '*' unaryExpression -> ^( DEREF[$op] unaryExpression ) | postfixExpression )
             int alt27=5;
             switch ( input.LA(1) ) {
             case 50:
@@ -3278,7 +3270,7 @@ public class CymbolParser extends Parser {
 
             switch (alt27) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:141:9: op= '-' unaryExpression
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:141:9: op= '-' unaryExpression
                     {
                     op=(Token)match(input,50,FOLLOW_50_in_unaryExpression1367); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_50.add(op);
@@ -3305,7 +3297,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 141:32: -> ^( UNARY_MINUS[$op] unaryExpression )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:141:35: ^( UNARY_MINUS[$op] unaryExpression )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:141:35: ^( UNARY_MINUS[$op] unaryExpression )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(UNARY_MINUS, op), root_1);
@@ -3321,7 +3313,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:142:9: op= '!' unaryExpression
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:142:9: op= '!' unaryExpression
                     {
                     op=(Token)match(input,52,FOLLOW_52_in_unaryExpression1390); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_52.add(op);
@@ -3348,7 +3340,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 142:32: -> ^( UNARY_NOT[$op] unaryExpression )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:142:35: ^( UNARY_NOT[$op] unaryExpression )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:142:35: ^( UNARY_NOT[$op] unaryExpression )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(UNARY_NOT, op), root_1);
@@ -3364,7 +3356,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:143:9: op= '&' unaryExpression
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:143:9: op= '&' unaryExpression
                     {
                     op=(Token)match(input,53,FOLLOW_53_in_unaryExpression1413); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_53.add(op);
@@ -3391,7 +3383,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 143:32: -> ^( ADDR[$op] unaryExpression )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:143:35: ^( ADDR[$op] unaryExpression )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:143:35: ^( ADDR[$op] unaryExpression )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(ADDR, op), root_1);
@@ -3407,7 +3399,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:144:9: op= '*' unaryExpression
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:144:9: op= '*' unaryExpression
                     {
                     op=(Token)match(input,35,FOLLOW_35_in_unaryExpression1436); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_35.add(op);
@@ -3434,7 +3426,7 @@ public class CymbolParser extends Parser {
                     root_0 = (CymbolAST)adaptor.nil();
                     // 144:32: -> ^( DEREF[$op] unaryExpression )
                     {
-                        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:144:35: ^( DEREF[$op] unaryExpression )
+                        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:144:35: ^( DEREF[$op] unaryExpression )
                         {
                         CymbolAST root_1 = (CymbolAST)adaptor.nil();
                         root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(DEREF, op), root_1);
@@ -3450,7 +3442,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:145:9: postfixExpression
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:145:9: postfixExpression
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3491,7 +3483,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "postfixExpression"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:149:1: postfixExpression : ( primary -> primary ) ( ( '(' expressionList ')' -> ^( CALL[\"CALL\"] $postfixExpression expressionList ) | r= '[' expr ']' -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) ) | '.' ID -> ^( '.' $postfixExpression ID ) | r= '->' ID -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID ) ) )* ;
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:149:1: postfixExpression : ( primary -> primary ) ( ( '(' expressionList ')' -> ^( CALL[\"CALL\"] $postfixExpression expressionList ) | r= '[' expr ']' -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) ) | '.' ID -> ^( '.' $postfixExpression ID ) | r= '->' ID -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID ) ) )* ;
     public final CymbolParser.postfixExpression_return postfixExpression() throws RecognitionException {
         CymbolParser.postfixExpression_return retval = new CymbolParser.postfixExpression_return();
         retval.start = input.LT(1);
@@ -3519,22 +3511,22 @@ public class CymbolParser extends Parser {
         CymbolAST char_literal105_tree=null;
         CymbolAST ID106_tree=null;
         CymbolAST ID107_tree=null;
-        RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
-        RewriteRuleTokenStream stream_54=new RewriteRuleTokenStream(adaptor,"token 54");
         RewriteRuleTokenStream stream_55=new RewriteRuleTokenStream(adaptor,"token 55");
         RewriteRuleTokenStream stream_56=new RewriteRuleTokenStream(adaptor,"token 56");
-        RewriteRuleTokenStream stream_MEMBER=new RewriteRuleTokenStream(adaptor,"token MEMBER");
-        RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
-        RewriteRuleSubtreeStream stream_primary=new RewriteRuleSubtreeStream(adaptor,"rule primary");
-        RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
+        RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
+        RewriteRuleTokenStream stream_MEMBER=new RewriteRuleTokenStream(adaptor,"token MEMBER");
+        RewriteRuleTokenStream stream_54=new RewriteRuleTokenStream(adaptor,"token 54");
+        RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
         RewriteRuleSubtreeStream stream_expressionList=new RewriteRuleSubtreeStream(adaptor,"rule expressionList");
+        RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
+        RewriteRuleSubtreeStream stream_primary=new RewriteRuleSubtreeStream(adaptor,"rule primary");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:150:5: ( ( primary -> primary ) ( ( '(' expressionList ')' -> ^( CALL[\"CALL\"] $postfixExpression expressionList ) | r= '[' expr ']' -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) ) | '.' ID -> ^( '.' $postfixExpression ID ) | r= '->' ID -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID ) ) )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:150:9: ( primary -> primary ) ( ( '(' expressionList ')' -> ^( CALL[\"CALL\"] $postfixExpression expressionList ) | r= '[' expr ']' -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) ) | '.' ID -> ^( '.' $postfixExpression ID ) | r= '->' ID -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID ) ) )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:150:5: ( ( primary -> primary ) ( ( '(' expressionList ')' -> ^( CALL[\"CALL\"] $postfixExpression expressionList ) | r= '[' expr ']' -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) ) | '.' ID -> ^( '.' $postfixExpression ID ) | r= '->' ID -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID ) ) )* )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:150:9: ( primary -> primary ) ( ( '(' expressionList ')' -> ^( CALL[\"CALL\"] $postfixExpression expressionList ) | r= '[' expr ']' -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) ) | '.' ID -> ^( '.' $postfixExpression ID ) | r= '->' ID -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID ) ) )*
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:150:9: ( primary -> primary )
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:150:10: primary
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:150:9: ( primary -> primary )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:150:10: primary
             {
             pushFollow(FOLLOW_primary_in_postfixExpression1478);
             primary99=primary();
@@ -3565,7 +3557,7 @@ public class CymbolParser extends Parser {
             retval.tree = root_0;}
             }
 
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:151:9: ( ( '(' expressionList ')' -> ^( CALL[\"CALL\"] $postfixExpression expressionList ) | r= '[' expr ']' -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) ) | '.' ID -> ^( '.' $postfixExpression ID ) | r= '->' ID -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID ) ) )*
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:151:9: ( ( '(' expressionList ')' -> ^( CALL[\"CALL\"] $postfixExpression expressionList ) | r= '[' expr ']' -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) ) | '.' ID -> ^( '.' $postfixExpression ID ) | r= '->' ID -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID ) ) )*
             loop29:
             do {
                 int alt29=2;
@@ -3578,9 +3570,9 @@ public class CymbolParser extends Parser {
 
                 switch (alt29) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:152:13: ( '(' expressionList ')' -> ^( CALL[\"CALL\"] $postfixExpression expressionList ) | r= '[' expr ']' -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) ) | '.' ID -> ^( '.' $postfixExpression ID ) | r= '->' ID -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID ) )
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:152:13: ( '(' expressionList ')' -> ^( CALL[\"CALL\"] $postfixExpression expressionList ) | r= '[' expr ']' -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) ) | '.' ID -> ^( '.' $postfixExpression ID ) | r= '->' ID -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID ) )
             	    {
-            	    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:152:13: ( '(' expressionList ')' -> ^( CALL[\"CALL\"] $postfixExpression expressionList ) | r= '[' expr ']' -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) ) | '.' ID -> ^( '.' $postfixExpression ID ) | r= '->' ID -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID ) )
+            	    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:152:13: ( '(' expressionList ')' -> ^( CALL[\"CALL\"] $postfixExpression expressionList ) | r= '[' expr ']' -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) ) | '.' ID -> ^( '.' $postfixExpression ID ) | r= '->' ID -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID ) )
             	    int alt28=4;
             	    switch ( input.LA(1) ) {
             	    case 31:
@@ -3613,7 +3605,7 @@ public class CymbolParser extends Parser {
 
             	    switch (alt28) {
             	        case 1 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:152:17: '(' expressionList ')'
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:152:17: '(' expressionList ')'
             	            {
             	            char_literal100=(Token)match(input,31,FOLLOW_31_in_postfixExpression1509); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_31.add(char_literal100);
@@ -3643,7 +3635,7 @@ public class CymbolParser extends Parser {
             	            root_0 = (CymbolAST)adaptor.nil();
             	            // 153:17: -> ^( CALL[\"CALL\"] $postfixExpression expressionList )
             	            {
-            	                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:153:20: ^( CALL[\"CALL\"] $postfixExpression expressionList )
+            	                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:153:20: ^( CALL[\"CALL\"] $postfixExpression expressionList )
             	                {
             	                CymbolAST root_1 = (CymbolAST)adaptor.nil();
             	                root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(CALL, "CALL"), root_1);
@@ -3660,7 +3652,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:154:17: r= '[' expr ']'
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:154:17: r= '[' expr ']'
             	            {
             	            r=(Token)match(input,54,FOLLOW_54_in_postfixExpression1561); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_54.add(r);
@@ -3690,12 +3682,12 @@ public class CymbolParser extends Parser {
             	            root_0 = (CymbolAST)adaptor.nil();
             	            // 155:17: -> ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) )
             	            {
-            	                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:155:20: ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) )
+            	                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:155:20: ^( DEREF[$r,\"*\"] ^( ADD[\"+\"] $postfixExpression expr ) )
             	                {
             	                CymbolAST root_1 = (CymbolAST)adaptor.nil();
             	                root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(DEREF, r, "*"), root_1);
 
-            	                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:155:36: ^( ADD[\"+\"] $postfixExpression expr )
+            	                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:155:36: ^( ADD[\"+\"] $postfixExpression expr )
             	                {
             	                CymbolAST root_2 = (CymbolAST)adaptor.nil();
             	                root_2 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(ADD, "+"), root_2);
@@ -3715,7 +3707,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 3 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:156:17: '.' ID
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:156:17: '.' ID
             	            {
             	            char_literal105=(Token)match(input,MEMBER,FOLLOW_MEMBER_in_postfixExpression1617); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_MEMBER.add(char_literal105);
@@ -3739,7 +3731,7 @@ public class CymbolParser extends Parser {
             	            root_0 = (CymbolAST)adaptor.nil();
             	            // 157:17: -> ^( '.' $postfixExpression ID )
             	            {
-            	                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:157:20: ^( '.' $postfixExpression ID )
+            	                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:157:20: ^( '.' $postfixExpression ID )
             	                {
             	                CymbolAST root_1 = (CymbolAST)adaptor.nil();
             	                root_1 = (CymbolAST)adaptor.becomeRoot(stream_MEMBER.nextNode(), root_1);
@@ -3756,7 +3748,7 @@ public class CymbolParser extends Parser {
             	            }
             	            break;
             	        case 4 :
-            	            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:158:17: r= '->' ID
+            	            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:158:17: r= '->' ID
             	            {
             	            r=(Token)match(input,56,FOLLOW_56_in_postfixExpression1666); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_56.add(r);
@@ -3767,7 +3759,7 @@ public class CymbolParser extends Parser {
 
 
             	            // AST REWRITE
-            	            // elements: postfixExpression, ID
+            	            // elements: ID, postfixExpression
             	            // token labels: 
             	            // rule labels: retval
             	            // token list labels: 
@@ -3780,12 +3772,12 @@ public class CymbolParser extends Parser {
             	            root_0 = (CymbolAST)adaptor.nil();
             	            // 159:17: -> ^( MEMBER[$r] ^( DEREF $postfixExpression) ID )
             	            {
-            	                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:159:20: ^( MEMBER[$r] ^( DEREF $postfixExpression) ID )
+            	                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:159:20: ^( MEMBER[$r] ^( DEREF $postfixExpression) ID )
             	                {
             	                CymbolAST root_1 = (CymbolAST)adaptor.nil();
             	                root_1 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(MEMBER, r), root_1);
 
-            	                // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:159:33: ^( DEREF $postfixExpression)
+            	                // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:159:33: ^( DEREF $postfixExpression)
             	                {
             	                CymbolAST root_2 = (CymbolAST)adaptor.nil();
             	                root_2 = (CymbolAST)adaptor.becomeRoot((CymbolAST)adaptor.create(DEREF, "DEREF"), root_2);
@@ -3845,7 +3837,7 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "primary"
-    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:165:1: primary : ( ID | INT | FLOAT | CHAR | 'true' | 'false' | '(' expr ')' -> expr );
+    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:165:1: primary : ( ID | INT | FLOAT | CHAR | 'true' | 'false' | '(' expr ')' -> expr );
     public final CymbolParser.primary_return primary() throws RecognitionException {
         CymbolParser.primary_return retval = new CymbolParser.primary_return();
         retval.start = input.LT(1);
@@ -3871,11 +3863,11 @@ public class CymbolParser extends Parser {
         CymbolAST string_literal113_tree=null;
         CymbolAST char_literal114_tree=null;
         CymbolAST char_literal116_tree=null;
-        RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
         RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
+        RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:166:5: ( ID | INT | FLOAT | CHAR | 'true' | 'false' | '(' expr ')' -> expr )
+            // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:166:5: ( ID | INT | FLOAT | CHAR | 'true' | 'false' | '(' expr ')' -> expr )
             int alt30=7;
             switch ( input.LA(1) ) {
             case ID:
@@ -3923,7 +3915,7 @@ public class CymbolParser extends Parser {
 
             switch (alt30) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:166:9: ID
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:166:9: ID
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3936,7 +3928,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:167:9: INT
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:167:9: INT
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3949,7 +3941,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:168:9: FLOAT
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:168:9: FLOAT
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3962,7 +3954,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:169:9: CHAR
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:169:9: CHAR
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3975,7 +3967,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:170:9: 'true'
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:170:9: 'true'
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -3988,7 +3980,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:171:9: 'false'
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:171:9: 'false'
                     {
                     root_0 = (CymbolAST)adaptor.nil();
 
@@ -4001,7 +3993,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:172:9: '(' expr ')'
+                    // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:172:9: '(' expr ')'
                     {
                     char_literal114=(Token)match(input,31,FOLLOW_31_in_primary1834); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_31.add(char_literal114);
@@ -4062,8 +4054,8 @@ public class CymbolParser extends Parser {
 
     // $ANTLR start synpred2_Cymbol
     public final void synpred2_Cymbol_fragment() throws RecognitionException {   
-        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:93:9: ( varDeclaration )
-        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:93:9: varDeclaration
+        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:93:9: ( varDeclaration )
+        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:93:9: varDeclaration
         {
         pushFollow(FOLLOW_varDeclaration_in_synpred2_Cymbol820);
         varDeclaration();
@@ -4077,8 +4069,8 @@ public class CymbolParser extends Parser {
 
     // $ANTLR start synpred5_Cymbol
     public final void synpred5_Cymbol_fragment() throws RecognitionException {   
-        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:97:9: ( lhs '=' expression ';' )
-        // /Users/parrt/research/book/TPDSL/Book/code/semantics/oo/Cymbol.g:97:9: lhs '=' expression ';'
+        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:97:9: ( lhs '=' expression ';' )
+        // /Users/hotoku/projects/lip/code/semantics/oo/Cymbol.g:97:9: lhs '=' expression ';'
         {
         pushFollow(FOLLOW_lhs_in_synpred5_Cymbol906);
         lhs();

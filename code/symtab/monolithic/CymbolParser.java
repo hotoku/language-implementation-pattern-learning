@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g 2009-09-23 17:37:57
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g 2020-10-28 21:00:33
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -17,19 +9,19 @@ public class CymbolParser extends Parser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ID", "INT", "LETTER", "WS", "SL_COMMENT", "'float'", "'int'", "'='", "';'", "'+'", "'('", "')'"
     };
-    public static final int LETTER=6;
-    public static final int T__12=12;
-    public static final int INT=5;
-    public static final int WS=7;
-    public static final int EOF=-1;
-    public static final int T__13=13;
-    public static final int T__10=10;
-    public static final int T__14=14;
     public static final int T__9=9;
+    public static final int LETTER=6;
+    public static final int INT=5;
+    public static final int T__15=15;
     public static final int T__11=11;
     public static final int SL_COMMENT=8;
-    public static final int T__15=15;
+    public static final int T__12=12;
+    public static final int T__13=13;
+    public static final int T__14=14;
     public static final int ID=4;
+    public static final int WS=7;
+    public static final int EOF=-1;
+    public static final int T__10=10;
 
     // delegates
     // delegators
@@ -45,20 +37,20 @@ public class CymbolParser extends Parser {
         
 
     public String[] getTokenNames() { return CymbolParser.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g"; }
 
     SymbolTable symtab;
 
 
     // $ANTLR start "compilationUnit"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:5:1: compilationUnit[SymbolTable symtab] : ( varDeclaration )+ ;
+    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:5:1: compilationUnit[SymbolTable symtab] : ( varDeclaration )+ ;
     public final void compilationUnit(SymbolTable symtab) throws RecognitionException {
         this.symtab = symtab;
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:7:5: ( ( varDeclaration )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:7:9: ( varDeclaration )+
+            // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:7:5: ( ( varDeclaration )+ )
+            // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:7:9: ( varDeclaration )+
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:7:9: ( varDeclaration )+
+            // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:7:9: ( varDeclaration )+
             int cnt1=0;
             loop1:
             do {
@@ -72,7 +64,7 @@ public class CymbolParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:7:9: varDeclaration
+            	    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:7:9: varDeclaration
             	    {
             	    pushFollow(FOLLOW_varDeclaration_in_compilationUnit37);
             	    varDeclaration();
@@ -111,13 +103,13 @@ public class CymbolParser extends Parser {
     };
 
     // $ANTLR start "type"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:12:1: type returns [Type tsym] : ( 'float' | 'int' );
+    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:12:1: type returns [Type tsym] : ( 'float' | 'int' );
     public final CymbolParser.type_return type() throws RecognitionException {
         CymbolParser.type_return retval = new CymbolParser.type_return();
         retval.start = input.LT(1);
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:16:5: ( 'float' | 'int' )
+            // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:16:5: ( 'float' | 'int' )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -135,7 +127,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt2) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:16:9: 'float'
+                    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:16:9: 'float'
                     {
                     match(input,9,FOLLOW_9_in_type69); 
                     retval.tsym = (Type)symtab.resolve("float");
@@ -143,7 +135,7 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:17:9: 'int'
+                    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:17:9: 'int'
                     {
                     match(input,10,FOLLOW_10_in_type81); 
                     retval.tsym = (Type)symtab.resolve("int");
@@ -170,15 +162,15 @@ public class CymbolParser extends Parser {
 
 
     // $ANTLR start "varDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:22:1: varDeclaration : type ID ( '=' expression )? ';' ;
+    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:22:1: varDeclaration : type ID ( '=' expression )? ';' ;
     public final void varDeclaration() throws RecognitionException {
         Token ID1=null;
         CymbolParser.type_return type2 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:23:5: ( type ID ( '=' expression )? ';' )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:23:9: type ID ( '=' expression )? ';'
+            // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:23:5: ( type ID ( '=' expression )? ';' )
+            // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:23:9: type ID ( '=' expression )? ';'
             {
             pushFollow(FOLLOW_type_in_varDeclaration106);
             type2=type();
@@ -186,7 +178,7 @@ public class CymbolParser extends Parser {
             state._fsp--;
 
             ID1=(Token)match(input,ID,FOLLOW_ID_in_varDeclaration108); 
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:23:17: ( '=' expression )?
+            // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:23:17: ( '=' expression )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -195,7 +187,7 @@ public class CymbolParser extends Parser {
             }
             switch (alt3) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:23:18: '=' expression
+                    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:23:18: '=' expression
                     {
                     match(input,11,FOLLOW_11_in_varDeclaration111); 
                     pushFollow(FOLLOW_expression_in_varDeclaration113);
@@ -231,18 +223,18 @@ public class CymbolParser extends Parser {
 
 
     // $ANTLR start "expression"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:32:1: expression : primary ( '+' primary )* ;
+    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:32:1: expression : primary ( '+' primary )* ;
     public final void expression() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:33:5: ( primary ( '+' primary )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:33:9: primary ( '+' primary )*
+            // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:33:5: ( primary ( '+' primary )* )
+            // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:33:9: primary ( '+' primary )*
             {
             pushFollow(FOLLOW_primary_in_expression145);
             primary();
 
             state._fsp--;
 
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:33:17: ( '+' primary )*
+            // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:33:17: ( '+' primary )*
             loop4:
             do {
                 int alt4=2;
@@ -255,7 +247,7 @@ public class CymbolParser extends Parser {
 
                 switch (alt4) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:33:18: '+' primary
+            	    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:33:18: '+' primary
             	    {
             	    match(input,13,FOLLOW_13_in_expression148); 
             	    pushFollow(FOLLOW_primary_in_expression150);
@@ -288,12 +280,12 @@ public class CymbolParser extends Parser {
 
 
     // $ANTLR start "primary"
-    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:37:1: primary : ( ID | INT | '(' expression ')' );
+    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:37:1: primary : ( ID | INT | '(' expression ')' );
     public final void primary() throws RecognitionException {
         Token ID3=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:38:5: ( ID | INT | '(' expression ')' )
+            // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:38:5: ( ID | INT | '(' expression ')' )
             int alt5=3;
             switch ( input.LA(1) ) {
             case ID:
@@ -320,7 +312,7 @@ public class CymbolParser extends Parser {
 
             switch (alt5) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:38:9: ID
+                    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:38:9: ID
                     {
                     ID3=(Token)match(input,ID,FOLLOW_ID_in_primary172); 
                     System.out.println("line "+ID3.getLine()+": ref to "+
@@ -329,14 +321,14 @@ public class CymbolParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:41:9: INT
+                    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:41:9: INT
                     {
                     match(input,INT,FOLLOW_INT_in_primary190); 
 
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/symtab/monolithic/Cymbol.g:42:9: '(' expression ')'
+                    // /Users/hotoku/projects/lip/code/symtab/monolithic/Cymbol.g:42:9: '(' expression ')'
                     {
                     match(input,14,FOLLOW_14_in_primary200); 
                     pushFollow(FOLLOW_expression_in_primary202);

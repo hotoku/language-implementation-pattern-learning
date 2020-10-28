@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g 2009-09-23 17:37:41
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/interp/stack/Assembler.g 2020-10-28 21:00:06
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -25,25 +17,25 @@ public class AssemblerParser extends Parser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "NEWLINE", "INT", "ID", "REG", "FUNC", "CHAR", "STRING", "FLOAT", "LETTER", "STR_CHARS", "WS", "'.globals'", "'.def'", "':'", "'args'", "'='", "','", "'locals'"
     };
-    public static final int LETTER=12;
-    public static final int T__20=20;
-    public static final int WS=14;
-    public static final int CHAR=9;
-    public static final int STRING=10;
     public static final int FLOAT=11;
-    public static final int T__21=21;
-    public static final int T__19=19;
-    public static final int NEWLINE=4;
-    public static final int T__17=17;
+    public static final int LETTER=12;
+    public static final int CHAR=9;
     public static final int INT=5;
+    public static final int T__19=19;
+    public static final int T__15=15;
+    public static final int T__16=16;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int ID=6;
+    public static final int WS=14;
     public static final int EOF=-1;
     public static final int FUNC=8;
-    public static final int T__16=16;
+    public static final int NEWLINE=4;
     public static final int STR_CHARS=13;
     public static final int REG=7;
-    public static final int T__18=18;
-    public static final int T__15=15;
-    public static final int ID=6;
+    public static final int STRING=10;
+    public static final int T__20=20;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -59,7 +51,7 @@ public class AssemblerParser extends Parser {
         
 
     public String[] getTokenNames() { return AssemblerParser.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/interp/stack/Assembler.g"; }
 
 
         // Define the functionality required by the parser for code generation
@@ -75,18 +67,18 @@ public class AssemblerParser extends Parser {
 
 
     // $ANTLR start "program"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:25:1: program : ( globals )? ( functionDeclaration | instr | label | NEWLINE )+ ;
+    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:25:1: program : ( globals )? ( functionDeclaration | instr | label | NEWLINE )+ ;
     public final void program() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:26:5: ( ( globals )? ( functionDeclaration | instr | label | NEWLINE )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:26:9: ( globals )? ( functionDeclaration | instr | label | NEWLINE )+
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:26:5: ( ( globals )? ( functionDeclaration | instr | label | NEWLINE )+ )
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:26:9: ( globals )? ( functionDeclaration | instr | label | NEWLINE )+
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:26:9: ( globals )?
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:26:9: ( globals )?
             int alt1=2;
             alt1 = dfa1.predict(input);
             switch (alt1) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:26:9: globals
+                    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:26:9: globals
                     {
                     pushFollow(FOLLOW_globals_in_program26);
                     globals();
@@ -99,7 +91,7 @@ public class AssemblerParser extends Parser {
 
             }
 
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:27:9: ( functionDeclaration | instr | label | NEWLINE )+
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:27:9: ( functionDeclaration | instr | label | NEWLINE )+
             int cnt2=0;
             loop2:
             do {
@@ -134,7 +126,7 @@ public class AssemblerParser extends Parser {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:27:11: functionDeclaration
+            	    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:27:11: functionDeclaration
             	    {
             	    pushFollow(FOLLOW_functionDeclaration_in_program39);
             	    functionDeclaration();
@@ -145,7 +137,7 @@ public class AssemblerParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:27:33: instr
+            	    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:27:33: instr
             	    {
             	    pushFollow(FOLLOW_instr_in_program43);
             	    instr();
@@ -156,7 +148,7 @@ public class AssemblerParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:27:41: label
+            	    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:27:41: label
             	    {
             	    pushFollow(FOLLOW_label_in_program47);
             	    label();
@@ -167,7 +159,7 @@ public class AssemblerParser extends Parser {
             	    }
             	    break;
             	case 4 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:27:49: NEWLINE
+            	    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:27:49: NEWLINE
             	    {
             	    match(input,NEWLINE,FOLLOW_NEWLINE_in_program51); 
 
@@ -200,15 +192,15 @@ public class AssemblerParser extends Parser {
 
 
     // $ANTLR start "globals"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:33:1: globals : ( NEWLINE )* '.globals' INT NEWLINE ;
+    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:33:1: globals : ( NEWLINE )* '.globals' INT NEWLINE ;
     public final void globals() throws RecognitionException {
         Token INT1=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:33:9: ( ( NEWLINE )* '.globals' INT NEWLINE )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:33:11: ( NEWLINE )* '.globals' INT NEWLINE
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:33:9: ( ( NEWLINE )* '.globals' INT NEWLINE )
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:33:11: ( NEWLINE )* '.globals' INT NEWLINE
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:33:11: ( NEWLINE )*
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:33:11: ( NEWLINE )*
             loop3:
             do {
                 int alt3=2;
@@ -221,7 +213,7 @@ public class AssemblerParser extends Parser {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:33:11: NEWLINE
+            	    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:33:11: NEWLINE
             	    {
             	    match(input,NEWLINE,FOLLOW_NEWLINE_in_globals82); 
 
@@ -253,15 +245,15 @@ public class AssemblerParser extends Parser {
 
 
     // $ANTLR start "functionDeclaration"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:38:1: functionDeclaration : '.def' name= ID ':' 'args' '=' a= INT ',' 'locals' '=' lo= INT NEWLINE ;
+    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:38:1: functionDeclaration : '.def' name= ID ':' 'args' '=' a= INT ',' 'locals' '=' lo= INT NEWLINE ;
     public final void functionDeclaration() throws RecognitionException {
         Token name=null;
         Token a=null;
         Token lo=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:39:5: ( '.def' name= ID ':' 'args' '=' a= INT ',' 'locals' '=' lo= INT NEWLINE )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:39:9: '.def' name= ID ':' 'args' '=' a= INT ',' 'locals' '=' lo= INT NEWLINE
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:39:5: ( '.def' name= ID ':' 'args' '=' a= INT ',' 'locals' '=' lo= INT NEWLINE )
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:39:9: '.def' name= ID ':' 'args' '=' a= INT ',' 'locals' '=' lo= INT NEWLINE
             {
             match(input,16,FOLLOW_16_in_functionDeclaration109); 
             name=(Token)match(input,ID,FOLLOW_ID_in_functionDeclaration113); 
@@ -291,7 +283,7 @@ public class AssemblerParser extends Parser {
 
 
     // $ANTLR start "instr"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:45:1: instr : ( ID NEWLINE | ID operand NEWLINE | ID a= operand ',' b= operand NEWLINE | ID a= operand ',' b= operand ',' c= operand NEWLINE );
+    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:45:1: instr : ( ID NEWLINE | ID operand NEWLINE | ID a= operand ',' b= operand NEWLINE | ID a= operand ',' b= operand ',' c= operand NEWLINE );
     public final void instr() throws RecognitionException {
         Token ID2=null;
         Token ID3=null;
@@ -307,7 +299,7 @@ public class AssemblerParser extends Parser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:46:5: ( ID NEWLINE | ID operand NEWLINE | ID a= operand ',' b= operand NEWLINE | ID a= operand ',' b= operand ',' c= operand NEWLINE )
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:46:5: ( ID NEWLINE | ID operand NEWLINE | ID a= operand ',' b= operand NEWLINE | ID a= operand ',' b= operand ',' c= operand NEWLINE )
             int alt4=4;
             int LA4_0 = input.LA(1);
 
@@ -329,11 +321,11 @@ public class AssemblerParser extends Parser {
                         if ( ((LA4_5>=INT && LA4_5<=FLOAT)) ) {
                             int LA4_6 = input.LA(5);
 
-                            if ( (LA4_6==NEWLINE) ) {
-                                alt4=3;
-                            }
-                            else if ( (LA4_6==20) ) {
+                            if ( (LA4_6==20) ) {
                                 alt4=4;
+                            }
+                            else if ( (LA4_6==NEWLINE) ) {
+                                alt4=3;
                             }
                             else {
                                 NoViableAltException nvae =
@@ -371,7 +363,7 @@ public class AssemblerParser extends Parser {
             }
             switch (alt4) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:46:9: ID NEWLINE
+                    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:46:9: ID NEWLINE
                     {
                     ID2=(Token)match(input,ID,FOLLOW_ID_in_instr166); 
                     match(input,NEWLINE,FOLLOW_NEWLINE_in_instr168); 
@@ -380,7 +372,7 @@ public class AssemblerParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:47:9: ID operand NEWLINE
+                    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:47:9: ID operand NEWLINE
                     {
                     ID3=(Token)match(input,ID,FOLLOW_ID_in_instr204); 
                     pushFollow(FOLLOW_operand_in_instr206);
@@ -394,7 +386,7 @@ public class AssemblerParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:48:9: ID a= operand ',' b= operand NEWLINE
+                    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:48:9: ID a= operand ',' b= operand NEWLINE
                     {
                     ID5=(Token)match(input,ID,FOLLOW_ID_in_instr236); 
                     pushFollow(FOLLOW_operand_in_instr240);
@@ -414,7 +406,7 @@ public class AssemblerParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:49:9: ID a= operand ',' b= operand ',' c= operand NEWLINE
+                    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:49:9: ID a= operand ',' b= operand ',' c= operand NEWLINE
                     {
                     ID6=(Token)match(input,ID,FOLLOW_ID_in_instr260); 
                     pushFollow(FOLLOW_operand_in_instr264);
@@ -456,14 +448,14 @@ public class AssemblerParser extends Parser {
     };
 
     // $ANTLR start "operand"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:55:1: operand : ( ID | REG | FUNC | INT | CHAR | STRING | FLOAT );
+    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:55:1: operand : ( ID | REG | FUNC | INT | CHAR | STRING | FLOAT );
     public final AssemblerParser.operand_return operand() throws RecognitionException {
         AssemblerParser.operand_return retval = new AssemblerParser.operand_return();
         retval.start = input.LT(1);
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:56:5: ( ID | REG | FUNC | INT | CHAR | STRING | FLOAT )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:56:5: ( ID | REG | FUNC | INT | CHAR | STRING | FLOAT )
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:
             {
             if ( (input.LA(1)>=INT && input.LA(1)<=FLOAT) ) {
                 input.consume();
@@ -492,13 +484,13 @@ public class AssemblerParser extends Parser {
 
 
     // $ANTLR start "label"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:67:1: label : ID ':' ;
+    // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:67:1: label : ID ':' ;
     public final void label() throws RecognitionException {
         Token ID7=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:68:5: ( ID ':' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/stack/Assembler.g:68:9: ID ':'
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:68:5: ( ID ':' )
+            // /Users/hotoku/projects/lip/code/interp/stack/Assembler.g:68:9: ID ':'
             {
             ID7=(Token)match(input,ID,FOLLOW_ID_in_label396); 
             match(input,17,FOLLOW_17_in_label398); 

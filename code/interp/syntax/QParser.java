@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g 2009-09-23 17:37:42
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/interp/syntax/Q.g 2020-10-28 21:00:10
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -17,28 +9,28 @@ public class QParser extends Parser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ID", "INT", "STRING", "COMMENT", "WS", "'print'", "';'", "'create'", "'table'", "'('", "'primary'", "'key'", "','", "')'", "'='", "'insert'", "'into'", "'set'", "'select'", "'from'", "'where'"
     };
-    public static final int T__12=12;
-    public static final int T__23=23;
-    public static final int T__20=20;
-    public static final int WS=8;
-    public static final int T__13=13;
-    public static final int STRING=6;
-    public static final int T__21=21;
+    public static final int INT=5;
     public static final int COMMENT=7;
     public static final int T__19=19;
-    public static final int T__9=9;
-    public static final int T__14=14;
-    public static final int T__11=11;
-    public static final int T__22=22;
-    public static final int T__17=17;
-    public static final int INT=5;
-    public static final int EOF=-1;
-    public static final int T__16=16;
-    public static final int T__24=24;
-    public static final int T__10=10;
-    public static final int T__18=18;
     public static final int T__15=15;
+    public static final int T__16=16;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int T__11=11;
+    public static final int T__12=12;
+    public static final int T__13=13;
+    public static final int T__14=14;
     public static final int ID=4;
+    public static final int WS=8;
+    public static final int EOF=-1;
+    public static final int T__10=10;
+    public static final int T__9=9;
+    public static final int T__22=22;
+    public static final int T__23=23;
+    public static final int STRING=6;
+    public static final int T__24=24;
+    public static final int T__20=20;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -54,7 +46,7 @@ public class QParser extends Parser {
         
 
     public String[] getTokenNames() { return QParser.tokenNames; }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/interp/syntax/Q.g"; }
 
 
         Interpreter interp;
@@ -66,13 +58,13 @@ public class QParser extends Parser {
 
 
     // $ANTLR start "program"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:11:1: program : ( stat )+ ;
+    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:11:1: program : ( stat )+ ;
     public final void program() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:12:5: ( ( stat )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:12:9: ( stat )+
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:12:5: ( ( stat )+ )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:12:9: ( stat )+
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:12:9: ( stat )+
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:12:9: ( stat )+
             int cnt1=0;
             loop1:
             do {
@@ -86,7 +78,7 @@ public class QParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:12:9: stat
+            	    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:12:9: stat
             	    {
             	    pushFollow(FOLLOW_stat_in_program22);
             	    stat();
@@ -122,10 +114,10 @@ public class QParser extends Parser {
 
 
     // $ANTLR start "stat"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:15:1: stat : ( table | insert | assign | query | print );
+    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:15:1: stat : ( table | insert | assign | query | print );
     public final void stat() throws RecognitionException {
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:15:5: ( table | insert | assign | query | print )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:15:5: ( table | insert | assign | query | print )
             int alt2=5;
             switch ( input.LA(1) ) {
             case 11:
@@ -162,7 +154,7 @@ public class QParser extends Parser {
 
             switch (alt2) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:15:9: table
+                    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:15:9: table
                     {
                     pushFollow(FOLLOW_table_in_stat37);
                     table();
@@ -173,7 +165,7 @@ public class QParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:16:9: insert
+                    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:16:9: insert
                     {
                     pushFollow(FOLLOW_insert_in_stat47);
                     insert();
@@ -184,7 +176,7 @@ public class QParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:17:9: assign
+                    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:17:9: assign
                     {
                     pushFollow(FOLLOW_assign_in_stat57);
                     assign();
@@ -195,7 +187,7 @@ public class QParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:18:9: query
+                    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:18:9: query
                     {
                     pushFollow(FOLLOW_query_in_stat67);
                     query();
@@ -206,7 +198,7 @@ public class QParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:19:9: print
+                    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:19:9: print
                     {
                     pushFollow(FOLLOW_print_in_stat77);
                     print();
@@ -231,14 +223,14 @@ public class QParser extends Parser {
 
 
     // $ANTLR start "print"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:22:1: print : 'print' expr ';' ;
+    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:22:1: print : 'print' expr ';' ;
     public final void print() throws RecognitionException {
         Object expr1 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:22:6: ( 'print' expr ';' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:22:9: 'print' expr ';'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:22:6: ( 'print' expr ';' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:22:9: 'print' expr ';'
             {
             match(input,9,FOLLOW_9_in_print90); 
             pushFollow(FOLLOW_expr_in_print92);
@@ -264,7 +256,7 @@ public class QParser extends Parser {
 
 
     // $ANTLR start "table"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:26:1: table : 'create' 'table' tbl= ID '(' 'primary' 'key' key= ID ( ',' columns+= ID )+ ')' ';' ;
+    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:26:1: table : 'create' 'table' tbl= ID '(' 'primary' 'key' key= ID ( ',' columns+= ID )+ ')' ';' ;
     public final void table() throws RecognitionException {
         Token tbl=null;
         Token key=null;
@@ -272,8 +264,8 @@ public class QParser extends Parser {
         List list_columns=null;
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:27:5: ( 'create' 'table' tbl= ID '(' 'primary' 'key' key= ID ( ',' columns+= ID )+ ')' ';' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:27:9: 'create' 'table' tbl= ID '(' 'primary' 'key' key= ID ( ',' columns+= ID )+ ')' ';'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:27:5: ( 'create' 'table' tbl= ID '(' 'primary' 'key' key= ID ( ',' columns+= ID )+ ')' ';' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:27:9: 'create' 'table' tbl= ID '(' 'primary' 'key' key= ID ( ',' columns+= ID )+ ')' ';'
             {
             match(input,11,FOLLOW_11_in_table116); 
             match(input,12,FOLLOW_12_in_table118); 
@@ -282,7 +274,7 @@ public class QParser extends Parser {
             match(input,14,FOLLOW_14_in_table134); 
             match(input,15,FOLLOW_15_in_table136); 
             key=(Token)match(input,ID,FOLLOW_ID_in_table140); 
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:28:36: ( ',' columns+= ID )+
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:28:36: ( ',' columns+= ID )+
             int cnt3=0;
             loop3:
             do {
@@ -296,7 +288,7 @@ public class QParser extends Parser {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:28:37: ',' columns+= ID
+            	    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:28:37: ',' columns+= ID
             	    {
             	    match(input,16,FOLLOW_16_in_table143); 
             	    columns=(Token)match(input,ID,FOLLOW_ID_in_table147); 
@@ -335,15 +327,15 @@ public class QParser extends Parser {
 
 
     // $ANTLR start "assign"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:34:1: assign : ID '=' expr ';' ;
+    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:34:1: assign : ID '=' expr ';' ;
     public final void assign() throws RecognitionException {
         Token ID2=null;
         Object expr3 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:34:8: ( ID '=' expr ';' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:34:10: ID '=' expr ';'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:34:8: ( ID '=' expr ';' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:34:10: ID '=' expr ';'
             {
             ID2=(Token)match(input,ID,FOLLOW_ID_in_assign178); 
             match(input,18,FOLLOW_18_in_assign180); 
@@ -370,15 +362,15 @@ public class QParser extends Parser {
 
 
     // $ANTLR start "insert"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:38:1: insert : 'insert' 'into' ID 'set' setFields[interp.tables.get($ID.text)] ';' ;
+    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:38:1: insert : 'insert' 'into' ID 'set' setFields[interp.tables.get($ID.text)] ';' ;
     public final void insert() throws RecognitionException {
         Token ID4=null;
         Row setFields5 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:39:5: ( 'insert' 'into' ID 'set' setFields[interp.tables.get($ID.text)] ';' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:39:7: 'insert' 'into' ID 'set' setFields[interp.tables.get($ID.text)] ';'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:39:5: ( 'insert' 'into' ID 'set' setFields[interp.tables.get($ID.text)] ';' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:39:7: 'insert' 'into' ID 'set' setFields[interp.tables.get($ID.text)] ';'
             {
             match(input,19,FOLLOW_19_in_insert202); 
             match(input,20,FOLLOW_20_in_insert204); 
@@ -407,21 +399,21 @@ public class QParser extends Parser {
 
 
     // $ANTLR start "setFields"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:45:1: setFields[Table t] returns [Row row] : set[$row] ( ',' set[$row] )* ;
+    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:45:1: setFields[Table t] returns [Row row] : set[$row] ( ',' set[$row] )* ;
     public final Row setFields(Table t) throws RecognitionException {
         Row row = null;
 
          row = new Row(t.columns); 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:47:5: ( set[$row] ( ',' set[$row] )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:47:9: set[$row] ( ',' set[$row] )*
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:47:5: ( set[$row] ( ',' set[$row] )* )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:47:9: set[$row] ( ',' set[$row] )*
             {
             pushFollow(FOLLOW_set_in_setFields257);
             set(row);
 
             state._fsp--;
 
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:47:19: ( ',' set[$row] )*
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:47:19: ( ',' set[$row] )*
             loop4:
             do {
                 int alt4=2;
@@ -434,7 +426,7 @@ public class QParser extends Parser {
 
                 switch (alt4) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:47:20: ',' set[$row]
+            	    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:47:20: ',' set[$row]
             	    {
             	    match(input,16,FOLLOW_16_in_setFields261); 
             	    pushFollow(FOLLOW_set_in_setFields263);
@@ -467,15 +459,15 @@ public class QParser extends Parser {
 
 
     // $ANTLR start "set"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:49:1: set[Row row] : ID '=' expr ;
+    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:49:1: set[Row row] : ID '=' expr ;
     public final void set(Row row) throws RecognitionException {
         Token ID6=null;
         Object expr7 = null;
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:50:5: ( ID '=' expr )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:50:9: ID '=' expr
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:50:5: ( ID '=' expr )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:50:9: ID '=' expr
             {
             ID6=(Token)match(input,ID,FOLLOW_ID_in_set286); 
             match(input,18,FOLLOW_18_in_set288); 
@@ -501,7 +493,7 @@ public class QParser extends Parser {
 
 
     // $ANTLR start "query"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:54:1: query returns [Object value] : 'select' columns+= ID ( ',' columns+= ID )* 'from' tbl= ID ( 'where' key= ID '=' expr | ) ;
+    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:54:1: query returns [Object value] : 'select' columns+= ID ( ',' columns+= ID )* 'from' tbl= ID ( 'where' key= ID '=' expr | ) ;
     public final Object query() throws RecognitionException {
         Object value = null;
 
@@ -513,15 +505,15 @@ public class QParser extends Parser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:55:5: ( 'select' columns+= ID ( ',' columns+= ID )* 'from' tbl= ID ( 'where' key= ID '=' expr | ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:55:9: 'select' columns+= ID ( ',' columns+= ID )* 'from' tbl= ID ( 'where' key= ID '=' expr | )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:55:5: ( 'select' columns+= ID ( ',' columns+= ID )* 'from' tbl= ID ( 'where' key= ID '=' expr | ) )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:55:9: 'select' columns+= ID ( ',' columns+= ID )* 'from' tbl= ID ( 'where' key= ID '=' expr | )
             {
             match(input,22,FOLLOW_22_in_query320); 
             columns=(Token)match(input,ID,FOLLOW_ID_in_query324); 
             if (list_columns==null) list_columns=new ArrayList();
             list_columns.add(columns);
 
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:55:30: ( ',' columns+= ID )*
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:55:30: ( ',' columns+= ID )*
             loop5:
             do {
                 int alt5=2;
@@ -534,7 +526,7 @@ public class QParser extends Parser {
 
                 switch (alt5) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:55:31: ',' columns+= ID
+            	    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:55:31: ',' columns+= ID
             	    {
             	    match(input,16,FOLLOW_16_in_query327); 
             	    columns=(Token)match(input,ID,FOLLOW_ID_in_query331); 
@@ -552,7 +544,7 @@ public class QParser extends Parser {
 
             match(input,23,FOLLOW_23_in_query335); 
             tbl=(Token)match(input,ID,FOLLOW_ID_in_query339); 
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:56:9: ( 'where' key= ID '=' expr | )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:56:9: ( 'where' key= ID '=' expr | )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -570,7 +562,7 @@ public class QParser extends Parser {
             }
             switch (alt6) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:56:13: 'where' key= ID '=' expr
+                    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:56:13: 'where' key= ID '=' expr
                     {
                     match(input,24,FOLLOW_24_in_query353); 
                     key=(Token)match(input,ID,FOLLOW_ID_in_query357); 
@@ -585,7 +577,7 @@ public class QParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:58:13: 
+                    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:58:13: 
                     {
                     value = interp.select((tbl!=null?tbl.getText():null), list_columns);
 
@@ -610,7 +602,7 @@ public class QParser extends Parser {
 
 
     // $ANTLR start "expr"
-    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:64:1: expr returns [Object value] : ( ID | INT | STRING | query );
+    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:64:1: expr returns [Object value] : ( ID | INT | STRING | query );
     public final Object expr() throws RecognitionException {
         Object value = null;
 
@@ -621,7 +613,7 @@ public class QParser extends Parser {
 
 
         try {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:65:5: ( ID | INT | STRING | query )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:65:5: ( ID | INT | STRING | query )
             int alt7=4;
             switch ( input.LA(1) ) {
             case ID:
@@ -653,7 +645,7 @@ public class QParser extends Parser {
 
             switch (alt7) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:65:9: ID
+                    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:65:9: ID
                     {
                     ID9=(Token)match(input,ID,FOLLOW_ID_in_expr425); 
                     value = interp.load((ID9!=null?ID9.getText():null));
@@ -661,7 +653,7 @@ public class QParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:66:9: INT
+                    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:66:9: INT
                     {
                     INT10=(Token)match(input,INT,FOLLOW_INT_in_expr442); 
                     value = (INT10!=null?Integer.valueOf(INT10.getText()):0);
@@ -669,7 +661,7 @@ public class QParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:67:9: STRING
+                    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:67:9: STRING
                     {
                     STRING11=(Token)match(input,STRING,FOLLOW_STRING_in_expr458); 
                     value = (STRING11!=null?STRING11.getText():null);
@@ -677,7 +669,7 @@ public class QParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:68:9: query
+                    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:68:9: query
                     {
                     pushFollow(FOLLOW_query_in_expr471);
                     query12=query();

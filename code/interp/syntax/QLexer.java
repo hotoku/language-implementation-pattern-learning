@@ -1,12 +1,4 @@
-/***
- * Excerpted from "Language Implementation Patterns",
- * published by The Pragmatic Bookshelf.
- * Copyrights apply to this code. It may not be used to create training material, 
- * courses, books, articles, and the like. Contact us if you are in doubt.
- * We make no guarantees that this code is fit for any purpose. 
- * Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
-***/
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g 2009-09-23 17:37:43
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/interp/syntax/Q.g 2020-10-28 21:00:10
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -14,28 +6,28 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class QLexer extends Lexer {
-    public static final int T__12=12;
-    public static final int T__23=23;
-    public static final int T__20=20;
-    public static final int WS=8;
-    public static final int T__13=13;
-    public static final int STRING=6;
-    public static final int T__21=21;
+    public static final int INT=5;
     public static final int COMMENT=7;
     public static final int T__19=19;
-    public static final int T__9=9;
-    public static final int T__14=14;
-    public static final int T__11=11;
-    public static final int T__22=22;
-    public static final int T__17=17;
-    public static final int INT=5;
-    public static final int EOF=-1;
-    public static final int T__16=16;
-    public static final int T__24=24;
-    public static final int T__10=10;
-    public static final int T__18=18;
     public static final int T__15=15;
+    public static final int T__16=16;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int T__11=11;
+    public static final int T__12=12;
+    public static final int T__13=13;
+    public static final int T__14=14;
     public static final int ID=4;
+    public static final int WS=8;
+    public static final int EOF=-1;
+    public static final int T__10=10;
+    public static final int T__9=9;
+    public static final int T__22=22;
+    public static final int T__23=23;
+    public static final int STRING=6;
+    public static final int T__24=24;
+    public static final int T__20=20;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -48,15 +40,15 @@ public class QLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "/Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/interp/syntax/Q.g"; }
 
     // $ANTLR start "T__9"
     public final void mT__9() throws RecognitionException {
         try {
             int _type = T__9;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:3:6: ( 'print' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:3:8: 'print'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:3:6: ( 'print' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:3:8: 'print'
             {
             match("print"); 
 
@@ -76,8 +68,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__10;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:4:7: ( ';' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:4:9: ';'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:4:7: ( ';' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:4:9: ';'
             {
             match(';'); 
 
@@ -96,8 +88,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:5:7: ( 'create' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:5:9: 'create'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:5:7: ( 'create' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:5:9: 'create'
             {
             match("create"); 
 
@@ -117,8 +109,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:6:7: ( 'table' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:6:9: 'table'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:6:7: ( 'table' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:6:9: 'table'
             {
             match("table"); 
 
@@ -138,8 +130,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:7:7: ( '(' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:7:9: '('
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:7:7: ( '(' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:7:9: '('
             {
             match('('); 
 
@@ -158,8 +150,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:8:7: ( 'primary' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:8:9: 'primary'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:8:7: ( 'primary' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:8:9: 'primary'
             {
             match("primary"); 
 
@@ -179,8 +171,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:9:7: ( 'key' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:9:9: 'key'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:9:7: ( 'key' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:9:9: 'key'
             {
             match("key"); 
 
@@ -200,8 +192,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:10:7: ( ',' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:10:9: ','
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:10:7: ( ',' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:10:9: ','
             {
             match(','); 
 
@@ -220,8 +212,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:11:7: ( ')' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:11:9: ')'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:11:7: ( ')' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:11:9: ')'
             {
             match(')'); 
 
@@ -240,8 +232,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:12:7: ( '=' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:12:9: '='
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:12:7: ( '=' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:12:9: '='
             {
             match('='); 
 
@@ -260,8 +252,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:13:7: ( 'insert' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:13:9: 'insert'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:13:7: ( 'insert' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:13:9: 'insert'
             {
             match("insert"); 
 
@@ -281,8 +273,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:14:7: ( 'into' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:14:9: 'into'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:14:7: ( 'into' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:14:9: 'into'
             {
             match("into"); 
 
@@ -302,8 +294,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:15:7: ( 'set' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:15:9: 'set'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:15:7: ( 'set' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:15:9: 'set'
             {
             match("set"); 
 
@@ -323,8 +315,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:16:7: ( 'select' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:16:9: 'select'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:16:7: ( 'select' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:16:9: 'select'
             {
             match("select"); 
 
@@ -344,8 +336,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:17:7: ( 'from' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:17:9: 'from'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:17:7: ( 'from' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:17:9: 'from'
             {
             match("from"); 
 
@@ -365,8 +357,8 @@ public class QLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:18:7: ( 'where' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:18:9: 'where'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:18:7: ( 'where' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:18:9: 'where'
             {
             match("where"); 
 
@@ -386,8 +378,8 @@ public class QLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:72:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:72:9: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:72:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:72:9: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -398,7 +390,7 @@ public class QLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:72:33: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:72:33: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop1:
             do {
                 int alt1=2;
@@ -411,7 +403,7 @@ public class QLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:
+            	    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -447,10 +439,10 @@ public class QLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:74:5: ( ( '0' .. '9' )+ )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:74:9: ( '0' .. '9' )+
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:74:5: ( ( '0' .. '9' )+ )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:74:9: ( '0' .. '9' )+
             {
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:74:9: ( '0' .. '9' )+
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:74:9: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -464,7 +456,7 @@ public class QLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:74:9: '0' .. '9'
+            	    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:74:9: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -496,11 +488,11 @@ public class QLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:77:5: ( '\\'' (~ '\\'' )* '\\'' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:77:9: '\\'' (~ '\\'' )* '\\''
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:77:5: ( '\\'' (~ '\\'' )* '\\'' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:77:9: '\\'' (~ '\\'' )* '\\''
             {
             match('\''); 
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:77:14: (~ '\\'' )*
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:77:14: (~ '\\'' )*
             loop3:
             do {
                 int alt3=2;
@@ -513,7 +505,7 @@ public class QLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:77:14: ~ '\\''
+            	    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:77:14: ~ '\\''
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -551,12 +543,12 @@ public class QLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:82:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:82:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:82:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:82:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
             {
             match("//"); 
 
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:82:14: (~ ( '\\n' | '\\r' ) )*
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:82:14: (~ ( '\\n' | '\\r' ) )*
             loop4:
             do {
                 int alt4=2;
@@ -569,7 +561,7 @@ public class QLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:82:14: ~ ( '\\n' | '\\r' )
+            	    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:82:14: ~ ( '\\n' | '\\r' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -589,7 +581,7 @@ public class QLexer extends Lexer {
                 }
             } while (true);
 
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:82:28: ( '\\r' )?
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:82:28: ( '\\r' )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -598,7 +590,7 @@ public class QLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:82:28: '\\r'
+                    // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:82:28: '\\r'
                     {
                     match('\r'); 
 
@@ -625,8 +617,8 @@ public class QLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:85:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:85:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:85:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:85:9: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -650,152 +642,152 @@ public class QLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | ID | INT | STRING | COMMENT | WS )
+        // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | ID | INT | STRING | COMMENT | WS )
         int alt6=21;
         alt6 = dfa6.predict(input);
         switch (alt6) {
             case 1 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:10: T__9
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:10: T__9
                 {
                 mT__9(); 
 
                 }
                 break;
             case 2 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:15: T__10
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:15: T__10
                 {
                 mT__10(); 
 
                 }
                 break;
             case 3 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:21: T__11
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:21: T__11
                 {
                 mT__11(); 
 
                 }
                 break;
             case 4 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:27: T__12
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:27: T__12
                 {
                 mT__12(); 
 
                 }
                 break;
             case 5 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:33: T__13
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:33: T__13
                 {
                 mT__13(); 
 
                 }
                 break;
             case 6 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:39: T__14
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:39: T__14
                 {
                 mT__14(); 
 
                 }
                 break;
             case 7 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:45: T__15
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:45: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
             case 8 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:51: T__16
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:51: T__16
                 {
                 mT__16(); 
 
                 }
                 break;
             case 9 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:57: T__17
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:57: T__17
                 {
                 mT__17(); 
 
                 }
                 break;
             case 10 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:63: T__18
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:63: T__18
                 {
                 mT__18(); 
 
                 }
                 break;
             case 11 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:69: T__19
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:69: T__19
                 {
                 mT__19(); 
 
                 }
                 break;
             case 12 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:75: T__20
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:75: T__20
                 {
                 mT__20(); 
 
                 }
                 break;
             case 13 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:81: T__21
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:81: T__21
                 {
                 mT__21(); 
 
                 }
                 break;
             case 14 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:87: T__22
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:87: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
             case 15 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:93: T__23
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:93: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
             case 16 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:99: T__24
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:99: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
             case 17 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:105: ID
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:105: ID
                 {
                 mID(); 
 
                 }
                 break;
             case 18 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:108: INT
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:108: INT
                 {
                 mINT(); 
 
                 }
                 break;
             case 19 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:112: STRING
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:112: STRING
                 {
                 mSTRING(); 
 
                 }
                 break;
             case 20 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:119: COMMENT
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:119: COMMENT
                 {
                 mCOMMENT(); 
 
                 }
                 break;
             case 21 :
-                // /Users/parrt/research/book/TPDSL/Book/code/interp/syntax/Q.g:1:127: WS
+                // /Users/hotoku/projects/lip/code/interp/syntax/Q.g:1:127: WS
                 {
                 mWS(); 
 

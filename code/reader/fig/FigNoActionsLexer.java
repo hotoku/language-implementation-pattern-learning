@@ -1,11 +1,11 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/reader/fig/Fig.g 2020-10-28 21:00:16
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g 2020-10-28 21:00:17
 
 import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
-public class FigLexer extends Lexer {
+public class FigNoActionsLexer extends Lexer {
     public static final int SLCMT=8;
     public static final int CMT=9;
     public static final int INT=6;
@@ -26,23 +26,23 @@ public class FigLexer extends Lexer {
     // delegates
     // delegators
 
-    public FigLexer() {;} 
-    public FigLexer(CharStream input) {
+    public FigNoActionsLexer() {;} 
+    public FigNoActionsLexer(CharStream input) {
         this(input, new RecognizerSharedState());
     }
-    public FigLexer(CharStream input, RecognizerSharedState state) {
+    public FigNoActionsLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/reader/fig/Fig.g"; }
+    public String getGrammarFileName() { return "/Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g"; }
 
     // $ANTLR start "T__10"
     public final void mT__10() throws RecognitionException {
         try {
             int _type = T__10;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:3:7: ( '{' )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:3:9: '{'
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:3:7: ( '{' )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:3:9: '{'
             {
             match('{'); 
 
@@ -61,8 +61,8 @@ public class FigLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:4:7: ( '}' )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:4:9: '}'
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:4:7: ( '}' )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:4:9: '}'
             {
             match('}'); 
 
@@ -81,8 +81,8 @@ public class FigLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:5:7: ( '.' )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:5:9: '.'
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:5:7: ( '.' )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:5:9: '.'
             {
             match('.'); 
 
@@ -101,8 +101,8 @@ public class FigLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:6:7: ( '=' )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:6:9: '='
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:6:7: ( '=' )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:6:9: '='
             {
             match('='); 
 
@@ -121,8 +121,8 @@ public class FigLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:7:7: ( ';' )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:7:9: ';'
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:7:7: ( ';' )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:7:9: ';'
             {
             match(';'); 
 
@@ -141,8 +141,8 @@ public class FigLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:8:7: ( '$' )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:8:9: '$'
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:8:7: ( '$' )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:8:9: '$'
             {
             match('$'); 
 
@@ -161,8 +161,8 @@ public class FigLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:9:7: ( '[' )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:9:9: '['
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:9:7: ( '[' )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:9:9: '['
             {
             match('['); 
 
@@ -181,8 +181,8 @@ public class FigLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:10:7: ( ',' )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:10:9: ','
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:10:7: ( ',' )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:10:9: ','
             {
             match(','); 
 
@@ -201,8 +201,8 @@ public class FigLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:11:7: ( ']' )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:11:9: ']'
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:11:7: ( ']' )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:11:9: ']'
             {
             match(']'); 
 
@@ -221,10 +221,10 @@ public class FigLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:67:5: ( ( '0' .. '9' )+ )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:67:9: ( '0' .. '9' )+
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:30:5: ( ( '0' .. '9' )+ )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:30:9: ( '0' .. '9' )+
             {
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:67:9: ( '0' .. '9' )+
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:30:9: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -238,7 +238,7 @@ public class FigLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:67:9: '0' .. '9'
+            	    // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:30:9: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -270,8 +270,8 @@ public class FigLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:68:5: ( ( '_' | 'a' .. 'z' | 'A' .. 'Z' ) ( '_' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:68:9: ( '_' | 'a' .. 'z' | 'A' .. 'Z' ) ( '_' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:32:5: ( ( '_' | 'a' .. 'z' | 'A' .. 'Z' ) ( '_' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:32:9: ( '_' | 'a' .. 'z' | 'A' .. 'Z' ) ( '_' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -282,7 +282,7 @@ public class FigLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:68:33: ( '_' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:32:33: ( '_' | 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -295,7 +295,7 @@ public class FigLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:
+            	    // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -331,11 +331,11 @@ public class FigLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:69:8: ( '\"' ( . )* '\"' )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:69:10: '\"' ( . )* '\"'
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:33:8: ( '\"' ( . )* '\"' )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:33:10: '\"' ( . )* '\"'
             {
             match('\"'); 
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:69:14: ( . )*
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:33:14: ( . )*
             loop3:
             do {
                 int alt3=2;
@@ -351,7 +351,7 @@ public class FigLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:69:14: .
+            	    // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:33:14: .
             	    {
             	    matchAny(); 
 
@@ -380,10 +380,10 @@ public class FigLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:70:5: ( ( ' ' | '\\n' | '\\t' )+ )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:70:9: ( ' ' | '\\n' | '\\t' )+
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:34:5: ( ( ' ' | '\\n' | '\\t' )+ )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:34:9: ( ' ' | '\\n' | '\\t' )+
             {
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:70:9: ( ' ' | '\\n' | '\\t' )+
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:34:9: ( ' ' | '\\n' | '\\t' )+
             int cnt4=0;
             loop4:
             do {
@@ -397,7 +397,7 @@ public class FigLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:
+            	    // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:
             	    {
             	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)==' ' ) {
             	        input.consume();
@@ -438,12 +438,12 @@ public class FigLexer extends Lexer {
         try {
             int _type = SLCMT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:71:6: ( '//' ( . )* ( '\\r' )? '\\n' )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:71:9: '//' ( . )* ( '\\r' )? '\\n'
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:35:6: ( '//' ( . )* ( '\\r' )? '\\n' )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:35:9: '//' ( . )* ( '\\r' )? '\\n'
             {
             match("//"); 
 
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:71:14: ( . )*
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:35:14: ( . )*
             loop5:
             do {
                 int alt5=2;
@@ -462,7 +462,7 @@ public class FigLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:71:14: .
+            	    // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:35:14: .
             	    {
             	    matchAny(); 
 
@@ -474,7 +474,7 @@ public class FigLexer extends Lexer {
                 }
             } while (true);
 
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:71:17: ( '\\r' )?
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:35:17: ( '\\r' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -483,7 +483,7 @@ public class FigLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:71:17: '\\r'
+                    // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:35:17: '\\r'
                     {
                     match('\r'); 
 
@@ -510,12 +510,12 @@ public class FigLexer extends Lexer {
         try {
             int _type = CMT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:72:5: ( '/*' ( . )* '*/' )
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:72:9: '/*' ( . )* '*/'
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:36:5: ( '/*' ( . )* '*/' )
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:36:9: '/*' ( . )* '*/'
             {
             match("/*"); 
 
-            // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:72:14: ( . )*
+            // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:36:14: ( . )*
             loop7:
             do {
                 int alt7=2;
@@ -540,7 +540,7 @@ public class FigLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:72:14: .
+            	    // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:36:14: .
             	    {
             	    matchAny(); 
 
@@ -567,110 +567,110 @@ public class FigLexer extends Lexer {
     // $ANTLR end "CMT"
 
     public void mTokens() throws RecognitionException {
-        // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:8: ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | INT | ID | STRING | WS | SLCMT | CMT )
+        // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:8: ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | INT | ID | STRING | WS | SLCMT | CMT )
         int alt8=15;
         alt8 = dfa8.predict(input);
         switch (alt8) {
             case 1 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:10: T__10
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:10: T__10
                 {
                 mT__10(); 
 
                 }
                 break;
             case 2 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:16: T__11
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:16: T__11
                 {
                 mT__11(); 
 
                 }
                 break;
             case 3 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:22: T__12
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:22: T__12
                 {
                 mT__12(); 
 
                 }
                 break;
             case 4 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:28: T__13
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:28: T__13
                 {
                 mT__13(); 
 
                 }
                 break;
             case 5 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:34: T__14
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:34: T__14
                 {
                 mT__14(); 
 
                 }
                 break;
             case 6 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:40: T__15
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:40: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
             case 7 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:46: T__16
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:46: T__16
                 {
                 mT__16(); 
 
                 }
                 break;
             case 8 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:52: T__17
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:52: T__17
                 {
                 mT__17(); 
 
                 }
                 break;
             case 9 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:58: T__18
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:58: T__18
                 {
                 mT__18(); 
 
                 }
                 break;
             case 10 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:64: INT
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:64: INT
                 {
                 mINT(); 
 
                 }
                 break;
             case 11 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:68: ID
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:68: ID
                 {
                 mID(); 
 
                 }
                 break;
             case 12 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:71: STRING
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:71: STRING
                 {
                 mSTRING(); 
 
                 }
                 break;
             case 13 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:78: WS
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:78: WS
                 {
                 mWS(); 
 
                 }
                 break;
             case 14 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:81: SLCMT
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:81: SLCMT
                 {
                 mSLCMT(); 
 
                 }
                 break;
             case 15 :
-                // /Users/hotoku/projects/lip/code/reader/fig/Fig.g:1:87: CMT
+                // /Users/hotoku/projects/lip/code/reader/fig/FigNoActions.g:1:87: CMT
                 {
                 mCMT(); 
 
