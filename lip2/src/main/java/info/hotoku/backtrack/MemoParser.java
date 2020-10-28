@@ -84,6 +84,7 @@ public class MemoParser {
     }
 
     private boolean speculate_list() {
+        System.out.println("speculate_list");
         boolean success = true;
         mark();
         try {
@@ -113,11 +114,13 @@ public class MemoParser {
 
     private void list() throws ParseFailure {
         if (!isSpeculating()) {
+            System.out.println("nor speculating. actually parse list");
             _list();
             return;
         }
         Integer p2 = Integer.valueOf(p);
         if (list_memo.containsKey(p2)) {
+            System.out.println(String.format("we have already parsed list at pos = %d", p));
             if (list_memo.get(p2).intValue() == FAILED) {
                 throw new ParseFailure("previous parse failed");
             } else {
@@ -125,6 +128,7 @@ public class MemoParser {
                 return;
             }
         }
+        System.out.println(String.format("we have not parsed list at pos = %d", p));
         boolean failed = false;
         int startPos = p;
         try {
