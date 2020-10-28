@@ -65,26 +65,26 @@ public class Parser {
         }
     }
 
-    private boolean speculate_assign() throws ParseFailure {
+    private boolean speculate_assign() {
         boolean success = true;
         mark();
         try {
             assign();
             match(Lexer.EOF_TYPE);
-        } catch (UnexpectedToken e) {
+        } catch (ParseFailure e) {
             success = false;
         }
         unmark();
         return success;
     }
 
-    private boolean speculate_list() throws ParseFailure {
+    private boolean speculate_list() {
         boolean success = true;
         mark();
         try {
             list();
             match(Lexer.EOF_TYPE);
-        } catch (UnexpectedToken e) {
+        } catch (ParseFailure e) {
             success = false;
         }
         unmark();
@@ -131,7 +131,7 @@ public class Parser {
             match(Lexer.NAME);
             return;
         }
-        throw new ParseFailure("cannot parsed as element");
+        throw new ParseFailure(String.format("cannot parsed as element: %s", LT(0).value));
     }
 
     private void assign() throws ParseFailure {

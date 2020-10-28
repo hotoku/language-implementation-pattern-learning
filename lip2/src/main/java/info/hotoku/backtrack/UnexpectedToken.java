@@ -5,7 +5,7 @@ public class UnexpectedToken extends ParseFailure {
     public Token actual;
 
     public UnexpectedToken(int expected, Token actual) {
-        super(String.format("unexpected token: expected %d, actual %d", Lexer.tokenName(expected),
+        super(String.format("unexpected token: expected %s, actual %s", Lexer.tokenName(expected),
                 Lexer.tokenName(actual.type)));
         this.expected = expected;
         this.actual = actual;

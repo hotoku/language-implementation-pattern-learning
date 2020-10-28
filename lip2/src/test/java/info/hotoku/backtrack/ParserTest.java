@@ -52,6 +52,8 @@ public class ParserTest extends TestCase {
             assertTrue("never comes here", false);
         } catch (NoAlternativeException e) {
         } catch (ParseFailure e) {
+            e.printStackTrace();
+            System.out.println(e.getRreason());
             assertTrue("never comes here", false);
         }
     }
@@ -75,10 +77,11 @@ public class ParserTest extends TestCase {
             parser = new Parser(lexer);
             parser.parse();
             assertTrue("never comes here", false);
-        } catch (UnexpectedToken e) {
-            assertEquals(Lexer.EOF_TYPE, e.expected);
-            assertEquals(Lexer.RBRACK, e.actual.type);
+        } catch (NoAlternativeException e) {
         } catch (ParseFailure e) {
+            e.printStackTrace();
+            System.out.println(e.getRreason());
+            assertTrue("never comes here", false);
         }
     }
 
