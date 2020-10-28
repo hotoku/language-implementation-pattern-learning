@@ -1,19 +1,24 @@
 package info.hotoku.backtrack;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
-public class Parser {
+public class MemoParser {
+    public static final int FAILED = -1;
+
     Lexer lexer;
     ArrayList<Token> buf;
     ArrayList<Integer> stack;
     int p;
+    HashMap<Integer, Integer> list_memo;
 
-    public Parser(Lexer l) throws ParseFailure {
+    public MemoParser(Lexer l) throws ParseFailure {
         lexer = l;
         buf = new ArrayList<Token>();
         stack = new ArrayList<Integer>();
         p = 0;
         sync(1);
+        list_memo = new HashMap<Integer, Integer>();
     }
 
     private void sync(int n) throws ParseFailure {
@@ -24,14 +29,14 @@ public class Parser {
 
     private void consume() throws ParseFailure {
         p++;
-        if (p == buf.size() && !is_speculating()) {
+        if (p == buf.size() && !isSpeculating()) {
             p = 0;
             buf.clear();
         }
         sync(1);
     }
 
-    private boolean is_speculating() {
+    private boolean isSpeculating() {
         return stack.size() > 0;
     }
 
@@ -55,7 +60,7 @@ public class Parser {
 
     public void parse() throws ParseFailure {
         if (speculate_list()) {
-            list();
+            _list();
             match(Lexer.EOF_TYPE);
         } else if (speculate_assign()) {
             assign();
@@ -86,6 +91,8 @@ public class Parser {
             match(Lexer.EOF_TYPE);
         } catch (UnexpectedToken e) {
             success = false;
+        } catch (ParseFailure e) {
+            success = false;
         }
         unmark();
         return success;
@@ -100,10 +107,47 @@ public class Parser {
         stack.remove(stack.size() - 1);
     }
 
-    private void list() throws ParseFailure {
+    private void _list() throws ParseFailure {
         match(Lexer.LBRACK);
         elements();
         match(Lexer.RBRACK);
+    }
+
+    private void list() throws ParseFailure {
+        if (isSpeculating() && alreadyParsedRule(list_memo))
+            return;
+
+        boolean failed = false;
+        int startTokenIndex = p;
+        try {
+            _list();
+        } catch (UnexpectedToken e) {
+            failed = true;
+        } finally {
+            if (isSpeculating()) {
+                memoize(list_memo, startTokenIndex, failed);
+            }
+        }
+    }
+
+    private void memoize(HashMap<Integer, Integer> memo, int startTokenIndex, boolean failed) {
+        if (failed) {
+            memo.put(Integer.valueOf(startTokenIndex), Integer.valueOf(FAILED));
+        } else {
+            memo.put(Integer.valueOf(startTokenIndex), Integer.valueOf(p));
+        }
+    }
+
+    private boolean alreadyParsedRule(HashMap<Integer, Integer> memo) throws ParseFailure {
+        Integer ret = memo.get(Integer.valueOf(p));
+        if (ret == null) {
+            return false;
+        }
+        if (ret.intValue() == FAILED) {
+            throw new ParseFailure("previous parse failed");
+        }
+        p = ret.intValue();
+        return true;
     }
 
     private void elements() throws ParseFailure {

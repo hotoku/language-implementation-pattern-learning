@@ -7,13 +7,13 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class ParserTest extends TestCase {
+public class MemoParserTest extends TestCase {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public ParserTest(String testName) {
+    public MemoParserTest(String testName) {
         super(testName);
     }
 
@@ -37,8 +37,12 @@ public class ParserTest extends TestCase {
         try {
             parser = new Parser(lexer);
             parser.parse();
-        } catch (ParseFailure e) {
+        } catch (UnknownCharacterException e) {
             assertTrue("never comes here", false);
+        } catch (UnexpectedToken e) {
+            e.printStackTrace();
+            assertTrue("unepected token: " + e.actual.value, false);
+        } catch (NoAlternativeException e) {
         }
     }
 
@@ -50,9 +54,11 @@ public class ParserTest extends TestCase {
             parser = new Parser(lexer);
             parser.parse();
             assertTrue("never comes here", false);
-        } catch (NoAlternativeException e) {
-        } catch (ParseFailure e) {
+        } catch (UnknownCharacterException e) {
             assertTrue("never comes here", false);
+        } catch (UnexpectedToken e) {
+            assertTrue("never comes here", false);
+        } catch (NoAlternativeException e) {
         }
     }
 
@@ -63,7 +69,11 @@ public class ParserTest extends TestCase {
         try {
             parser = new Parser(lexer);
             parser.parse();
-        } catch (ParseFailure e) {
+        } catch (UnknownCharacterException e) {
+            assertTrue("never comes here", false);
+        } catch (UnexpectedToken e) {
+            assertTrue("never comes here", false);
+        } catch (NoAlternativeException e) {
         }
     }
 
@@ -75,10 +85,12 @@ public class ParserTest extends TestCase {
             parser = new Parser(lexer);
             parser.parse();
             assertTrue("never comes here", false);
+        } catch (UnknownCharacterException e) {
+            assertTrue("never comes here", false);
         } catch (UnexpectedToken e) {
             assertEquals(Lexer.EOF_TYPE, e.expected);
             assertEquals(Lexer.RBRACK, e.actual.type);
-        } catch (ParseFailure e) {
+        } catch (NoAlternativeException e) {
         }
     }
 
@@ -89,7 +101,11 @@ public class ParserTest extends TestCase {
         try {
             parser = new Parser(lexer);
             parser.parse();
-        } catch (ParseFailure e) {
+        } catch (UnknownCharacterException e) {
+            assertTrue("never comes here", false);
+        } catch (UnexpectedToken e) {
+            assertTrue("never comes here", false);
+        } catch (NoAlternativeException e) {
             assertTrue("never comes here", false);
         }
     }
@@ -101,7 +117,11 @@ public class ParserTest extends TestCase {
         try {
             parser = new Parser(lexer);
             parser.parse();
-        } catch (ParseFailure e) {
+        } catch (UnknownCharacterException e) {
+            assertTrue("never comes here", false);
+        } catch (UnexpectedToken e) {
+            assertTrue("never comes here", false);
+        } catch (NoAlternativeException e) {
             assertTrue("never comes here", false);
         }
     }

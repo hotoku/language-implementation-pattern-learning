@@ -1,9 +1,7 @@
 package info.hotoku.backtrack;
 
-public class UnknownCharacterException extends Exception {
-    public char character;
-
+public class UnknownCharacterException extends ParseFailure {
     public UnknownCharacterException(char c) {
-        this.character = c;
+        super(String.format("unknown character: %s", c));
     }
 }
