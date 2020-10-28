@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--
- ! Excerpted from "Language Implementation Patterns",
- ! published by The Pragmatic Bookshelf.
- ! Copyrights apply to this code. It may not be used to create training material, 
- ! courses, books, articles, and the like. Contact us if you are in doubt.
- ! We make no guarantees that this code is fit for any purpose. 
- ! Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
+! Excerpted from "Language Implementation Patterns",
+! published by The Pragmatic Bookshelf.
+! Copyrights apply to this code. It may not be used to create training material,
+! courses, books, articles, and the like. Contact us if you are in doubt.
+! We make no guarantees that this code is fit for any purpose.
+! Visit http://www.pragmaticprogrammer.com/titles/tpdsl for more book information.
 -->
 <project name="build-macros" basedir=".">
 
-    <!-- Looks weird but correct, as it runs from our subdirs, this allows the ant build to function from every subdirectory -->
+  <!-- Looks weird but correct, as it runs from our subdirs, this allows the ant build to function from every subdirectory -->
   <path id="libs.all">
-    <fileset dir="../../" includes="*.jar"  /> 
+    <fileset dir="../../" includes="*.jar"  />
   </path>
 
-    <!-- Creates output directories for classes -->
+  <!-- Creates output directories for classes -->
   <macrodef name="init">
     <sequential>
       <mkdir dir="${build.dir}" />
@@ -24,7 +24,7 @@
 
 
 
-		<!-- Clean macro we use for all sub-projects, deletes build dir. -->
+	<!-- Clean macro we use for all sub-projects, deletes build dir. -->
   <macrodef name="clean">
     <sequential>
       <delete dir="${build.dir}" failonerror="false" includes="*.class" />
@@ -38,41 +38,41 @@
           <fileset dir="${src.dir}" includes="*.g" />
         </path>
       </pathconvert>
-      
+
       <echo message="Grammars: ${grammars}" />
-      
+
       <java classname="org.antlr.Tool" classpathref="libs.all" fork="true">
         <arg line="-o ${src.dir} ${grammars}" />
         <!--
-        <arg value="-o" />
-        <arg value="${src.dir}"  />
-        <arg value="${grammars}" />
+            <arg value="-o" />
+            <arg value="${src.dir}"  />
+            <arg value="${grammars}" />
         -->
       </java>
 
     </sequential>
   </macrodef>
 
-    <!-- Compile macro we use for all sub-projects, it may optionally have another classpathrefid parameter if libraries need to be changed for a project -->
+  <!-- Compile macro we use for all sub-projects, it may optionally have another classpathrefid parameter if libraries need to be changed for a project -->
   <macrodef name="compile">
     <attribute name="cprefid" default="libs.all" />
     <sequential>
-        <!-- The libraries, for convenience we just import them into one path, the weird ../ assures we can run it from any directory where there is a build.xml -->
+      <!-- The libraries, for convenience we just import them into one path, the weird ../ assures we can run it from any directory where there is a build.xml -->
 
-      <javac destdir="${classes.dir}" target="1.5">
+      <javac destdir="${classes.dir}" target="1.9">
         <classpath refid="@{cprefid}" />
         <src location="${src.dir}" />
       </javac>
     </sequential>
   </macrodef>
 
-    <!-- Macro to run a class, in our case it runs a test. Default class that runs is 'Test', can be changed. -->
+  <!-- Macro to run a class, in our case it runs a test. Default class that runs is 'Test', can be changed. -->
   <macrodef name="run">
     <attribute name="class" default="Test" />
     <attribute name="argline" default="" />
     <attribute name="cprefid" default="libs.all" />
     <sequential>
-        <!-- The libraries, for convenience we just import them into one path, the weird ../ assures we can run it from any directory where there is a build.xml -->
+      <!-- The libraries, for convenience we just import them into one path, the weird ../ assures we can run it from any directory where there is a build.xml -->
 
       <java classname="@{class}" fork="true">
         <classpath refid="@{cprefid}" />
@@ -88,7 +88,7 @@
     <attribute name="cprefid" default="libs.all" />
 
     <sequential>
-        <!-- The libraries, for convenience we just import them into one path, the weird ../ assures we can run it from any directory where there is a build.xml -->
+      <!-- The libraries, for convenience we just import them into one path, the weird ../ assures we can run it from any directory where there is a build.xml -->
 
       <java classname="@{class}" fork="true">
         <classpath refid="@{cprefid}" />
@@ -97,4 +97,4 @@
       </java>
     </sequential>
   </macrodef>
-</project>  
+</project>
